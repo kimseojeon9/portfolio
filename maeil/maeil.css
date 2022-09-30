@@ -94,7 +94,7 @@ header .inner {
 }
 .inner>a {
     text-indent: -9999px;
-    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
     font-size: 1rem;
@@ -137,13 +137,13 @@ header .inner {
     justify-content: center;
 }
 .one {
-    background: url(/maeil/main/sec1_visu/visual01.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec1_visu/visual01.jpg) no-repeat 50% 50% / cover;
 }
 .two {
-    background: url(/maeil/main/sec1_visu/visual02.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec1_visu/visual02.jpg) no-repeat 50% 50% / cover;
 }
 .three {
-    background: url(/maeil/main/sec1_visu/visual03.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec1_visu/visual03.jpg) no-repeat 50% 50% / cover;
 }
 .slide .slick-list,
 .slide .slick-track {
@@ -162,11 +162,11 @@ header .inner {
 }
 .slide .slick-arrow:nth-of-type(1) {
     left: 0;
-    background: url(/maeil/main/chevron_left.svg) no-repeat 50% 50%;
+    background: url(/main/chevron_left.svg) no-repeat 50% 50%;
 }
 .slide .slick-arrow:nth-of-type(2) {
     right: 0;
-    background: url(/maeil/main/chevron_right.svg) no-repeat 50% 50%;
+    background: url(/main/chevron_right.svg) no-repeat 50% 50%;
 }
 .slide .slick-dots {
     position: absolute;
@@ -256,20 +256,20 @@ header .inner {
     border-radius: 50px;
 }
 .container .social:nth-of-type(1) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution01.jpg) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec3_social/contribution01.jpg) no-repeat 50% 50% / cover;
     background-blend-mode: multiply;
 }
 .container .social:nth-of-type(2) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution02.jpg) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec3_social/contribution02.jpg) no-repeat 50% 50% / cover;
 }
 .container .social:nth-of-type(3) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution03.jpg) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec3_social/contribution03.jpg) no-repeat 50% 50% / cover;
 }
 .container .social:nth-of-type(4) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution04.jpg) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec3_social/contribution04.jpg) no-repeat 50% 50% / cover;
 }
 .container .social:nth-of-type(5) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution05.jpg) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec3_social/contribution05.jpg) no-repeat 50% 50% / cover;
 }
 /* 사업분야 시작 */
 .business {
@@ -289,7 +289,7 @@ header .inner {
     color: #fff;
 }
 .business>div.right {
-    background: url(/maeil/main/sec4_global.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec4_global.jpg) no-repeat 50% 50% / cover;
     color: #fff;
 }
 .business>div.right:hover {
@@ -352,16 +352,16 @@ header .inner {
     font-weight: 300;
 }
 .management .container div:nth-of-type(1) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec5_manage/management01.png) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/main/sec5_manage/management01.png) no-repeat 50% 50% / cover;
 }
 .management .container div:nth-of-type(2) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management02.png) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/main/sec5_manage/management02.png) no-repeat 50% 50% / cover;
 }
 .management .container div:nth-of-type(3) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management03.png) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/main/sec5_manage/management03.png) no-repeat 50% 50% / cover;
 }
 .management .container div:nth-of-type(4) {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management04.png) no-repeat 50% 50% / cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/main/sec5_manage/management04.png) no-repeat 50% 50% / cover;
 }
 .management .container div:nth-of-type(1):hover {
     flex: 2 1 0;
@@ -394,25 +394,25 @@ header .inner {
     height: 260px;
 }
 .brand .slide_brn .milk {
-    background: url(/maeil/main/sec6_brand/brand01.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand01.jpg) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .absol {
-    background: url(/maeil/main/sec6_brand/brand02.png) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand02.png) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .sang {
-    background: url(/maeil/main/sec6_brand/brand03.png) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand03.png) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .bio {
-    background: url(/maeil/main/sec6_brand/brand04.png) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand04.png) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .barista {
-    background: url(/maeil/main/sec6_brand/brand05.png) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand05.png) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .sun {
-    background: url(/maeil/main/sec6_brand/brand06.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand06.jpg) no-repeat 50% 50% / cover;
 }
 .brand .slide_brn .well {
-    background: url(/maeil/main/sec6_brand/brand07.jpg) no-repeat 50% 50% / cover;
+    background: url(/main/sec6_brand/brand07.jpg) no-repeat 50% 50% / cover;
 }
 /* 슬릭 커스텀 */
 .brand .slide_brn {
@@ -456,11 +456,11 @@ header .inner {
 }
 .slide_brn .slick-arrow:nth-of-type(1) {
     left: 0;
-    background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_left.svg) no-repeat 50% 50% / 30%;
+    background: rgba(0, 0, 0, 0.2) url(/main/chevron_left.svg) no-repeat 50% 50% / 30%;
 }
 .slide_brn .slick-arrow:nth-of-type(2) {
     right: 0;
-    background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_right.svg) no-repeat 50% 50% / 30%;
+    background: rgba(0, 0, 0, 0.2) url(/main/chevron_right.svg) no-repeat 50% 50% / 30%;
 }
 /* 공지사항 시작 */
 .notice {
