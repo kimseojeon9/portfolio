@@ -1,0 +1,472 @@
+@charset "UTF-8";
+
+/* 폰트어썸 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+/* 구글아이콘 */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    --Blue: #1553A3;
+    --garyFontColor: #4A4A4A;
+    --darkGray: #353535;
+    --yellow: #FDF4A7;
+    --purple: #7E5192;
+    --green: #2AC1BC;
+}
+
+h1 {font-size: 3rem; color: #fff;}
+h2 {font-size: 1.75rem;}
+li {list-style: none;}
+a {color: var(--garyFontColor);}
+a:link, a:visited {text-decoration: none;}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    width: 100%;
+    height: 150px;
+}
+.title>h2 {
+    color: var(--Blue);
+}
+/* 애니메이션 넣기 */
+.title>h2::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--Blue);
+    margin-bottom: 10px;
+}
+.title>p {
+    font-size: 1.5rem;
+    color: var(--garyFontColor);
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+}
+/* header 시작 */
+header {
+    height: 75px;
+}
+header .inner {
+    align-items: center;
+    justify-content: space-around;
+}
+.inner .gnb {
+    display: flex;
+    flex-direction: row;
+    padding: 18px 50px;
+    gap: 50px;
+}
+.inner>a {
+    text-indent: -9999px;
+    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    width: 114px;
+    height: 52px;
+    font-size: 1rem;
+}
+/* visual */
+.visual {
+    padding: 0;
+    height: 750px;
+}
+.slide .images h1 {
+    text-align: center;
+}
+.slide .images h1::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    background: #fff;
+    margin-top: 30px;
+}
+.slide .images span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    width: 650px;
+}
+/* 슬릭 슬라이드 */
+.visual .slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slide .images { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.one {
+    background: url(/maeil/main/sec1_visu/visual01.jpg) no-repeat 50% 50% / cover;
+}
+.two {
+    background: url(/maeil/main/sec1_visu/visual02.jpg) no-repeat 50% 50% / cover;
+}
+.three {
+    background: url(/maeil/main/sec1_visu/visual03.jpg) no-repeat 50% 50% / cover;
+}
+.slide .slick-list,
+.slide .slick-track {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.slide .slick-arrow {
+    position: absolute;
+    z-index: 100;
+    text-indent: -9999px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    top: 50%;
+}
+.slide .slick-arrow:nth-of-type(1) {
+    left: 0;
+    background: url(/maeil/main/chevron_left.svg) no-repeat 50% 50%;
+}
+.slide .slick-arrow:nth-of-type(2) {
+    right: 0;
+    background: url(/maeil/main/chevron_right.svg) no-repeat 50% 50%;
+}
+.slide .slick-dots {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    gap: 10px;
+    z-index: 150;
+    display: flex;
+    flex-direction: row;
+}
+/* 어바웃 */
+.about {
+    height: 488px;
+}
+.about .inner {
+    flex-direction: column;
+    justify-content: center;
+}
+.about .title>h2::before {
+    transform: translateX(165%);
+}
+.about .container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+    height: 300px;
+}
+.about .container .con {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+.about .container .con > span {
+    font-size: 1rem;
+    color: var(--garyFontColor);
+}
+.about .container .con > span:nth-of-type(1) {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.about .container .con > span:nth-of-type(3) {
+    display: block;
+    margin-top: 10px;
+}
+/* 사회공헌 시작 */
+.contribution {height: 750px;}
+.contribution .inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.contribution .title>h2::before {
+    transform: translateX(2%);
+}
+.container {
+    gap: 10px;
+}
+.container .social {
+    width: 222px;
+    height: 500px;
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+.container .social>p:nth-of-type(1){
+    bottom: 0;
+    font-size: 1.5rem;
+}
+.container .social>a {
+    color: #fff;
+    padding: 4px 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+.container .social>a:hover {
+    color: #fff;
+    padding: 4px 20px;
+    background: #222;
+    border: 1px solid #222;
+    border-radius: 50px;
+}
+.container .social:nth-of-type(1) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution01.jpg) no-repeat 50% 50% / cover;
+    background-blend-mode: multiply;
+}
+.container .social:nth-of-type(2) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution02.jpg) no-repeat 50% 50% / cover;
+}
+.container .social:nth-of-type(3) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution03.jpg) no-repeat 50% 50% / cover;
+}
+.container .social:nth-of-type(4) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution04.jpg) no-repeat 50% 50% / cover;
+}
+.container .social:nth-of-type(5) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution05.jpg) no-repeat 50% 50% / cover;
+}
+/* 사업분야 시작 */
+.business {
+    height: 400px; 
+    flex-direction: row;
+}
+.business>div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.business>div.left {
+    background: var(--Blue);
+    color: #fff;
+}
+.business>div.right {
+    background: url(/maeil/main/sec4_global.jpg) no-repeat 50% 50% / cover;
+    color: #fff;
+}
+.business>div.right:hover {
+    background-size: 120%;
+    transition: all 300ms ease-in-out;
+    color: #fff;
+}
+.business > div > .tbox {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 30px;
+}
+.business>div>.tbox>a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    width: 160px;
+    padding: 4px 0;
+    text-align: center;
+}
+.business>div>.tbox>a:hover {
+    color: var(--Blue);
+    padding: 4px 20px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+/* 윤리경영 시작 */
+.management {
+    height: 750px;
+}
+.management .inner {
+    flex-direction: column;
+}
+.management .title>h2::before {
+    transform: translateX(31%);
+}
+.management .container div {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    width: 280px;
+    height: 500px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.management .container div>p:nth-of-type(1) {
+    font-size: 1.5rem;
+}
+.management .container div>p:nth-of-type(2) {
+    font-size: 1rem;
+    font-weight: 300;
+}
+.management .container div:nth-of-type(1) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec5_manage/management01.png) no-repeat 50% 50% / cover;
+}
+.management .container div:nth-of-type(2) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management02.png) no-repeat 50% 50% / cover;
+}
+.management .container div:nth-of-type(3) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management03.png) no-repeat 50% 50% / cover;
+}
+.management .container div:nth-of-type(4) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%),url(/maeil/main/sec5_manage/management04.png) no-repeat 50% 50% / cover;
+}
+.management .container div:nth-of-type(1):hover {
+    flex: 2 1 0;
+    transition: all 300ms ease-in-out;
+}
+.management .container div:nth-of-type(2):hover {
+    flex: 2 1 0;
+    transition: all 300ms ease-in-out;
+}
+.management .container div:nth-of-type(3):hover {
+    flex: 2 1 0;
+    transition: all 300ms ease-in-out;
+}
+.management .container div:nth-of-type(4):hover {
+    flex: 2 1 0;
+    transition: all 300ms ease-in-out;
+}
+/* 브랜드 시작 */
+.brand {
+    height: 480px;
+    background: #F2F2F7;
+}
+.brand .inner {
+    flex-direction: column;
+}
+.brand .title>h2::before {
+    transform: translateX(-11%);
+}
+.brand .container {
+    height: 260px;
+}
+.brand .slide_brn .milk {
+    background: url(/maeil/main/sec6_brand/brand01.jpg) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .absol {
+    background: url(/maeil/main/sec6_brand/brand02.png) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .sang {
+    background: url(/maeil/main/sec6_brand/brand03.png) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .bio {
+    background: url(/maeil/main/sec6_brand/brand04.png) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .barista {
+    background: url(/maeil/main/sec6_brand/brand05.png) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .sun {
+    background: url(/maeil/main/sec6_brand/brand06.jpg) no-repeat 50% 50% / cover;
+}
+.brand .slide_brn .well {
+    background: url(/maeil/main/sec6_brand/brand07.jpg) no-repeat 50% 50% / cover;
+}
+/* 슬릭 커스텀 */
+.brand .slide_brn {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.brand .slide_brn { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.slide_brn .slick-list {
+    height: 200px;
+    overflow: hidden;
+}
+.slide_brn .slick-track {
+    width: 100% !important;
+    display: flex;
+    justify-content: center
+}
+.slide_brn .slick-dots {
+    display: none !important;
+}
+.slide_brn .slick-slide {
+    text-indent: -9999px;
+    display: inline-block;
+    height: 200px;
+    padding: 0 100px;
+    margin: 0 5px;
+}
+.slide_brn .slick-arrow {
+    position: absolute;
+    z-index: 100;
+    text-indent: -9999px;
+    width: 45px;
+    height: 200px;
+    border: none;
+}
+.slide_brn .slick-arrow:nth-of-type(1) {
+    left: 0;
+    background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_left.svg) no-repeat 50% 50% / 30%;
+}
+.slide_brn .slick-arrow:nth-of-type(2) {
+    right: 0;
+    background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_right.svg) no-repeat 50% 50% / 30%;
+}
+/* 공지사항 시작 */
+.notice {
+    height: 670px;
+}
+/* 푸터 시작 */
+footer {
+    height: 149px;
+}
