@@ -463,8 +463,44 @@ header .inner {
     background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_right.svg) no-repeat 50% 50% / 30%;
 }
 /* 공지사항 시작 */
-.notice {
-    height: 670px;
+.notice {height: 670px; flex-direction: row;}
+.notice .wrap1 {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    gap: 30px;
+    width: 453px;
+    height: 570px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.wrap1 .wrapTitle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.wrap1 table {
+    height: 100%;
+}
+.wrap1 table tbody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.wrap1 table tr {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.wrap1 table tr>td:first-child {
+    width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
 }
 /* 푸터 시작 */
 footer {
