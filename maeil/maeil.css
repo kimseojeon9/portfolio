@@ -463,23 +463,30 @@ header .inner {
     background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_right.svg) no-repeat 50% 50% / 30%;
 }
 /* 공지사항 시작 */
-.notice {height: 670px; flex-direction: row;}
-.notice .wrap1 {
+.notice {height: 670px; flex-direction: row; color: var(--garyFontColor);}
+.notice div[class*="wrap"] {
     display: flex;
     flex-direction: column;
     padding: 30px 30px;
     gap: 30px;
-    width: 453px;
-    height: 570px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-.wrap1 .wrapTitle {
+.wrap1 {
+    width: 453px;
+    height: 570px;
+    margin-right: 10px;
+}
+.notice .wTitle {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+}
+.notice .wTitle i {
+    font-size: 1.5rem;
 }
 .wrap1 table {
     height: 100%;
@@ -501,6 +508,19 @@ header .inner {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
+}
+.notice .add {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 570px;
+    gap: 10px;
+}
+.notice .wrap2,
+.notice .wrap3 {
+    height: 100%;
+}
+.notice .wrap2 {
 }
 /* 푸터 시작 */
 footer {
