@@ -15,5 +15,9 @@ $(function () {
         centerMode: true,
         variableWidth: true
       });
+
+      $("selectBox").click(function(){
+        if($("selectList").css({"display": ""}))
+      });
 })
   
