@@ -657,27 +657,27 @@ footer .inner .left>div {
     width: 246px;
     height: 28px;
 }
-footer .inner .left>div>a::after {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 28px;
-    background: #2F3545;
-    transform: translate(780%, -157%);
-    z-index: 100;
-}
-footer .inner .left>div>a {
-    color: var(--garyFontColor);
-    padding: 0 0 0 10px;
-}
 footer .inner .left>div::after {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
     background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50%;
-    transform: translate(920%, -76%);
+    transform: translate(915%, -190%);
     z-index: 101;
+}
+footer .inner .left>div>a {
+    color: var(--garyFontColor);
+    padding: 0 0 0 10px;
+}
+footer .inner .left>div>a::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: #2F3545;
+    transform: translate(779%, -71%);
+    z-index: 100;
 }
 /* 2 */
 footer .inner .center {
