@@ -690,7 +690,7 @@ footer .inner .left>div::after {
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50%;
+    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50% / 50%;
     transform: translate(915%, -190%);
     z-index: 101;
 }
