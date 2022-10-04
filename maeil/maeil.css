@@ -11,9 +11,11 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }
-
+body{
+    min-width: 1280px;
+}
 :root{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
@@ -28,7 +30,7 @@
 }
 
 h1 {font-size: 3rem; color: #fff;}
-h2 {font-size: 1.75rem;}
+h2 {font-size: 1.75rem; text-align: center;}
 li {list-style: none;}
 a {color: var(--garyFontColor);}
 a:link, a:visited {text-decoration: none;}
@@ -78,6 +80,7 @@ section {
     align-items: center;
     padding: 0px 25px;
 }
+
 /* header 시작 */
 header {
     height: 75px;
@@ -99,6 +102,7 @@ header .inner {
     height: 52px;
     font-size: 1rem;
 }
+
 /* visual */
 .visual {
     padding: 0;
@@ -123,7 +127,7 @@ header .inner {
     color: #fff;
     width: 650px;
 }
-/* 슬릭 슬라이드 */
+/* 비주얼 슬릭 슬라이드 */
 .visual .slide {
     width: 100%;
     height: 100%;
@@ -177,6 +181,7 @@ header .inner {
     display: flex;
     flex-direction: row;
 }
+
 /* 어바웃 */
 .about {
     height: 488px;
@@ -211,6 +216,7 @@ header .inner {
     display: block;
     margin-top: 10px;
 }
+
 /* 사회공헌 시작 */
 .contribution {height: 750px;}
 .contribution .inner {
@@ -271,6 +277,7 @@ header .inner {
 .container .social:nth-of-type(5) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution05.jpg) no-repeat 50% 50% / cover;
 }
+
 /* 사업분야 시작 */
 .business {
     height: 400px; 
@@ -320,6 +327,7 @@ header .inner {
     border: 1px solid #fff;
     border-radius: 50px;
 }
+
 /* 윤리경영 시작 */
 .management {
     height: 750px;
@@ -379,6 +387,7 @@ header .inner {
     flex: 2 1 0;
     transition: all 300ms ease-in-out;
 }
+
 /* 브랜드 시작 */
 .brand {
     height: 480px;
@@ -388,7 +397,7 @@ header .inner {
     flex-direction: column;
 }
 .brand .title>h2::before {
-    transform: translateX(-11%);
+    transform: translateX(0%);
 }
 .brand .container {
     height: 260px;
@@ -414,7 +423,7 @@ header .inner {
 .brand .slide_brn .well {
     background: url(/maeil/main/sec6_brand/brand07.jpg) no-repeat 50% 50% / cover;
 }
-/* 슬릭 커스텀 */
+/* 브랜드 슬릭 커스텀 */
 .brand .slide_brn {
     width: 100%;
     height: 100%;
@@ -462,66 +471,102 @@ header .inner {
     right: 0;
     background: rgba(0, 0, 0, 0.2) url(/maeil/main/chevron_right.svg) no-repeat 50% 50% / 30%;
 }
+
 /* 공지사항 시작 */
 .notice {height: 670px; flex-direction: row; color: var(--garyFontColor);}
-.notice div[class*="wrap"] {
+.notice div[class*="box0"] {
     display: flex;
     flex-direction: column;
     padding: 30px 30px;
     gap: 30px;
-    background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
-.wrap1 {
+.box01 {
     width: 453px;
     height: 570px;
     margin-right: 10px;
 }
-.notice .wTitle {
+.notice .bTitle {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
-.notice .wTitle i {
+.notice .bTitle i {
     font-size: 1.5rem;
 }
-.wrap1 table {
+.box01 table {
     height: 100%;
 }
-.wrap1 table tbody {
+.box01 table tbody {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.wrap1 table tr {
+.box01 table tr {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
-.wrap1 table tr>td:first-child {
+.box01 table tr>td:first-child {
     width: 300px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
 }
-.notice .add {
+.notice .boxR {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 570px;
     gap: 10px;
 }
-.notice .wrap2,
-.notice .wrap3 {
+.notice .box02,
+.notice .box03 {
     height: 100%;
 }
-.notice .wrap2 {
+.notice .box02 {
+    background: url(/maeil/main/maeil.png) no-repeat 100% 65% / 85%;
 }
+.notice .box02 p {
+    width: 55%;
+}
+.box03 .ir {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+.box03 .changes01 strong {
+    font-size: 3rem;
+}
+.box03 .changes02 {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.75rem;
+    gap: 15px;
+}
+.box03 .changes02>div>div {
+    display: none; 
+    align-items: center; 
+    gap: 5px;
+}
+.box03 .changes02>div>div.up {
+    display: flex; 
+}
+.box03 .changes02>div>div>i {
+    color: #d62013; 
+    font-size: 1.25rem;
+}
+.box03 .changes02>div>div.up>i {
+    color: var(--Blue);
+}
+
 /* 푸터 시작 */
 footer {
     height: 149px;
