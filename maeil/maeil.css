@@ -266,7 +266,7 @@ header .inner {
 .container {
     gap: 10px;
 }
-/* 사회공헌 커스텀 */
+/* 사회공헌 카드 커스텀 */
 .container .social {
     width: 222px;
     height: 500px;
@@ -308,6 +308,15 @@ header .inner {
     font-size: 1.5rem;
     position: absolute;
     bottom: 40%;
+    transition: all 300ms ease-in-out;
+}
+.container .social:nth-of-type(1):hover>p:nth-of-type(1), 
+.container .social:nth-of-type(2):hover>p:nth-of-type(1),
+.container .social:nth-of-type(3):hover>p:nth-of-type(1) {
+    bottom: 0;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 30%;
     transition: all 300ms ease-in-out;
 }
 .container .social>.con a {
