@@ -266,6 +266,7 @@ header .inner {
 .container {
     gap: 10px;
 }
+/* 사회공헌 커스텀 */
 .container .social {
     width: 222px;
     height: 500px;
@@ -279,18 +280,35 @@ header .inner {
     text-align: center;
     color: #fff;
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 .container .social>p:nth-of-type(1){
     bottom: 0;
     font-size: 1.5rem;
+    position: absolute;
+    bottom: 0%;
 }
 .container .social>.con {
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
     text-align: center;
     color: #fff;
+    transform: translate(0%, 150%);
+}
+.container .social:hover .con {
+    transform: translate(0%, 0%);
+    transition: all 300ms ease-in-out;
+}
+.container .social:hover>p:nth-of-type(1){
+    bottom: 0;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 40%;
+    transition: all 300ms ease-in-out;
 }
 .container .social>.con a {
     color: #fff;
@@ -305,6 +323,7 @@ header .inner {
     border: 1px solid #fff;
     border-radius: 50px;
 }
+/* 사회공헌 사진 */
 .container .social:nth-of-type(1) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/portfolio/maeil/main/sec3_social/contribution01.jpg) no-repeat 50% 50% / cover;
     background-color: rgba(0, 0, 0, 0.2);
