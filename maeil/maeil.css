@@ -11,7 +11,7 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 body{
     min-width: 1280px;
@@ -111,13 +111,32 @@ header .inner {
 .slide .images h1 {
     text-align: center;
 }
-.slide .images h1::after{
+.slide .one h1::after{
     content: "";
     display: block;
     width: 300px;
     height: 2px;
     background: #fff;
     margin-top: 30px;
+    transform: translateX(10%);
+}
+.slide .two h1::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    background: #fff;
+    margin-top: 30px;
+    transform: translateX(0%);
+}
+.slide .three h1::after{
+    content: "";
+    display: block;
+    width: 300px;
+    height: 2px;
+    background: #fff;
+    margin-top: 30px;
+    transform: translateX(3%);
 }
 .slide .images span {
     font-size: 1.5rem;
@@ -173,13 +192,30 @@ header .inner {
     background: url(/maeil/main/chevron_right.svg) no-repeat 50% 50%;
 }
 .slide .slick-dots {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    gap: 10px;
-    z-index: 150;
     display: flex;
     flex-direction: row;
+    z-index: 150;
+    transform: translate(48%, -600%);
+}
+.slick-dots li {
+    display: flex;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li.slick-active{
+    width: 50px;
+    transition: all 300ms ease-in-out;
+}
+.slick-dots li button{
+    background: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    text-indent: -9999px;
+    border-radius: 50px;
+    border: none;
 }
 
 /* 어바웃 */
@@ -248,6 +284,10 @@ header .inner {
     bottom: 0;
     font-size: 1.5rem;
 }
+.container .social>p:nth-of-type(2),
+.container .social>a {
+    display: none;
+}
 .container .social>a {
     color: #fff;
     padding: 4px 20px;
@@ -255,27 +295,36 @@ header .inner {
     border-radius: 50px;
 }
 .container .social>a:hover {
-    color: #fff;
+    color: var(--Blue);
     padding: 4px 20px;
-    background: #222;
-    border: 1px solid #222;
+    background: #fff;
+    border: 1px solid #fff;
     border-radius: 50px;
 }
 .container .social:nth-of-type(1) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution01.jpg) no-repeat 50% 50% / cover;
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: multiply;
 }
 .container .social:nth-of-type(2) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution02.jpg) no-repeat 50% 50% / cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
 }
 .container .social:nth-of-type(3) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution03.jpg) no-repeat 50% 50% / cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
 }
 .container .social:nth-of-type(4) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution04.jpg) no-repeat 50% 50% / cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
 }
 .container .social:nth-of-type(5) {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 11.46%, rgba(0, 0, 0, 0.35) 47.92%, rgba(0, 0, 0, 0.5) 100%), url(/maeil/main/sec3_social/contribution05.jpg) no-repeat 50% 50% / cover;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: hard-light;
 }
 
 /* 사업분야 시작 */
@@ -309,6 +358,7 @@ header .inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     padding: 0px;
     gap: 30px;
 }
@@ -569,5 +619,140 @@ header .inner {
 
 /* 푸터 시작 */
 footer {
-    height: 149px;
+    height: 150px;
+    background: #464D5D;
+    color: #fff;
+    font-size: 1rem;
+}
+footer a {
+    color: #fff;
+    font-size: 1rem;
+}
+footer .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .inner .left>a.tel {
+    font-size: 2rem;
+    font-weight: 500;
+}
+footer .inner .left>div {
+    background: #F2F2F7;
+    margin: 10px 0;
+    width: 246px;
+    height: 28px;
+}
+footer .inner .left>div::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: #2F3545;
+    transform: translate(780%, -172%);
+    z-index: 100;
+}
+/* 1 */
+footer .inner .left>div>a {
+    color: var(--garyFontColor);
+    padding: 0 0 0 10px;
+}
+footer .inner .left>div>a::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(/maeil/main/chevron_right.svg) no-repeat 50% 50%;
+    transform: translate(920%, -95%);
+    z-index: 300;
+}
+/* 2 */
+footer .inner .center {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .inner .center ul {
+    display: flex;
+    flex-direction: row;
+}
+footer .inner .center ul>li {
+    padding-right: 5px;
+}
+footer .inner .center ul>li::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    background: #fff;
+    margin-left: 5px;
+}
+footer .inner .center ul>li:last-child::after {
+    display: none;
+}
+footer .inner .center address {
+    font-style: normal;
+}
+/* 3 */
+footer .inner .rigth {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .inner .rigth .sns {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+footer .inner .rigth .sns>li>a {
+    text-indent: -9999px;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+footer .inner .rigth .sns>li:nth-of-type(1)>a {
+    background: url(/maeil/main/sns_01_Instagram.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(1)>a:hover {
+    background: url(/maeil/main/sns_01_InstagramHover.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(2)>a {
+    background: url(/maeil/main/sns_02_Facebook.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(2)>a:hover {
+    background: url(/maeil/main/sns_02_FacebookHover.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(3)>a {
+    background: url(/maeil/main/sns_03_youtube.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(3)>a:hover {
+    background: url(/maeil/main/sns_03_youtubeHover.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(4)>a {
+    background: url(/maeil/main/sns_04_naverBlog.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .sns>li:nth-of-type(4)>a:hover {
+    background: url(/maeil/main/sns_04_naverBlogHover.svg) no-repeat 50% 50% / cover;
+}
+footer .inner .rigth .selectBox .site {
+    background: #F2F2F7;
+    padding: 0 50px;
+    color: var(--garyFontColor);
+    border-radius: 30px;
+}
+footer .rigth .selectList{
+    background: #F2F2F7;
+    padding: 0 0 0 10px ;
+    border-radius: 10px;
+}
+footer .rigth .selectList a {
+    color: var(--garyFontColor);
+}
+
+
+
+
+footer .rigth .selectList {
+    display: none;
 }
