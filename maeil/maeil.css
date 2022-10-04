@@ -284,17 +284,26 @@ header .inner {
     bottom: 0;
     font-size: 1.5rem;
 }
-.container .social>p:nth-of-type(2),
-.container .social>a {
+.container .social>.con {
     display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    color: #fff;
 }
-.container .social>a {
+.container .social:hover>.con {
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+.container .social>.con a {
     color: #fff;
     padding: 4px 20px;
     border: 1px solid #fff;
     border-radius: 50px;
 }
-.container .social>a:hover {
+.container .social>.con a:hover {
     color: var(--Blue);
     padding: 4px 20px;
     background: #fff;
@@ -401,6 +410,10 @@ header .inner {
     color: #fff;
     border-radius: 10px;
     padding: 10px 20px;
+}
+.management .container div a {
+    color: #fff;
+    text-decoration: underline;
 }
 .management .container div>p:nth-of-type(1) {
     font-size: 1.5rem;
@@ -622,16 +635,21 @@ footer {
     height: 150px;
     background: #464D5D;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 footer a {
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 footer .inner {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+footer .inner>div {
+    height: 100%;
+    justify-content: space-around;
+    padding: 10px 0;
 }
 footer .inner .left>a.tel {
     font-size: 2rem;
@@ -649,7 +667,7 @@ footer .inner .left>div::after {
     width: 28px;
     height: 28px;
     background: #2F3545;
-    transform: translate(780%, -172%);
+    transform: translate(780%, -157%);
     z-index: 100;
 }
 /* 1 */
@@ -663,14 +681,13 @@ footer .inner .left>div>a::after {
     width: 24px;
     height: 24px;
     background: url(/maeil/main/chevron_right.svg) no-repeat 50% 50%;
-    transform: translate(920%, -95%);
+    transform: translate(920%, -76%);
     z-index: 300;
 }
 /* 2 */
 footer .inner .center {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 footer .inner .center ul {
     display: flex;
@@ -683,7 +700,7 @@ footer .inner .center ul>li::after {
     content: "";
     display: inline-block;
     width: 1px;
-    height: 1rem;
+    height: 0.875rem;
     background: #fff;
     margin-left: 5px;
 }
@@ -695,7 +712,6 @@ footer .inner .center address {
 }
 /* 3 */
 footer .inner .rigth {
-    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
