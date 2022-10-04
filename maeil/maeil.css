@@ -651,6 +651,7 @@ footer .inner>div {
     justify-content: space-around;
     padding: 10px 0;
 }
+/* 1 */
 footer .inner .left>a.tel {
     font-size: 2rem;
     font-weight: 500;
@@ -661,7 +662,7 @@ footer .inner .left>div {
     width: 246px;
     height: 28px;
 }
-footer .inner .left>div::after {
+footer .inner .left>div>a::after {
     content: "";
     display: block;
     width: 28px;
@@ -670,12 +671,11 @@ footer .inner .left>div::after {
     transform: translate(780%, -157%);
     z-index: 100;
 }
-/* 1 */
 footer .inner .left>div>a {
     color: var(--garyFontColor);
     padding: 0 0 0 10px;
 }
-footer .inner .left>div>a::after {
+footer .inner .left>div::after {
     content: "";
     display: block;
     width: 24px;
