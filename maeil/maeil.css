@@ -354,7 +354,7 @@ header .inner {
     color: #fff;
 }
 .business>div.right {
-    background: url(/maeil/main/sec4_global.jpg) no-repeat 50% 50% / cover;
+    background: url(/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 100%;
     color: #fff;
 }
 .business>div.right:hover {
@@ -753,7 +753,7 @@ footer .inner .rigth .sns>li:nth-of-type(4)>a:hover {
 }
 footer .inner .rigth .selectBox .site {
     background: #F2F2F7;
-    padding: 0 50px;
+    padding: 5px 50px;
     color: var(--garyFontColor);
     border-radius: 30px;
 }
