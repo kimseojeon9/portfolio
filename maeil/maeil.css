@@ -86,22 +86,29 @@ header {
     height: 75px;
 }
 header .inner {
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
-.inner .gnb {
+header .inner .gnb {
     display: flex;
     flex-direction: row;
     padding: 18px 50px;
     gap: 50px;
 }
-.inner>a {
+header .inner> a {
     text-indent: -9999px;
-    background: url(/portfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
-    font-size: 1rem;
 }
+header .inner .gnb li a, 
+header .inner i {
+    font-size: 1.25rem;
+    color: var(--garyFontColor);
+}
+header .inner i {display: none;}
+/* header .inner i.on {display: flex;} */
 
 /* visual */
 .visual {

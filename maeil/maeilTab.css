@@ -4,6 +4,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
-body{max-width: 1024px;}
+body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
 :root{font-size: 15px;}
-.inner{width: 100%;}
+.inner{width: 100%; margin: 0;}
+
+
+
+/* 헤더 시작 */
+header .inner {
+    position: relative;
+}
+
+header .inner>a {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+header .inner .nav {
+    display: none;
+}
+
+header .inner i {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
