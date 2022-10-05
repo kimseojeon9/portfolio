@@ -97,7 +97,7 @@ header .inner .gnb {
     padding: 18px 50px;
     gap: 50px;
 }
-header .inner> a {
+header .inner> .logo {
     text-indent: -9999px;
     background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
@@ -119,32 +119,17 @@ header .inner i {display: none;}
 .slide .images h1 {
     text-align: center;
 }
-.slide .one h1::after{
+.slide .images h1::after{
     content: "";
     display: block;
     width: 300px;
     height: 2px;
     background: #fff;
     margin-top: 30px;
-    transform: translateX(10%);
-}
-.slide .two h1::after{
-    content: "";
-    display: block;
-    width: 300px;
-    height: 2px;
-    background: #fff;
-    margin-top: 30px;
-    transform: translateX(0%);
-}
-.slide .three h1::after{
-    content: "";
-    display: block;
-    width: 300px;
-    height: 2px;
-    background: #fff;
-    margin-top: 30px;
-    transform: translateX(3%);
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .slide .images span {
     font-size: 1.5rem;
