@@ -301,14 +301,14 @@ header .inner {
 }
 .container .social:hover .con {
     transform: translate(0%, 0%);
-    transition: all 300ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 .container .social:hover>p:nth-of-type(1){
     bottom: 0;
     font-size: 1.5rem;
     position: absolute;
     bottom: 40%;
-    transition: all 300ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 .container .social:nth-of-type(1):hover>p:nth-of-type(1), 
 .container .social:nth-of-type(2):hover>p:nth-of-type(1),
@@ -317,7 +317,7 @@ header .inner {
     font-size: 1.5rem;
     position: absolute;
     bottom: 30%;
-    transition: all 300ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 .container .social>.con a {
     color: #fff;
@@ -377,12 +377,12 @@ header .inner {
     color: #fff;
 }
 .business>div.right {
-    background: url(/portfolio/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 120%;
+    background: url(/portfolio/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 140%;
     color: #fff;
 }
 .business>div.right:hover {
-    background-size: 140%;
-    transition: all 300ms ease-in-out;
+    background-size: 150%;
+    transition: all 500ms ease-out;
     color: #fff;
 }
 .business > div > .tbox {
@@ -604,6 +604,9 @@ header .inner {
     text-overflow: ellipsis;
     display: block;
 }
+.box01 table tr>td:first-child>a:hover {
+    text-decoration: underline;
+}
 .notice .boxR {
     display: flex;
     flex-direction: column;
@@ -800,6 +803,9 @@ footer .rigth .selectList {
     display: none;
     position: absolute;
     bottom: 40px;
+    width: 100%;
+    height: initial;
+    flex-direction: column;
 }
 footer .rigth .selectList.on {
     display: flex;
@@ -810,4 +816,7 @@ footer .rigth .selectList li {
 }
 footer .rigth .selectList a {
     color: var(--garyFontColor);
+}
+footer .rigth .selectList a:hover {
+    text-decoration: underline;
 }
