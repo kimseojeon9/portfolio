@@ -79,6 +79,7 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0px 25px;
+    width: 100%;
 }
 
 /* header 시작 */
@@ -578,7 +579,7 @@ header .inner i {display: none;}
     border-radius: 10px;
 }
 .box01 {
-    width: 453px;
+    width: 40%;
     height: 570px;
     margin-right: 10px;
 }
@@ -594,6 +595,7 @@ header .inner i {display: none;}
 }
 .box01 table {
     height: 100%;
+    width: 100%;
 }
 .box01 table tbody {
     height: 100%;
@@ -619,7 +621,7 @@ header .inner i {display: none;}
 .notice .boxR {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     height: 570px;
     gap: 10px;
 }
@@ -628,7 +630,7 @@ header .inner i {display: none;}
     height: 100%;
 }
 .notice .box02 {
-    background: url(/portfolio/maeil/main/maeil.png) no-repeat 100% 65% / 85%;
+    background: url(/maeil/main/maeil.png) no-repeat 100% 65% / 85%;
 }
 .notice .box02 p {
     width: 55%;
