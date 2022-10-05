@@ -14,7 +14,7 @@
     /* outline: 1px solid red; */
 }
 body{
-    min-width: 1024px;
+    min-width: 1280px;
 }
 :root{
     font-family: 'Noto Sans KR', sans-serif;
@@ -561,6 +561,7 @@ header .inner {
 
 /* 공지사항 시작 */
 .notice {height: 670px; flex-direction: row; color: var(--garyFontColor);}
+.notice .inner {padding: 0px 25px;}
 .notice div[class*="box0"] {
     display: flex;
     flex-direction: column;
