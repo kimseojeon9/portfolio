@@ -30,3 +30,7 @@ header .inner i {
     right: 1%;
     transform: translateY(-50%);
 }
+
+footer .inner {
+    padding: 0 30px;
+}
