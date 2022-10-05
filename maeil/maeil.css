@@ -14,7 +14,7 @@
     /* outline: 1px solid red; */
 }
 body{
-    min-width: 1280px;
+    min-width: 1024px;
 }
 :root{
     font-family: 'Noto Sans KR', sans-serif;
@@ -69,7 +69,7 @@ section {
     margin-bottom: 10px;
 }
 .title>p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--garyFontColor);
     text-align: center;
 }
@@ -87,7 +87,7 @@ header {
 }
 header .inner {
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .inner .gnb {
     display: flex;
@@ -254,6 +254,7 @@ header .inner {
 }
 
 /* 사회공헌 시작 */
+.contribution .title {margin: 0 0 30px 0;}
 .contribution {height: 750px;}
 .contribution .inner {
     flex-direction: column;
@@ -391,7 +392,7 @@ header .inner {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0 30px;
     gap: 30px;
 }
 .business>div>.tbox>a {
