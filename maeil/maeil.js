@@ -16,8 +16,8 @@ $(function () {
         variableWidth: true
       });
 
-      $("selectBox").click(function(){
-        if($("selectList").css({"display": ""}))
-      });
+      // $("selectBox").click(function(){
+      //   if($("selectList").css({"display": "none"}))
+      // });
 })
   
