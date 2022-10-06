@@ -91,11 +91,16 @@ header .inner {
     align-items: center;
     justify-content: space-around;
 }
+header .inner .nav {
+    height: 100%;
+    width: 100%;
+}
 header .inner .gnb {
     display: flex;
     flex-direction: row;
-    padding: 18px 50px;
-    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 header .inner> .logo {
     text-indent: -9999px;
