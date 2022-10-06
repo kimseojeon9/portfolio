@@ -31,6 +31,13 @@ header .inner i {
     transform: translateY(-50%);
 }
 
+.business>div.right {
+    background: url(/portfolio/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 200%;
+}
+.business>div.right:hover {
+    background: url(/portfolio/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 220%;
+}
+
 footer .inner {
     padding: 0 30px;
 }
