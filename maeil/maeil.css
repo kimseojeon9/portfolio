@@ -103,13 +103,66 @@ header .inner> .logo {
     width: 114px;
     height: 52px;
 }
-header .inner .gnb li a, 
-header .inner i {
+header .inner>i {display: none;}
+.gnb .m a, 
+header .inner i,
+header .inner .nav i {
     font-size: 1.25rem;
     color: var(--garyFontColor);
 }
-header .inner i {display: none;}
-/* header .inner i.on {display: flex;} */
+header .inner .nav i {display: none;}
+.gnb .m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 125px;
+    height: 100%;
+}
+.gnb .m>a:hover::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    position: absolute;
+    top: -15%;
+    left: -5%;
+    transform: translate(-50%, 0);
+    background: var(--Blue);
+}
+.gnb .m>a {
+    display: block;
+    position: relative;
+}
+.gnb .m.on>a {
+    color: var(--Blue);
+}
+.gnb .m ul {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    background: #F2F2F7;
+    z-index: 100;
+    display: none;
+    text-align: center;
+}
+.gnb .m ul li a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--darkGray);
+    font-size: 1rem;
+    color: var(--garyFontColor);
+}
+.gnb .m ul li:last-child a {
+    border: none;
+}
+.gnb .m ul li a:hover,
+.gnb .m ul li a:active,
+.gnb .m ul li a:focus {
+    color: var(--Blue);
+}
 
 /* visual */
 .visual {
