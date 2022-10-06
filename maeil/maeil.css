@@ -110,7 +110,7 @@ header .inner .nav i {
     font-size: 1.25rem;
     color: var(--garyFontColor);
 }
-header .inner .nav i {display: none;}
+header .inner .gnb .bt {display: none;}
 .gnb .m {
     display: flex;
     align-items: center;
