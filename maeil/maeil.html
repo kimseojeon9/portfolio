@@ -14,68 +14,71 @@
 <body>
     <!-- 헤더 시작 -->
     <header>
-        <nav class="inner">
-            <i class="fa-solid fa-bars"></i>
+        <div class="inner">
             <a href="/" class="logo">매일유업 로고</a>
-            <div class="nav">
-                <ul class="gnb">
-                    <li><i class="fa-solid fa-xmark"></i></li>
-                    <li class="m">
-                        <a href="#">회사소개</a>
-                        <ul>
-                            <li><a href="#">기업소개</a></li>
-                            <li><a href="#">가치체계</a></li>
-                            <li><a href="#">인사말</a></li>
-                            <li><a href="#">연구소</a></li>
-                            <li><a href="#">공장</a></li>
-                            <li><a href="#">글로벌사업</a></li>
-                            <li><a href="#">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li class="m">
-                        <a href="#">브랜드</a>
-                    </li>
-                    <li class="m">
-                        <a href="#">사회공헌</a>
-                        <ul>
-                            <li><a href="#">사회공헌 소개</a></li>
-                            <li><a href="#">사회공헌 연혁</a></li>
-                            <li><a href="#">나눔소식</a></li>
-                        </ul>
-                    </li>
-                    <li class="m">
-                        <a href="#">상생·윤리경영</a>
-                        <ul>
-                            <li><a href="#">상생경영</a></li>
-                            <li><a href="#">윤리경영</a></li>
-                            <li><a href="#">가족친화경영</a></li>
-                            <li><a href="#">매일유업 동반성장</a></li>
-                        </ul>
-                    </li>
-                    <li class="m">
-                        <a href="#">IR</a>
-                        <ul>
-                            <li><a href="#">경영정보</a></li>
-                            <li><a href="#">재무정보</a></li>
-                            <li><a href="#">공시정보</a></li>
-                            <li><a href="#">IR 자료실</a></li>
-                            <li><a href="#">공고</a></li>
-                        </ul>
-                    </li>
-                    <li class="m">
-                        <a href="#">PR</a>
-                        <ul>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">광고</a></li>
-                            <li><a href="#">매일 레시피</a></li>
-                        </ul>
-                    </li>
-                    <li class="m">
-                        <a href="#">ESG 정보 공개</a>
-                    </li>
-                </ul>
+            <i class="fa-solid fa-bars mMenu"></i>
+            <div class="gnb">
+                <i class="fa-solid fa-xmark mClose"></i>
+                <div>
+                    <span class="on" data-id="snb01" tabindex="0">회사소개</span>
+                    <span data-id="snb02" tabindex="0">브랜드</span>
+                    <span data-id="snb03" tabindex="0">사회공헌</span>
+                    <span data-id="snb04" tabindex="0">상생·윤리경영</span>
+                    <span data-id="snb05" tabindex="0">IR</span>
+                    <span data-id="snb06" tabindex="0">PR</span>
+                    <span data-id="snb07" tabindex="0">ESG 정보공개</span>
+                </div>
+                <div class="subGnb">
+                    <ul>
+                        <li class="on" id="sub01">
+                            <ul>
+                                <li><a href="#">기업소개</a></li>
+                                <li><a href="#">가치체계</a></li>
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">연구소</a></li>
+                                <li><a href="#">공장</a></li>
+                                <li><a href="#">글로벌사업</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li id="sub02"></li>
+                        <li id="sub03">
+                            <ul>
+                                <li><a href="#">사회공헌 소개</a></li>
+                                <li><a href="#">나눔활동</a></li>
+                                <li><a href="#">사회공헌 연혁</a></li>
+                                <li><a href="#">나눔소식</a></li>
+                            </ul>
+                        </li>
+                        <li id="sub04">
+                            <ul>
+                                <li><a href="#">상생경영</a></li>
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">가족친화경영</a></li>
+                                <li><a href="#">매일유업 동반성장</a></li>
+                            </ul>
+                        </li>
+                        <li id="sub05">
+                            <ul>
+                                <li><a href="#">경영정보</a></li>
+                                <li><a href="#">재무정보</a></li>
+                                <li><a href="#">공시정보</a></li>
+                                <li><a href="#">IR 자료실</a></li>
+                                <li><a href="#">공고</a></li>
+                            </ul>
+                        </li>
+                        <li id="sub06">
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">광고</a></li>
+                                <li><a href="#">매일 레시피</a></li>
+                            </ul>
+                        </li>
+                        <li id="sub07"></li>
+                    </ul>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
     <!-- 비주얼 시작 -->
     <section class="visual">

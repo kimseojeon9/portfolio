@@ -85,90 +85,111 @@ section {
 /* header 시작 */
 header {
     height: 75px;
+    position: relative;
+    z-index: 200;
 }
+
 header .inner {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
 }
-header .inner .nav {
-    height: 100%;
-    width: 100%;
-}
-header .inner .gnb {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-}
-header .inner> .logo {
+
+header .inner i {display: none;}
+
+header .inner>.logo {
     text-indent: -9999px;
-    background: url(/portfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
 }
-header .inner>i {display: none;}
-.gnb .m a, 
-header .inner i,
-header .inner .nav i {
-    font-size: 1.25rem;
-    color: var(--garyFontColor);
-}
-header .inner .gnb .bt {display: none;}
-.gnb .m {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 125px;
+
+header .inner .gnb{ 
+    width: 890px;
     height: 100%;
 }
-.gnb .m>a:hover::after {
-    content: "";
+
+header .inner .gnb > div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header .inner .gnb > div > span{
+    width: 130px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+header .inner .gnb > div > span.on {
+    color: #0A4484;
+}
+
+header .inner .gnb .subGnb{
+    height: 0;
+    overflow-y: hidden;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    min-width: 1200px;
+    background: #d9d9d9;
+}
+
+header .inner .gnb:hover .subGnb {
+    height: 380px;
+    transition: height 0.5s;
+}
+
+header .inner .gnb .subGnb > ul{
+    margin: 10px 0 0 122px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 890px;
+}
+
+header .inner .gnb .subGnb > ul > li{
+    width: 130px;
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+header .inner .gnb .subGnb > ul > li:last-child{
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+header .inner .gnb .subGnb > ul > li > ul{
+    width: 100%;    
+}
+header .inner .gnb .subGnb > ul > li > ul > li{
+    min-height: 40px;
+    line-height: 40px;
+    padding: 0 0 0 20px;
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+}
+header .inner .gnb .subGnb > ul > li.on > ul > li {
+    color: #0A4484;
+}
+header .inner .gnb .subGnb > ul > li.on > ul > li::before {
+    position: absolute;
+    top: 19px;
+    left: 9px;
     display: block;
+    content: "";
     width: 5px;
     height: 5px;
     border-radius: 3px;
-    position: absolute;
-    top: -15%;
-    left: -5%;
-    transform: translate(-50%, 0);
-    background: var(--Blue);
+    color: #0A4484;
 }
-.gnb .m>a {
-    display: block;
-    position: relative;
-}
-.gnb .m.on>a {
-    color: var(--Blue);
-}
-.gnb .m ul {
-    position: absolute;
-    left: 0;
-    top: 75px;
-    width: 100%;
-    background: #F2F2F7;
-    z-index: 100;
-    display: none;
-    text-align: center;
-}
-.gnb .m ul li a {
-    display: block;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--darkGray);
-    font-size: 1rem;
-    color: var(--garyFontColor);
-}
-.gnb .m ul li:last-child a {
-    border: none;
-}
-.gnb .m ul li a:hover,
-.gnb .m ul li a:active,
-.gnb .m ul li a:focus {
-    color: var(--Blue);
-}
-
 /* visual */
 .visual {
     padding: 0;

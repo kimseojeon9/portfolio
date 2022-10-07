@@ -11,25 +11,43 @@ body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
 
 
 /* 헤더 시작 */
-header .inner {
-    position: relative;
-}
-header .inner>a {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-}
-header .inner .nav {
-    display: none;
-}
-header .inner i {
-    display: flex;
+header .inner .mMenu{
+    color: #333;
+    display: block;
+    font-size: 2rem;
     position: absolute;
-    top: 50%;
-    right: 1%;
-    transform: translateY(-50%);
+    right: 10px;
 }
+
+header .inner .gnb{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-width: 320px;
+    z-index: 100;
+    background: #f1f1f3;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-150%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb.on{
+    transform: translateX(0%);
+    transition: all 0.5s;
+}
+
+header .inner .gnb .mClose{
+    color: #6b9ecc;
+    display: block;
+    font-size: 2rem;
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    z-index: 300;
+} 
 
 /* 사회공헌 */
 
