@@ -640,6 +640,7 @@ header .inner .gnb .bt {display: none;}
 .box01 table {
     height: 100%;
     width: 100%;
+    display: flex;
 }
 .box01 table tbody {
     height: 100%;
@@ -750,7 +751,7 @@ footer .inner .left>div::after {
     width: 24px;
     height: 24px;
     background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50% / 50%;
-    transform: translate(915%, -190%);
+    transform: translate(914%, -198%);
     z-index: 101;
 }
 footer .inner .left>div>a {
@@ -760,10 +761,10 @@ footer .inner .left>div>a {
 footer .inner .left>div>a::after {
     content: "";
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     background: #2F3545;
-    transform: translate(779%, -71%);
+    transform: translate(720%, -69%);
     z-index: 100;
 }
 /* 2 */
