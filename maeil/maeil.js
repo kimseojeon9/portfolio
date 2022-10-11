@@ -1,23 +1,23 @@
 $(function () {
 
   // 헤더 메뉴
-  $(".gnb").on("mouseenter focusin", function(){
+  $(".gnb").on("mouseenter focusin", function () {
     $(".gnb>div>span").addClass("on").siblings().removeClass("on");
-});
+  });
 
-if ($(window).width()<1024) {
-    $("mMenu").click(function(){
-        $(".gnb").addClass("on");
+  if ($(window).width() < 1024) {
+    $("mMenu").click(function () {
+      $(".gnb").addClass("on");
     });
-    $(".mClose").click(function(){
-        $(".gnb").removeClass("on")
+    $(".mClose").click(function () {
+      $(".gnb").removeClass("on");
     });
 
-    $(".gnb>div>span").click(function(){
-        $(this).addClass("on").siblings().removeClass("on");
-        $("#" + $(this).data("id")).addClass("on").siblings().removeClass("on")
+    $(".gnb>div>span").click(function () {
+      $(this).addClass("on").siblings().removeClass("on");
+      $("#" + $(this).data("id")).addClass("on").siblings().removeClass("on");
     });
-}
+  }
 
   // 비주얼 슬릭슬라이드
   $(".slide").slick({
@@ -47,9 +47,9 @@ if ($(window).width()<1024) {
     }
     return false;
   });
-  $("html").click(function(event){
+  $("html").click(function (event) {
     $(".site").add(".selectList").removeClass("on");
     event.stopPropagation();
-});
+  });
 
 });
