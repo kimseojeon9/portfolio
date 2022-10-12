@@ -101,7 +101,7 @@ header .inner .mClose {display: none;}
 
 header .inner>.logo {
     text-indent: -9999px;
-    background: url(/potfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/portfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
 }
