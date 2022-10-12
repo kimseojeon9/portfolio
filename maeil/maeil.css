@@ -923,7 +923,7 @@ footer>.topbt{
 footer>.topbt.on{
     opacity: 1;
 }
-.fa-arrow-up:before {
+.topbt.fa-arrow-up:before {
     transform: translate(32%, 50%);
     display: block;
 }
