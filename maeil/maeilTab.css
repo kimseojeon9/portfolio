@@ -6,8 +6,8 @@
 
 body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
 :root{
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
     word-break: keep-all;
     word-wrap: break-word;
     --Blue: #1553A3;
@@ -26,7 +26,7 @@ header .inner {
     position: relative;
 }
 header .inner .mMenu{
-    color: var(--garyFontColor);
+    color: #333;
     display: block;
     font-size: 2rem;
     position: absolute;
@@ -41,7 +41,7 @@ header .inner .gnb{
     height: 100%;
     min-width: 320px;
     z-index: 100;
-    background: #fff;
+    background: #f1f1f3;
     display: flex;
     justify-content: flex-start;
     transform: translateX(-150%);
@@ -70,7 +70,7 @@ header .inner .gnb > div > span{
 }
 
 header .inner .gnb .mClose{
-    color: var(--garyFontColor);
+    color: #333;
     display: block;
     font-size: 2rem;
     position: absolute;
@@ -130,7 +130,15 @@ header .inner .gnb .subGnb > ul > #sub07 {
 }
 
 /* 사회공헌 */
-
+.container .social>.con>p {
+    display: none;
+}
+.container .social>.con>a {
+    transform: translate(0%, 0%);
+}
+.container .social:hover .con {
+    display: none;
+}
 
 /* 사업분야 */
 .business>div.right {
@@ -139,7 +147,10 @@ header .inner .gnb .subGnb > ul > #sub07 {
 .business>div.right:hover {
     background: url(/portfolio/maeil/main/sec4_global.jpg) no-repeat 50% 50% / 220%;
 }
+
 /* 푸터 */
+footer {font-size: 0.75rem;}
+
 footer .inner {
     padding: 0 30px;
 }
