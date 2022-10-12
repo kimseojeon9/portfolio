@@ -163,12 +163,6 @@ header .inner .gnb .subGnb > ul > li{
     border-left: 1px solid rgba(0,0,0,0.05);
 }
 
-header .inner .gnb .subGnb > ul > li.on,
-header .inner .gnb .subGnb > ul > li.on a {
-    background: var(--Blue);
-    color: #fff;
-}
-
 header .inner .gnb .subGnb > ul > li:last-child{
     border-right: 1px solid rgba(0,0,0,0.05);
 }
