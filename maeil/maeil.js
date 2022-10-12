@@ -4,7 +4,7 @@ $(function () {
   $(".gnb").on("mouseenter focusin", function () {
     $(".gnb>div>span").on("focusin click", function () {
       $(this).addClass("on").siblings().removeClass("on");
-      $("#"+$(this).data("id")).addClass("on").siblings().removeClass("on");
+      $("#" + $(this).data("id")).addClass("on").siblings().removeClass("on");
       $(".subGnb").addClass("on");
     });
   });
@@ -24,9 +24,9 @@ $(function () {
   }
 
   // $(".gnb>div>span").click(function () {
-    
+
   // });
-  
+
   // 비주얼 슬릭슬라이드
   $(".slide").slick({
     slidesToShow: 1,
@@ -35,7 +35,7 @@ $(function () {
     autoplaySpeed: 2000,
     dots: true,
   });
-  
+
   // 브랜드 슬릭슬라이드
   $(".slide_brn").slick({
     dots: true,
@@ -45,7 +45,7 @@ $(function () {
     centerMode: true,
     variableWidth: true
   });
-  
+
   // 패밀리 사이트
   $(".site").click(function () {
     if ($(this).hasClass("on")) {
@@ -60,6 +60,18 @@ $(function () {
     event.stopPropagation();
   });
 
+  // 스크롤 이벤트
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 750) {
+      $(".topbt").addClass("on");
+    } else {
+      $(".topbt").removeClass("on");
+    }
+  });
+  // 탑 버튼
+  $(".topbt").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+  });
 });
 
 // 리사이징
