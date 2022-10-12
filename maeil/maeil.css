@@ -101,7 +101,7 @@ header .inner .mClose {display: none;}
 
 header .inner>.logo {
     text-indent: -9999px;
-    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/potfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
 }
@@ -238,6 +238,8 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 .one {
     background: url(/portfolio/maeil/main/sec1_visu/visual01.jpg) no-repeat 50% 50% / cover;

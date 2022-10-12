@@ -60,6 +60,14 @@ header .inner .gnb .mClose{
     z-index: 300;
 } 
 
+header .inner .gnb .subGnb > ul{
+    margin: 0px 0 0 -290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
 /* 사회공헌 */
 
 
