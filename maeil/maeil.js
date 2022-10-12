@@ -2,20 +2,33 @@ $(function () {
 
   // 헤더 메뉴
   $(".gnb").on("mouseenter focusin", function () {
-    $(".gnb>div>span").addClass("on").siblings().removeClass("on");
+    $(".gnb>div>span").on("focusin click", function () {
+      $(this).addClass("on").siblings().removeClass("on");
+      $(".subGnb").addClass("on");
+    });
+  });
+
+  $("#sub06 li:last a").on("focusout", function () {
+    $(".subGnb").removeClass("on");
   });
 
   if ($(window).width() < 1024) {
-    $("mMenu").click(function () {
+    $(".mMenu").click(function () {
       $(".gnb").addClass("on");
     });
     $(".mClose").click(function () {
       $(".gnb").removeClass("on");
     });
+  }
+});
 
-    $(".gnb>div>span").click(function () {
-      $(this).addClass("on").siblings().removeClass("on");
-      $("#" + $(this).data("id")).addClass("on").siblings().removeClass("on");
+$(window).resize(function () {
+  if ($(window).width() < 1024) {
+    $(".mMenu").click(function () {
+      $(".gnb").addClass("on");
+    });
+    $(".mClose").click(function () {
+      $(".gnb").removeClass("on");
     });
   }
 

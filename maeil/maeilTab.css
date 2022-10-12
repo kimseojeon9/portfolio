@@ -5,14 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
 body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
-:root{font-size: 15px;}
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    --Blue: #1553A3;
+    --garyFontColor: #4A4A4A;
+    --darkGray: #353535;
+    --yellow: #FDF4A7;
+    --purple: #7E5192;
+    --green: #2AC1BC;
+}
 .inner{width: 100%; margin: 0;}
 
 
 
 /* 헤더 시작 */
 header .inner .mMenu{
-    color: #333;
+    color: var(--garyFontColor);
     display: block;
     font-size: 2rem;
     position: absolute;
@@ -40,7 +51,7 @@ header .inner .gnb.on{
 }
 
 header .inner .gnb .mClose{
-    color: #6b9ecc;
+    color: var(--garyFontColor);
     display: block;
     font-size: 2rem;
     position: absolute;

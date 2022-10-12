@@ -96,11 +96,12 @@ header .inner {
     gap: 10px;
 }
 
-header .inner i {display: none;}
+header .inner .mMenu,
+header .inner .mClose {display: none;}
 
 header .inner>.logo {
     text-indent: -9999px;
-    background: url(/portfolio/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
+    background: url(/maeil/main/logo.svg) no-repeat 50% 50% / 100% auto;
     width: 114px;
     height: 52px;
 }
@@ -127,7 +128,7 @@ header .inner .gnb > div > span{
 }
 
 header .inner .gnb > div > span.on {
-    color: #0A4484;
+    color: var(--Blue);
 }
 
 header .inner .gnb .subGnb{
@@ -139,10 +140,11 @@ header .inner .gnb .subGnb{
     z-index: 200;
     width: 100%;
     min-width: 1200px;
-    background: #d9d9d9;
+    background: #F2F2F7;
 }
 
-header .inner .gnb:hover .subGnb {
+header .inner .gnb:hover .subGnb,
+header .inner .gnb .subGnb.on {
     height: 380px;
     transition: height 0.5s;
 }
@@ -161,6 +163,12 @@ header .inner .gnb .subGnb > ul > li{
     border-left: 1px solid rgba(0,0,0,0.05);
 }
 
+header .inner .gnb .subGnb > ul > li.on,
+header .inner .gnb .subGnb > ul > li.on a {
+    background: var(--Blue);
+    color: #fff;
+}
+
 header .inner .gnb .subGnb > ul > li:last-child{
     border-right: 1px solid rgba(0,0,0,0.05);
 }
@@ -177,7 +185,7 @@ header .inner .gnb .subGnb > ul > li > ul > li{
     position: relative;
 }
 header .inner .gnb .subGnb > ul > li.on > ul > li {
-    color: #0A4484;
+    color: var(--Blue);
 }
 header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     position: absolute;
@@ -188,7 +196,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     width: 5px;
     height: 5px;
     border-radius: 3px;
-    color: #0A4484;
+    color: var(--Blue);
 }
 /* visual */
 .visual {
