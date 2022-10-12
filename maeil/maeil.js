@@ -1,9 +1,10 @@
 $(function () {
 
-  // 헤더 메뉴
+  // 헤더
   $(".gnb").on("mouseenter focusin", function () {
     $(".gnb>div>span").on("focusin click", function () {
       $(this).addClass("on").siblings().removeClass("on");
+      $("#"+$(this).data("id")).addClass("on").siblings().removeClass("on");
       $(".subGnb").addClass("on");
     });
   });
@@ -12,17 +13,7 @@ $(function () {
     $(".subGnb").removeClass("on");
   });
 
-  if ($(window).width() < 1024) {
-    $(".mMenu").click(function () {
-      $(".gnb").addClass("on");
-    });
-    $(".mClose").click(function () {
-      $(".gnb").removeClass("on");
-    });
-  }
-});
-
-$(window).resize(function () {
+  // 모바일 헤더
   if ($(window).width() < 1024) {
     $(".mMenu").click(function () {
       $(".gnb").addClass("on");
@@ -32,6 +23,10 @@ $(window).resize(function () {
     });
   }
 
+  // $(".gnb>div>span").click(function () {
+    
+  // });
+  
   // 비주얼 슬릭슬라이드
   $(".slide").slick({
     slidesToShow: 1,
@@ -40,7 +35,7 @@ $(window).resize(function () {
     autoplaySpeed: 2000,
     dots: true,
   });
-
+  
   // 브랜드 슬릭슬라이드
   $(".slide_brn").slick({
     dots: true,
@@ -50,7 +45,7 @@ $(window).resize(function () {
     centerMode: true,
     variableWidth: true
   });
-
+  
   // 패밀리 사이트
   $(".site").click(function () {
     if ($(this).hasClass("on")) {
@@ -64,5 +59,18 @@ $(window).resize(function () {
     $(".site").add(".selectList").removeClass("on");
     event.stopPropagation();
   });
+
+});
+
+// 리사이징
+$(window).resize(function () {
+  if ($(window).width() < 1024) {
+    $(".mMenu").click(function () {
+      $(".gnb").addClass("on");
+    });
+    $(".mClose").click(function () {
+      $(".gnb").removeClass("on");
+    });
+  }
 
 });

@@ -22,6 +22,9 @@ body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
 
 
 /* 헤더 시작 */
+header .inner {
+    position: relative;
+}
 header .inner .mMenu{
     color: var(--garyFontColor);
     display: block;
@@ -35,10 +38,10 @@ header .inner .gnb{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     min-width: 320px;
     z-index: 100;
-    background: #f1f1f3;
+    background: #fff;
     display: flex;
     justify-content: flex-start;
     transform: translateX(-150%);
@@ -50,6 +53,22 @@ header .inner .gnb.on{
     transition: all 0.5s;
 }
 
+header .inner .gnb > div {
+    width: 150px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 0;
+}
+
+header .inner .gnb > div > span{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
 header .inner .gnb .mClose{
     color: var(--garyFontColor);
     display: block;
@@ -59,13 +78,55 @@ header .inner .gnb .mClose{
     right: 17px;
     z-index: 300;
 } 
+/* subGnb */
+header .inner .gnb .subGnb, 
+header .inner .gnb .subGnb.on {
+    height: 100%;
+}
+
+header .inner .gnb .subGnb{
+    position: unset;
+    min-width: 100px;
+    width: calc(100% - 150px);
+    background: #F2F2F7;
+    padding: 100px 0;
+    font-size: 1.1rem;
+}
 
 header .inner .gnb .subGnb > ul{
-    margin: 0px 0 0 -290px;
+    margin: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
     position: relative;
+}
+
+header .inner .gnb .subGnb > ul > li{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    border-left: unset;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb .subGnb > ul > li.on{
+    transform: translateX(0%);
+    transition: transform 0.5s;
+}
+
+header .inner .gnb .subGnb > ul > li:last-child{
+    border-right: unset;
+}
+
+header .inner .gnb .subGnb > ul > #sub02,
+header .inner .gnb .subGnb > ul > #sub07 {
+    border: none;
 }
 
 /* 사회공헌 */
