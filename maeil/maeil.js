@@ -23,9 +23,6 @@ $(function () {
     });
   }
 
-  // $(".gnb>div>span").click(function () {
-
-  // });
 
   // 비주얼 슬릭슬라이드
   $(".slide").slick({
