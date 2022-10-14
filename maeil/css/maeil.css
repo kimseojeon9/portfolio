@@ -361,41 +361,30 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     overflow: hidden;
     position: relative;
 }
-.container .social>p:nth-of-type(1){
-    bottom: 0;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 0%;
-}
 .container .social>.con {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     text-align: center;
     color: #fff;
-    transform: translate(0%, 150%);
+    position: absolute;
+    bottom: -27%;
+}
+.container .social:nth-of-type(4)>.con {
+    bottom: -36.1%;
+}
+.container .social:nth-of-type(5)>.con {
+    bottom: -31.5%;
 }
 .container .social:hover .con {
-    transform: translate(0%, 0%);
+    position: absolute;
+    bottom: 2%;
     transition: all 500ms ease-in-out;
 }
-.container .social:hover>p:nth-of-type(1){
-    bottom: 0;
+.container .social>.con>p:nth-of-type(1){
     font-size: 1.5rem;
-    position: absolute;
-    bottom: 40%;
-    transition: all 500ms ease-in-out;
-}
-.container .social:nth-of-type(1):hover>p:nth-of-type(1), 
-.container .social:nth-of-type(2):hover>p:nth-of-type(1),
-.container .social:nth-of-type(3):hover>p:nth-of-type(1) {
-    bottom: 0;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 30%;
-    transition: all 500ms ease-in-out;
 }
 .container .social>.con a {
     color: #fff;
