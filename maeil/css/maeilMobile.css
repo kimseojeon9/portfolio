@@ -155,3 +155,7 @@ body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
 footer .inner>div.left {
     display: none;
 }
+
+footer>.topbt{
+    background: var(--garyFontColor);
+}
