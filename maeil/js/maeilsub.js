@@ -58,18 +58,18 @@ $(function () {
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".sec2Slide", {
+      });
+      var swiper2 = new Swiper(".mainSlide", {
         loop: true,
         spaceBetween: 10,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         thumbs: {
-            swiper: swiper,
+          swiper: swiper,
         },
-    });
+      });
 
 
 });
