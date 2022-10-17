@@ -247,12 +247,16 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     flex-direction: column;
     align-items: flex-start;
     width: 1200px;
+    position: relative;
 }
 .con2 .sec2 .tab {
     width: 100%;
     height: 60px;    
     background: var(--garyFontColor);
     border-radius: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
 }
 .con2 .sec2 .tab ul {
     display: flex;
@@ -275,21 +279,30 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .tab ul li.on {
     background: #8FC7E8;
 }
-.con2 .sec2 .tab ul li a {color: #fff;}
+.con2 .sec2 .tab ul li>a {color: #fff;}
 .con2 .sec2 .container {
+    width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 80px 0px 0px;
 }
-.con2 .sec2 .container .conwrap {
+.con2 .sec2 .container .content {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
+    position: relative;
 }
-.con2 .sec2 .container .conwrap .aside {height: fit-content;}
-.con2 .sec2 .container .conwrap .aside ul {
+.con2 .sec2 .container .content .aside {
+    height: fit-content;
+    width: 20%;
+    position: sticky;
+    top: 20%;
+    left: 0;
+}
+.con2 .sec2 .container .content .aside ul {
     width: 150px;
     display: flex;
     flex-direction: column;
@@ -300,11 +313,11 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     font-size: 1.25rem;
     color: var(--garyFontColor);
 }
-.con2 .sec2 .container .conwrap .aside ul li {position: relative; width: 100%;}
-.con2 .sec2 .container .conwrap .aside ul li.on {
+.con2 .sec2 .container .content .aside ul li {position: relative; width: 100%;}
+.con2 .sec2 .container .content .aside ul li.on a {
     color: var(--Blue);
 }
-.con2 .sec2 .container .conwrap .aside ul li.on::after {
+.con2 .sec2 .container .content .aside ul li.on::after {
     content: "";
     margin-left: 15px;
     width: 30px;
@@ -315,11 +328,11 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     left: 50%;
     background: url(/portfolio/maeil/sub_sc/chevron_right.png) no-repeat 50% 50%;
 }
-.con2 .sec2 .container .conwrap .aside ul li:hover {
+.con2 .sec2 .container .content .aside ul li:hover a {
     color: var(--Blue);
     transition: all 300ms ease-in-out;
 }
-.con2 .sec2 .container .conwrap .aside ul li:hover::after {
+.con2 .sec2 .container .content .aside ul li:hover::after {
     content: "";
     margin-left: 15px;
     width: 30px;
@@ -330,85 +343,49 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     left: 50%;
     background: url(/portfolio/maeil/sub_sc/chevron_right.png) no-repeat 50% 50%;
 }
-.con2 .sec2 .container .conwrap .con {
+.con2 .sec2 .container .content .mainCon {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    width: 100%;
+    width: 80%;
 }
-.con2 .sec2 .container .conwrap .con .tbox {
+.con2 .sec2 .container .content .mainCon .tbox {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
 }
-.con2 .sec2 .container .conwrap .con .tbox h3 {color: var(--Blue);}
-
-
-
-
-
-
-/* 스와이퍼 시작 */
-.swiper {
+.con2 .sec2 .container .content .mainCon .tbox h3 {
+    color: var(--Blue);
+}
+/* swiper */
+.swiper.mainSlide {
     width: 100%;
-    height: 100%;
+    height: 445px;
+}
+.swiper.thumb {
+    width: 100%;
+    height: 107px;
+    padding: 10px 0;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.swiper-slide {
-    background-size: cover;
-    background-position: center;
-}
-
-.sec2Slide {
-    height: 80%;
-    width: 100%;
-}
-
-.thumb {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-}
-
 .thumb .swiper-slide {
-    width: 25%;
+    width: 100%;
     height: 100%;
     opacity: 0.4;
 }
@@ -416,12 +393,17 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .thumb .swiper-slide-thumb-active {
     opacity: 1;
 }
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    color: #fff;
+    font-size: 1rem;
+}
+.swiper-button-next, 
+.swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #fff;
 }
 
 
