@@ -58,18 +58,26 @@ $(function () {
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper(".mainSlide", {
+    });
+    var swiper2 = new Swiper(".mainSlide", {
         loop: true,
         spaceBetween: 10,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         thumbs: {
-          swiper: swiper,
+            swiper: swiper,
         },
-      });
+    });
+
+    //탭구조
+    $(".con2 .sec2 .tab ul li").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+    });
+    $(".con2 .sec2 .container .content .aside ul li").click(function () {
+        $(this).addClass("on").siblings().removeClass("on");
+    });
 
 
 });
