@@ -418,7 +418,6 @@ footer {
     background: #464D5D;
     color: #fff;
     font-size: 0.875rem;
-    position: relative;
 }
 footer a {
     color: #fff;
@@ -442,30 +441,31 @@ footer .inner .left>a.tel {
 footer .inner .left>div {
     background: #F2F2F7;
     margin: 10px 0;
+    padding: 3px 0 0 0;
     width: 246px;
     height: 28px;
-}
-footer .inner .left>div>a::after {
-    content: "";
-    display: block;
-    width: 28px;
-    height: 28px;
-    background: #2F3545;
-    transform: translate(780%, -157%);
-    z-index: 100;
-}
-footer .inner .left>div>a {
-    color: var(--garyFontColor);
-    padding: 0 0 0 10px;
 }
 footer .inner .left>div::after {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50%;
-    transform: translate(920%, -76%);
+    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50% / 50%;
+    transform: translate(920%, -215%);
     z-index: 101;
+}
+footer .inner .left>div>a {
+    color: var(--garyFontColor);
+    padding: 0 0 0 10px;
+}
+footer .inner .left>div>a::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #2F3545;
+    transform: translate(722%, -82%);
+    z-index: 100;
 }
 /* 2 */
 footer .inner .center {
@@ -535,8 +535,7 @@ footer .inner .rigth .sns>li:nth-of-type(4)>a:hover {
     background: url(/portfolio/maeil/main/sns_04_naverBlogHover.svg) no-repeat 50% 50% / cover;
 }
 
-
-
+/* selectBox */
 footer .inner .rigth .selectBox {
     width: 100%;
     height: 30px;
@@ -574,6 +573,8 @@ footer .rigth .selectList a {
 footer .rigth .selectList a:hover {
     text-decoration: underline;
 }
+
+/* topbt */
 footer>.topbt{
     background: var(--Blue);
     color: #fff;
@@ -583,16 +584,16 @@ footer>.topbt{
     height: 50px;
     border-radius: 50px;
     position: fixed;
-    bottom: 10%;
+    bottom: 10px;
     right: 1%;
     z-index: 250;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 footer>.topbt.on{
     opacity: 1;
 }
 .topbt.fa-arrow-up:before {
-    transform: translate(32%, 50%);
+    transform: translate(28%, 33%);
     display: block;
 }
