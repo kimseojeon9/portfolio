@@ -369,6 +369,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
+    color: var(--garyFontColor);
 }
 .con2 .sec2 .container .content .mainCon .tbox h3 {
     color: var(--Blue);
