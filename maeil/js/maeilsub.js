@@ -64,6 +64,20 @@ $(function () {
         return false;
     });
 
+    // 탭 스크롤 이벤트
+    console.log($(".con2 .sec2 .tab").offset())
+
+    var tabScroll = $(".con2 .sec2 .tab").offset();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= tabScroll.top) {
+            $(".con2 .sec2 .tab").css({"border-radius": "0"});
+            $(".con2 .sec2 .tab ul li").css({"border-radius": "0"});
+        } else {
+            $(".con2 .sec2 .tab").css({"border-radius": "30px"});
+            $(".con2 .sec2 .tab ul li").css({"border-radius": "30px"});
+        }
+    });
+
 });
 
 /* -------------------------------------------------- */

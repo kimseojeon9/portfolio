@@ -338,7 +338,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     display: block;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 70%;
     background: url(/portfolio/maeil/sub_sc/chevron_right.png) no-repeat 50% 50%;
 }
 .con2 .sec2 .container .content .aside ul li:hover a {
@@ -353,7 +353,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     display: block;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 70%;
     background: url(/portfolio/maeil/sub_sc/chevron_right.png) no-repeat 50% 50%;
 }
 .con2 .sec2 .container .content .mainCon {
