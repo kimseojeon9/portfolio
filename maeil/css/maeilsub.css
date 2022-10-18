@@ -99,7 +99,7 @@ header .inner .gnb .subGnb{
     position: absolute;
     top: 75px;
     left: 0;
-    z-index: 200;
+    z-index: 500;
     width: 100%;
     min-width: 1200px;
     background: #F2F2F7;
