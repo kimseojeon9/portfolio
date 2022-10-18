@@ -283,7 +283,9 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .tab ul li.on {
     background: #8FC7E8;
 }
-.con2 .sec2 .tab ul li>a {color: #fff;}
+.con2 .sec2 .tab ul li>a {
+    color: #fff; 
+}
 .con2 .sec2 .container {
     width: 1200px;
     display: flex;
@@ -412,6 +414,41 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     height: 30px;
     border-radius: 100%;
     border: 1px solid #fff;
+}
+/* milk */
+.con2 .sec2 .container .content.milk {
+    justify-content: center;
+}
+.con2 .sec2 .container .content.milk .mainCon {
+    width: 100%;
+    align-items: center;
+}
+.milkSlide {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-track {
+    width: 1200px;
+    height: 480px;
+    display: flex;
+    flex-direction: row;
+}
+.slick-list {
+    width: 480px;
+    overflow: hidden;
+}
+.slick-slide {
+    width: 100% !important;
+    height: 100%;
+}
+.milkSlide>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 

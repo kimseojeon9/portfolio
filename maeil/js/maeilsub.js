@@ -1,3 +1,4 @@
+
 $(function () {
     // 헤더
     $(".gnb").on("mouseenter focusin", function () {
@@ -44,46 +45,28 @@ $(function () {
             $(".topbt").removeClass("on");
         }
     });
+
     // 탑 버튼
     $(".topbt").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 600);
+        $("html, body").animate({ scrollTop: 0 }, 500);
     });
 
-
-
-    // 스와이퍼
-    var swiper = new Swiper(".thumb", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mainSlide", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-    });
-
-    //탭구조
+    
+    // 탭구조
+    $(".con2 .sec2 .tab ul li:first").show().addClass("on"); // 첫째 탭 show
+    $(".con2 .sec2 .container .content:first").show(); // 첫째 창 show
+    
     $(".con2 .sec2 .tab ul li").click(function () {
+        var tabIndex = $(this).index();
+        console.log(tabIndex);
         $(this).addClass("on").siblings().removeClass("on");
+        $(".con2 .sec2 .container .content").eq(tabIndex).addClass("on").siblings().removeClass("on");
+        return false;
     });
-    $(".con2 .sec2 .container .content .aside ul li").click(function () {
-        $(this).addClass("on").siblings().removeClass("on");
-    });
-
 
 });
 
-
-
+/* -------------------------------------------------- */
 
 // 리사이징
 $(window).resize(function () {
@@ -98,4 +81,113 @@ $(window).resize(function () {
 
 });
 
+/* -------------------------------------------------- */
+
+// 스와이퍼1
+var swiper1 = new Swiper(".t01", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+new Swiper(".m01", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper1,
+    },
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+// 스와이퍼2
+var swiper2 = new Swiper(".t02", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+new Swiper(".m02", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper2,
+    },
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+// 스와이퍼3
+var swiper3 = new Swiper(".t03", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+new Swiper(".m03", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper3,
+    },
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+// 스와이퍼4
+var swiper4 = new Swiper(".t04", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+new Swiper(".m04", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper4,
+    },
+    observer: true,
+    observeParents: true,
+    //탭안의 스와이퍼 갱신, ie11부터 가능,
+});
+// 스와이퍼5(오토)
+$('.milkSlide').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 
