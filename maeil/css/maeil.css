@@ -878,6 +878,7 @@ footer .rigth .selectList {
     width: 100%;
     height: initial;
     flex-direction: column;
+    z-index: 1000;
 }
 footer .rigth .selectList.on {
     display: flex;
