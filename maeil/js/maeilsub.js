@@ -184,10 +184,21 @@ new Swiper(".m04", {
     //탭안의 스와이퍼 갱신, ie11부터 가능,
 });
 // 스와이퍼5(오토)
-$('.milkSlide').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+var swiper = new Swiper(".milkSlide", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    observer: true,
+    observeParents: true,
   });
-

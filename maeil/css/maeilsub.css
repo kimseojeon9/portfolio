@@ -305,12 +305,15 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .container .content.on {
     display: flex;
 }
+.con2 .sec2 .container .content::after {
+    clear: both;
+}
 .con2 .sec2 .container .content .aside {
     height: fit-content;
     width: 20%;
     position: sticky;
     top: 20%;
-    left: 0;
+    float: left;
 }
 .con2 .sec2 .container .content .aside ul {
     width: 150px;
@@ -359,6 +362,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     align-items: flex-start;
     gap: 10px;
     width: 80%;
+    float: right;
 }
 .con2 .sec2 .container .content .mainCon .tbox {
     display: flex;
@@ -419,36 +423,39 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .container .content.milk {
     justify-content: center;
 }
-.con2 .sec2 .container .content.milk .mainCon {
-    width: 100%;
-    align-items: center;
-}
 .milkSlide {
     width: 100%;
-    height: 480px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.slick-track {
-    width: 1200px;
-    height: 480px;
-    display: flex;
-    flex-direction: row;
-}
-.slick-list {
+.milk-wrapper {
     width: 480px;
-    overflow: hidden;
+    height: 480px;
+    margin: 0 auto;
 }
-.slick-slide {
-    width: 100% !important;
-    height: 100%;
+.milk-wrapper>div>img {
+    width: 480px;
+    height: 480px;
 }
-.milkSlide>div>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.milkbt {
+    border: none;
+}
+.milkbt:after {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--skyBlue)
+}
+.swiper-button-next.milkbt {right: 20%;}
+.swiper-button-prev.milkbt {left: 20%;}
+.swiper-pagination-bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.swiper-pagination-bullet-active {
+    background: var(--skyBlue);
+    transition: all 0.3s ease-in-out;
+} 
+.swiper-pagination.milkpg {
+    bottom: -10%;
 }
 
 
