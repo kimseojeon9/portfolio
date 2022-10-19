@@ -307,6 +307,9 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .container .content::after {
     clear: both;
 }
+
+/* ------------------------------------------------------- */
+
 .con2 .sec2 .container .content .aside {
     height: fit-content;
     width: 20%;
@@ -355,6 +358,8 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     left: 70%;
     background: url(/portfolio/maeil/sub_sc/chevron_right.png) no-repeat 50% 50%;
 }
+/* ------------------------------------------------------- */
+
 .con2 .sec2 .container .content .mainCon {
     display: flex;
     flex-direction: column;
@@ -374,6 +379,31 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .con2 .sec2 .container .content .mainCon .tbox h3 {
     color: var(--Blue);
 }
+
+/* ------------------------------------------------------- */
+
+.con2 .sec2 .container .content .mainCon > .pagination {
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+.con2 .sec2 .container .content .mainCon > .pagination > div {
+    width: 30px;
+    height: 30px;
+    background: #969696;
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.con2 .sec2 .container .content .mainCon > .pagination > div.on {background: var(--skyBlue);}
+
+/* ------------------------------------------------------- */
+
 /* swiper */
 .swiper.mainSlide {
     width: 100%;

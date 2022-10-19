@@ -128,9 +128,12 @@ header .inner .gnb .subGnb > ul > #sub07 {
     border: none;
 }
 /* ---------------------------------------------------------- */
-.con1 .sec1, .con2 .sec2 {width: 100%;}
 .con2 .sec2 .container {width: 100%;}
-.con2 .sec2 .tab, .con2 .sec2 .tab ul li {border-radius: 0;}
+.con2 .sec2 .container .content {justify-content: center;}
+.con2 .sec2 .tab,
+.con2 .sec2 .tab ul li {border-radius: 0;}
+.con2 .sec2 .container .content .aside {display: none;}
+.con2 .sec2 .container .content .mainCon > .pagination {display: flex;}
 
 
 
