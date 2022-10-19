@@ -40,7 +40,7 @@ header .inner .gnb{
     width: 100%;
     height: 100%;
     min-width: 320px;
-    z-index: 100;
+    z-index: 500;
     background: #f1f1f3;
     display: flex;
     justify-content: flex-start;
@@ -76,7 +76,7 @@ header .inner .gnb .mClose{
     position: absolute;
     top: 17px;
     right: 17px;
-    z-index: 300;
+    z-index: 501;
 } 
 /* subGnb */
 header .inner .gnb .subGnb, 
