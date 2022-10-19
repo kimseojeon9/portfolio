@@ -455,7 +455,10 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 }
 .milkSlide {
     width: 100%;
+    height: 600px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 .milk-wrapper {
     width: 480px;
@@ -485,9 +488,8 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     transition: all 0.3s ease-in-out;
 } 
 .swiper-pagination.milkpg {
-    bottom: -10%;
+    bottom: 3%;
 }
-
 
 
 
