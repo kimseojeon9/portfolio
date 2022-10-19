@@ -79,7 +79,13 @@ $(function () {
         });
     }
     /* ----------------------------------------------------- */
-
+    //후원 버튼
+    setInterval(function () {
+        $(".con2 .sec2 .container .content.milk > a").addClass("on");
+    }, 500);
+    setInterval(function () {
+        $(".con2 .sec2 .container .content.milk > a").removeClass("on");
+    }, 1000);
 });
 
 /* -------------------------------------------------- */

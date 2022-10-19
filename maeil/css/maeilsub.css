@@ -490,6 +490,32 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .swiper-pagination.milkpg {
     bottom: 3%;
 }
+/* ---------------------------------------------------------------- */
+.con2 .sec2 .container .content.milk > a {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: var(--yellow);
+    color: var(--purple);
+    font-size: 1.5rem;
+    font-weight: 400;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.con2 .sec2 .container .content.milk > a.on {
+    background: var(--purple);
+    color: var(--yellow);
+}
+/* ---------------------------------------------------------------- */
 
 
 
