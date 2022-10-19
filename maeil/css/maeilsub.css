@@ -259,7 +259,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     border-radius: 30px;
     position: sticky;
     top: 0;
-    z-index: 200;
+    z-index: 199;
 }
 .con2 .sec2 .tab ul {
     display: flex;
