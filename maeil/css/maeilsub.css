@@ -528,6 +528,7 @@ footer .inner .left>div {
     padding: 3px 0 0 0;
     width: 246px;
     height: 28px;
+    position: relative;
 }
 footer .inner .left>div::after {
     content: "";
@@ -554,7 +555,7 @@ footer .inner .left>div>a::after {
     transform: translate(465%, -14%);
     z-index: 100;
     position: absolute;
-    top: 2px;
+    top: 0px;
     right: 5px;
 }
 /* 2 */
