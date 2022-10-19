@@ -525,31 +525,37 @@ footer .inner .left>a.tel {
 footer .inner .left>div {
     background: #F2F2F7;
     margin: 10px 0;
-    padding: 3px 0 0 0;
     width: 246px;
     height: 28px;
+    position: relative;
 }
 footer .inner .left>div::after {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
-    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50% / 50%;
-    transform: translate(920%, -215%);
+    background: url(/portfolio/maeil/main/chevron_right.svg) no-repeat 50% 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 101;
 }
 footer .inner .left>div>a {
     color: var(--garyFontColor);
     padding: 0 0 0 10px;
+    position: relative;
 }
 footer .inner .left>div>a::after {
     content: "";
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     background: #2F3545;
-    transform: translate(722%, -82%);
+    transform: translate(465%, -14%);
     z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 /* 2 */
 footer .inner .center {
