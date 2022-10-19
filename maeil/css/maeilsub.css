@@ -548,14 +548,14 @@ footer .inner .left>div>a {
 footer .inner .left>div>a::after {
     content: "";
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 31px;
+    height: 31px;
     background: #2F3545;
     transform: translate(465%, -14%);
     z-index: 100;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 5px;
 }
 /* 2 */
 footer .inner .center {
