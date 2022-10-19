@@ -163,3 +163,4 @@ footer {font-size: 0.75rem;}
 footer .inner {
     padding: 0 30px;
 }
+footer .inner .left>div::after {top: 1px; right: 1px;}
