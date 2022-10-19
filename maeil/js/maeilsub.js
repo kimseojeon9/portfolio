@@ -204,17 +204,17 @@ var swiper = new Swiper(".milkSlide", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+        delay: 2500,
+        disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     observer: true,
     observeParents: true,
-  });
+});
