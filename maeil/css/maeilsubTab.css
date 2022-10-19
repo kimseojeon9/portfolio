@@ -135,30 +135,12 @@ header .inner .gnb .subGnb > ul > #sub07 {
 .con2 .sec2 .container .content .aside {display: none;}
 .con2 .sec2 .container .content .mainCon {padding: 0;}
 .con2 .sec2 .container .content .mainCon .tbox h3, .con2 .sec2 .container .content .mainCon .tbox h4 {width: 100%;}
-.con2 .sec2 .container .content .mainCon > .pagination {display: flex;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.con2 .sec2 .container .content .mainCon > .pagination {display: flex;     margin: 30px 0 0 0}
 /* ---------------------------------------------------------- */
 footer {font-size: 0.75rem;}
 footer .inner {padding: 0 30px;}
 footer .inner .left>div::after {top: 1px; right: 1px;}
+/* ---------------------------------------------------------- */
+@media screen and (max-width: 820px) {
+    footer .inner>div.left {display: none;}
+}
