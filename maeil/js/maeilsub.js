@@ -51,7 +51,7 @@ $(function () {
         $("html, body").animate({ scrollTop: 0 }, 500);
     });
 
-    
+    /* ----------------------------------------------------- */
     // 탭구조
     $(".con2 .sec2 .tab ul li:first").show().addClass("on"); // 첫째 탭 show
     $(".con2 .sec2 .container .content:first").show(); // 첫째 창 show
@@ -78,6 +78,7 @@ $(function () {
             }
         });
     }
+    /* ----------------------------------------------------- */
 
 });
 
