@@ -64,8 +64,7 @@ $(function () {
 
     // button click
     $(".formBox .box .content > div > ul li button").click(function(){
-        $(this).addClass("on").siblings().removeClass("on");
-        return false;
+        $(this).addClass("on").parent().siblings().children().removeClass("on");
     });
 
 });
