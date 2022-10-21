@@ -352,7 +352,25 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .formBox .box .content > div.dos:last-child h3 {width: 22%;}
 /*  */
 
+/* --------------admit 커스텀-------------- */
 
+.formBox .bwrap .admit_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    color: var(--garyFontColor);
+    font-size: 1rem;
+}
+.formBox .bwrap .admit_wrap .admit_all {
+    color: var(--darkGray);
+    font-weight: 500;
+}
+.formBox .bwrap .admit_wrap a {
+    text-decoration: underline;
+}
 
 
 
