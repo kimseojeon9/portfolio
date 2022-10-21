@@ -165,7 +165,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     align-items: center;
     gap: 30px;
     padding: 30px 0 80px 0;
-    background: url(/maeil/sub_sc/bgimg2.jpg) no-repeat 50% 50% / cover;
+    background: url(/portfolio/maeil/sub_sc/bgimg2.jpg) no-repeat 50% 50% / cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
 }
