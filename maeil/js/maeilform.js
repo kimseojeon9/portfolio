@@ -67,6 +67,14 @@ $(function () {
         $(this).addClass("on").parent().siblings().children().removeClass("on");
     });
 
+    //popup
+    $(".formBox .bwrap .bt_wrap > .submit").click(function(){
+        $(".submit_pop").show();
+    });
+    $(".submit_close").click(function () {
+        $(".submit_pop").hide();
+    });
+    
 });
 
 /* -------------------------------------------------- */
