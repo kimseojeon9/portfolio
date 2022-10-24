@@ -74,7 +74,19 @@ $(function () {
     $(".submit_close").click(function () {
         $(".submit_pop").hide();
     });
+
+    // next prev
+    $(".formBox .bwrap .bt_wrap > .next").click(function(){
+        var nextpage = $(this).index();
+        $(".formBox .bwrap").eq(nextpage + 1).addClass("on").siblings().removeClass("on");
+        $(".formBox .step ul li").eq(nextpage + 1).addClass("on").siblings().removeClass("on");
+    });
     
+    $(".formBox .bwrap .bt_wrap > .prev").click(function () {
+        var prevpage = $(this).index();
+        $(".formBox .bwrap").eq(prevpage < 1).addClass("on").siblings().removeClass("on");
+        $(".formBox .step ul li").eq(prevpage < 1).addClass("on").siblings().removeClass("on");
+    });
 });
 
 /* -------------------------------------------------- */
