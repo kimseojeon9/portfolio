@@ -25,6 +25,7 @@ body{
     --purple: #7E5192;
     --green: #2AC1BC;
     --skyBlue: #8FC7E8;
+    --formGray: #F4F4F4;
 }
 h1 {font-size: 2.5rem; font-weight: 500;}
 h2 {font-size: 1.75rem; font-weight: 500;} /*24*/
