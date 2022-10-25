@@ -127,7 +127,30 @@ $(function () {
         $(".submit_pop").hide();
     });
 
+    
+    //체크박스 구현
+    // 전체 동의
+    $('#admitAll').on('click', function () {
+        var checked = $(this).is(':checked');
+        if (checked) {
+            $(this).closest('.admit_wrap').find('.check').prop('checked', true);
+        } else {
+            $(this).closest('.admit_wrap').find('.check').prop('checked', false);
+        }
+    });
 
+    //하나 선택시 전체 동의 해제
+    $('.admit_wrap .check').on('click', function () {
+        var chkGroup = $(this).closest('.admit_wrap').find('.admit');
+        var chkGroup_cnt = chkGroup.length;
+        checked_cnt = $('.admit .input-check:checked').length;
+
+        if (checked_cnt < chkGroup_cnt) {
+            $('#admitAll').prop('checked', false);
+        } else if (checked_cnt == chkGroup_cnt) {
+            $('#admitAll').prop('checked', true);
+        }
+    });
 
     /* ----------------------유효성 검사---------------------------- */
 
