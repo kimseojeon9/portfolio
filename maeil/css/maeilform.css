@@ -185,7 +185,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .visu>ul>li:last-child::after {
     display: none;
 }
-.visu h1 {
+.visu a, .visu h1 {
     color: #fff;
     text-align: center;
 }
@@ -206,7 +206,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     justify-content: center;
     gap: 10px;
 }
-.formBox .step ul li {
+.formBox .step ul a {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -220,7 +220,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     font-weight: 500;
     cursor: pointer;
 }
-.formBox .step ul li.on {
+.formBox .step ul li.on a {
     background: var(--green);
     color: #fff;
 }
@@ -435,7 +435,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin: 0 0 0 22px;
+    margin: 0 0 0 25px;
 }
 .formBox .bwrap.tres .box .content > #credit div:nth-of-type(2) input {
     width: 30%;
@@ -460,6 +460,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .formBox .bwrap .admit_wrap a {
     text-decoration: underline;
 }
+
 
 /* --------------submit 커스텀-------------- */
 .submit_pop {
@@ -495,7 +496,6 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     bottom: 100px;
     left: 150px;
 }
-
 
 
 
