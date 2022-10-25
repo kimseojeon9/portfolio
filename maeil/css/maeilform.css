@@ -287,26 +287,14 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     font-size: 1rem;
     font-weight: 500;
 }
-/* --------------커스텀-------------- */
+/* --------------기본 커스텀-------------- */
 .formBox .box .content > div > select {
     width: 80%;
     height: 40px;
     font-size: 1rem;
     cursor: pointer;
 }
-.formBox .box .content > div > ul {
-    width: 80%;
-    display: flex;
-    gap: 10px;
-    flex-flow: row wrap;
-}
-.formBox .box .content > div > ul li {
-    display: inline-block;
-    height: 40px;
-    flex: 1 1 0;
-}
-.formBox .box .content > div > ul li button,
-.formBox .bwrap.uno .box .content > div:nth-of-type(3) > ul li input {
+.formBox div ul li button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -320,11 +308,22 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     cursor: pointer;
     text-align: center;
 }
-.formBox .box .content > div > ul li button.on {
+.formBox div ul li button.on {
     background: var(--darkGray);
     color: #fff;
 }
-.formBox .box .content > div > ul li button:hover {
+.formBox div ul {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
+}
+.formBox div ul li {
+    display: inline-block;
+    height: 40px;
+    flex: 1 1 0;
+}
+.formBox div ul li button:hover {
     background: var(--darkGray);
     color: #fff;
 }
@@ -345,13 +344,102 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
 .formBox .box .content > div > div {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     width: 80%;
     align-items: center;
+    position: relative;
 }
-/*  */
-.formBox .bwrap.dos .box .content > div:last-child h3 {width: 22%;}
-/*  */
+/* uno */
+.formBox .bwrap.uno .box .content > .amount input {
+    width: 100%;
+    background: var(--formGray);
+}
+.formBox .bwrap.uno .box .content > .amount input.on {
+    background: var(--darkGray);
+    color: #fff;
+}
+/* dos */
+.formBox .bwrap.dos .box .content > div#individual div:last-child h3,
+.formBox .bwrap.dos .box .content > div#group div:last-child h3 {width: 22%;}
+.formBox .bwrap.dos .box .content > div#individual,
+.formBox .bwrap.dos .box .content > div#group {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    background: #FFFFFF;
+}
+.formBox .bwrap.dos .box .content > div#individual.on,
+.formBox .bwrap.dos .box .content > div#group.on {
+    display: flex;
+}
+.formBox .bwrap.dos .box .content > div#individual>div,
+.formBox .bwrap.dos .box .content > div#group>div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    align-items: center
+}
+.formBox .bwrap.dos .box .content > div#individual>div div,
+.formBox .bwrap.dos .box .content > div#group>div div {
+    margin-left: 23px;
+}
+
+.formBox .box .content > div div {
+    width: 100%;
+}
+.formBox .box .content > div > div span {
+    color: red;
+    position: absolute;
+    bottom: -25px;
+    left: 24%;
+}
+/* tres */
+.formBox .bwrap.tres .box .content > div#auto div#individual2,
+.formBox .bwrap.tres .box .content > div#auto div#group2 {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    background: #FFFFFF;
+}
+.formBox .bwrap.tres .box .content > div#auto div#individual2.on,
+.formBox .bwrap.tres .box .content > div#auto div#group2.on {
+    display: flex;
+}
+.formBox .bwrap.tres .box .content > div#auto div#individual2>div,
+.formBox .bwrap.tres .box .content > div#auto div#group2>div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    align-items: center
+}
+.formBox .bwrap.tres .box .content > div#auto,
+.formBox .bwrap.tres .box .content > div#credit
+ {
+    gap: 30px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.formBox .bwrap.tres .box .content > div#auto.on,
+.formBox .bwrap.tres .box .content > div#credit.on
+ {
+    display: flex;
+}
+.formBox .bwrap.tres .box .content > #credit div:nth-of-type(2) div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 0 0 22px;
+}
+.formBox .bwrap.tres .box .content > #credit div:nth-of-type(2) input {
+    width: 30%;
+}
 
 /* --------------admit 커스텀-------------- */
 
