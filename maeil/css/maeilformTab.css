@@ -24,7 +24,9 @@ header .inner .gnb .subGnb > ul > li:last-child { border-right: unset; }
 header .inner .gnb .subGnb > ul > #sub02,
 header .inner .gnb .subGnb > ul > #sub07 { border: none; } 
 /* ---------------------------------------------------------- */
-
+.formBox div.amount ul li {
+    flex: 1 1 100px;
+}
 
 
 /* ---------------------------------------------------------- */
