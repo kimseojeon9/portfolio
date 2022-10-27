@@ -78,6 +78,7 @@
                 </div>
             </div>
         </header>
+        <!-- header 끝 -->
         <section class="visu">
             <ul>
                 <li><a href="/"><i class="fa-sharp fa-solid fa-house"></i></a></li>
@@ -102,52 +103,51 @@
                             <h2 tabindex="0">후원 정보</h2>
                         </div>
                         <div class="content">
-                            <!-- 상품 선택 -->
-                            <div>
+                            <!-- 1 상품 선택 -->
+                            <div class="choose">
                                 <h3>상품선택</h3>
-                                <select>
-                                    <option selected="selected">우유안부</option>
-                                </select>
+                                <input type="text" id="select" value="우유안부" readonly="readonly" disabled="disabled">
                             </div>
-                            <!-- 후원 주기 -->
-                            <div>
+                            <!-- 1 후원 주기 -->
+                            <div class="cycle">
                                 <h3>후원주기</h3>
                                 <ul>
                                     <li>
-                                        <button class="on">정기후원</button>
+                                        <button class="on" name="cycleBt" value="정기후원" id="keep">정기후원</button>
                                     </li>
                                     <li>
-                                        <button>일시후원</button>
+                                        <button name="cycleBt" value="일시후원" id="nokeep">일시후원</button>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- 후원 금액 -->
+                            <!-- 1 후원 금액 -->
                             <div class="amount">
                                 <h3>후원금액</h3>
                                 <ul>
                                     <li>
-                                        <button class="on">50,000원</button>
+                                        <button class="on" value="50,000원">50,000원</button>
                                     </li>
                                     <li>
-                                        <button>40,000원</button>
+                                        <button value="40,000원">40,000원</button>
                                     </li>
                                     <li>
-                                        <button>30,000원</button>
+                                        <button value="30,000원">30,000원</button>
                                     </li>
                                     <li>
-                                        <button>20,000원</button>
+                                        <button value="20,000원">20,000원</button>
                                     </li>
                                     <li>
-                                        <button >10,000원</button>
+                                        <button value="10,000원">10,000원</button>
                                     </li>
                                     <li>
-                                        <input type="text" placeholder="직접입력" maxlength="11" autocomplete="off" id="number">
+                                        <input type="text" placeholder="직접입력" maxlength="11" autocomplete="off" id="number" value="">
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info">
-                            한 어르신께 일주일간 안부를 묻기 위해 약 5,000원의 후원금이 쓰여집니다.
+                            <span id="cycle"></span>에 의해<span id="amount"></span> &nbsp; 이 후원금으로 사용됩니다.
+                            <!-- 한 어르신께 일주일간 안부를 묻기 위해 약 5,000원의 후원금이 쓰여집니다. -->
                         </div>
                     </div>
                     <div class="bt_wrap">
@@ -161,7 +161,7 @@
                             <h2 tabindex="0">후원자 정보</h2>
                         </div>
                         <div class="content">
-                            <!-- 구분 (개인or사업자) -->
+                            <!-- 2 구분 (개인or사업자) -->
                             <div>
                                 <h3>구분</h3>
                                 <ul>
@@ -173,64 +173,64 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- 개인 클릭시 -->
+                            <!-- 2-1 개인 클릭시 -->
                             <div id="individual" class="on">
-                                <!-- 이름 -->
+                                <!-- 2-1 이름 -->
                                 <div>
                                     <h3>이름</h3>
                                     <input type="text" maxlength="30" value autocomplete="off" placeholder="이름을 입력하세요.">
                                 </div>
-                                <!-- 휴대전화 -->
-                                <div>
+                                <!-- 2-1 휴대전화 -->
+                                <div class="tel">
                                     <h3>휴대전화</h3>
                                     <div>
                                         <input type="tel" pattern="[0-9]*" maxlength="13" autocomplete="off"
-                                            placeholder="000-0000-0000 형식에 맞추어 기입하세요." id="num01">
+                                            placeholder="010-0000-0000 형식에 맞추어 기입하세요." id="num01">
                                         <span id="numlog01" class="alert"></span>
                                     </div>
                                 </div>
-                                <!-- 이메일 -->
-                                <div>
+                                <!-- 2-1 이메일 -->
+                                <div class="email">
                                     <h3>이메일</h3>
                                     <div>
                                         <input type="text" autocomplete="off" placeholder="이메일을 입력하세요." id="email01">
                                         <span id="emaillog01" class="alert"></span>
                                     </div>
                                 </div>
-                                <!-- 후원자 한마디 -->
-                                <div>
+                                <!-- 2-1 후원자 한마디 -->
+                                <div class="warm">
                                     <h3>후원자 한마디</h3>
-                                    <input type="text" maxlength="30" value autocomplete="off">
+                                    <textarea></textarea>
                                 </div>
                             </div>
-                            <!-- 사업자 클릭시 -->
+                            <!-- 2-2 사업자 클릭시 -->
                             <div id="group">
-                                <!-- 단체명 -->
+                                <!-- 2-2 단체명 -->
                                 <div>
                                     <h3>단체명</h3>
                                     <input type="text" maxlength="30" value autocomplete="off" placeholder="이름을 입력하세요.">
                                 </div>
-                                <!-- 휴대전화 -->
-                                <div>
+                                <!-- 2-2 휴대전화 -->
+                                <div class="tel">
                                     <h3>휴대전화</h3>
                                     <div>
-                                        <input type="tel" pattern="[0-9]*" maxlength="13" autocomplete="off" placeholder="000-0000-0000 형식에 맞추어 기입하세요."
+                                        <input type="tel" pattern="[0-9]*" maxlength="13" autocomplete="off" placeholder="010-0000-0000 형식에 맞추어 기입하세요."
                                             id="num02">
                                         <span id="numlog02" class="alert"></span>
                                     </div>
                                 </div>
-                                <!-- 이메일 -->
-                                <div>
+                                <!-- 2-2 이메일 -->
+                                <div class="email">
                                     <h3>이메일</h3>
                                     <div>
                                         <input type="text" autocomplete="off" placeholder="이메일을 입력하세요." id="email02">
                                         <span id="emaillog02" class="alert"></span>
                                     </div>
                                 </div>
-                                <!-- 후원자 한마디 -->
-                                <div>
+                                <!-- 2-2 후원자 한마디 -->
+                                <div class="warm">
                                     <h3>후원자 한마디</h3>
-                                    <input type="text" maxlength="30" value autocomplete="off">
+                                    <textarea></textarea>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                             <h2 tabindex="0">결제 정보</h2>
                         </div>
                         <div class="content">
-                            <!-- 결제수단 -->
+                            <!-- 3 결제수단 -->
                             <div>
                                 <h3>결제수단</h3>
                                 <ul>
@@ -259,32 +259,24 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- 자동결제 클릭시 -->
+                            <!-- 3-1 자동결제 클릭시 -->
                             <div class="on" id="auto">
-                                <!-- 은행명 -->
-                                <div>
+                                <!-- 3-1 은행명 -->
+                                <div class="bank">
                                     <h3>은행명</h3>
-                                    <select>
-                                        <option selected="selected">국민은행</option>
-                                        <option>농협은행</option>
-                                        <option>신한은행</option>
-                                        <option>우리은행</option>
-                                        <option>IBK기업은행</option>
-                                        <option>KEB하나은행</option>
-                                        <option>카카오뱅크</option>
-                                    </select>
+                                    <select id="bank"></select>
                                 </div>
-                                <!-- 계좌번호 -->
+                                <!-- 3-1 계좌번호 -->
                                 <div>
                                     <h3>계좌번호</h3>
                                     <input type="tel" placeholder="하이픈 없이 입력하세요." autocomplete="off">
                                 </div>
-                                <!-- 예금주명 -->
+                                <!-- 3-1 예금주명 -->
                                 <div>
                                     <h3>예금주명</h3>
                                     <input type="tel" autocomplete="off">
                                 </div>
-                                <!-- 예금주구분 (개인or사업자) -->
+                                <!-- 3-1 예금주구분 (개인or사업자) -->
                                 <div>
                                     <h3>예금주구분</h3>
                                     <ul>
@@ -296,45 +288,53 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- 개인 클릭시 -->
+                                <!-- 3-1-1 개인 클릭시 -->
                                 <div id="individual2" class="on">
-                                    <!-- 생년월일 -->
+                                    <!-- 3-1-1 생년월일 -->
                                     <div>
                                         <h3>생년월일</h3>
                                         <input type="tel" placeholder="주민번호 앞 6자리" autocomplete="off" maxlength="6">
                                     </div>
-                                    <!-- 출금일 -->
-                                    <div>
+                                    <!-- 3-1-1 출금일 -->
+                                    <div class="wdate">
                                         <h3>출금일</h3>
                                         <select>
-                                            <option selected="selected">매월 5일</option>
+                                            <option selected="selected">매월 1일</option>
+                                            <option>매월 30일</option>
+                                            <option>매월 5일</option>
+                                            <option>매월 15일</option>
+                                            <option>매월 25일</option>
                                         </select>
                                     </div>
                                 </div>
-                                <!-- 사업자 클릭시 -->
+                                <!-- 3-1-2 사업자 클릭시 -->
                                 <div id="group2">
-                                    <!-- 사업자번호 -->
+                                    <!-- 3-1-2 사업자번호 -->
                                     <div>
                                         <h3>사업자번호</h3>
                                         <input type="tel" autocomplete="off">
                                     </div>
-                                    <!-- 출금일 -->
-                                    <div>
+                                    <!-- 3-1-2 출금일 -->
+                                    <div class="wdate">
                                         <h3>출금일</h3>
                                         <select>
-                                            <option selected="selected">매월 5일</option>
+                                            <option selected="selected">매월 1일</option>
+                                            <option>매월 30일</option>
+                                            <option>매월 5일</option>
+                                            <option>매월 15일</option>
+                                            <option>매월 25일</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 카드결제 클릭시 -->
+                            <!-- 3-2 카드결제 클릭시 -->
                             <div id="credit">
-                                <!-- 카드번호 -->
+                                <!-- 3-2 카드번호 -->
                                 <div>
                                     <h3>카드번호</h3>
                                     <input type="tel" placeholder="카드번호를 입력하세요." autocomplete="off">
                                 </div>
-                                <!-- 유효기간 -->
+                                <!-- 3-2 유효기간 -->
                                 <div>
                                     <h3>유효기간</h3>
                                     <div>
@@ -342,32 +342,37 @@
                                         <input type="tel" placeholder="YY" autocomplete="off" maxlength="2">
                                     </div>
                                 </div>
-                                <!-- 카드주명 -->
+                                <!-- 3-2 카드주명 -->
                                 <div>
                                     <h3>카드주명</h3>
                                     <input type="text" autocomplete="off">
                                 </div>
-                                <!-- 생년월일 -->
+                                <!-- 3-2 생년월일 -->
                                 <div>
                                     <h3>생년월일</h3>
                                     <input type="tel" placeholder="주민번호 앞 6자리" autocomplete="off" maxlength="6">
                                 </div>
-                                <!-- 비밀번호 -->
+                                <!-- 3-2 비밀번호 -->
                                 <div>
                                     <h3>비밀번호</h3>
                                     <input type="password" placeholder="비밀번호 앞 2자리" autocomplete="off" maxlength="2">
                                 </div>
-                                <!-- 출금일 -->
-                                <div>
+                                <!-- 3-2 출금일 -->
+                                <div class="wdate">
                                     <h3>출금일</h3>
                                     <select>
-                                        <option selected="selected">매월 5일</option>
+                                        <option selected="selected">매월 1일</option>
+                                        <option>매월 30일</option>
+                                        <option>매월 5일</option>
+                                        <option>매월 15일</option>
+                                        <option>매월 25일</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="info">
-                            *정기출금일은 매월 5일입니다.
+                            <span></span>
+                            <!-- *정기출금일은 매월 5일입니다. -->
                         </div>
                     </div>
                     <div class="admit_wrap">
@@ -397,6 +402,7 @@
                 </form>
             </div>
         </section>
+        <!-- footer 시작 -->
         <footer>
             <div class="inner">
                 <div class="left">

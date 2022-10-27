@@ -260,6 +260,7 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     align-items: center;
 }
 .formBox .box .content > div h3 {width: 20%;}
+/* ---------info----------- */
 .formBox .box .info {
     display: flex;
     flex-direction: row;
@@ -270,6 +271,10 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     background: var(--formGray);
     color: var(--darkGray);
 }
+.info span {
+    color: var(--darkGray);
+}
+/* -------------------------- */
 .formBox .bt_wrap {
     display: flex;
     flex-direction: row;
@@ -395,6 +400,16 @@ header .inner .gnb .subGnb > ul > li.on > ul > li::before {
     position: absolute;
     bottom: -25px;
     left: 24%;
+}
+.formBox .box .content > div div.tel input, 
+.formBox .box .content > div div.email input {width: 100%;}
+.formBox .box .content > div div.warm textarea {
+    width: 80%;
+    height: 80px;
+    color: var(--darkGray);
+    font-size: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
 }
 /* tres */
 .formBox .bwrap.tres .box .content > div#auto div#individual2,
