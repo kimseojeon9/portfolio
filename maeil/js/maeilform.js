@@ -122,23 +122,23 @@ $(function () {
 
     /* ------------------------단계별-------------------------- */
 
-    //0 빈값 체크
+    // //0 빈값 체크
     // $("bt_wrap .next").on("click", function(){
     //     var empty = $('input:value').attr()
     //     var empty2 = $('button:value').attr()
-        
+
     // });
 
     //1 일시후원 클릭시 출금일 없애기
-    $(".cycle button#keep").click(function(){
-        $(".wdate").css({"display": "flex"});
+    $(".cycle button#keep").click(function () {
+        $(".wdate").css({ "display": "flex" });
     });
-    $(".cycle button#nokeep").click(function(){
-        $(".wdate").css({"display": "none"});
+    $(".cycle button#nokeep").click(function () {
+        $(".wdate").css({ "display": "none" });
     });
 
-    //1 input에 5천원 이하 입력시
-    $("#number").blur(function(){
+    //1 .amount input에 5천원 이하 입력시
+    $("#number").blur(function () {
         var avg = $("#number").value;
         var comment = `한 어르신께 일주일간 안부를 묻기 위해 약 5,000원 이상의 후원금이 필요합니다.`;
         if (avg < 5000) {
@@ -146,147 +146,147 @@ $(function () {
         alert(comment);
     });
 
-    //1 버튼 값 span에 넣기
-    // $(".bwrap.uno button").on('click', function(){
-    //     var cycle = $('.cycle button').on('click', function(e) {
+    // //1 버튼 값 span에 넣기
+    // $(".bwrap.uno button").on('click', function () {
+    //     var cycle = $('.cycle button').on('click', function (e) {
     //         console.log(e.target.value);
-    //         $('.cycle button').attr(e.target.value);
-    //       });
-    //     var amount = $('.amount button').on('click', function(e) {
+    //         $(this).attr(e.target.value);
+    //     });
+    //     var amount = $('.amount button').on('click', function (e) {
     //         console.log(e.target.value);
-    //         $('.amount button').attr(e.target.value);
-    //       });
-    //     $("#cycle").text(`${cycle}`);
-    //     $("#amount").text(`${amount}`);
+    //         $(this).attr(e.target.value);
+    //     });
+    //     $("#cycle").text(cycle);
+    //     $("#amount").text(amount);
     // });
-    
-    //3 은행
-    $.ajax({
-        type: "GET",
-        url: "/portfolio/maeil/js/bank.json",
-        dataType: "json",
-        success: function(data) {
-            var elem = ""
-            console.log(data)
-            $.each(data, function (index, obj) {
-                elem += `<option>${obj.name}</option>`
-            });
-            $("#bank").append(elem);
-        },
-        error: function(xhr) {
-            console.log(`${xhr.status}/${xhr.errorText}`)
-        }
-    });
 
-    //3 popup
-    $(".formBox .bwrap .bt_wrap > .submit").click(function () {
-        $(".submit_pop").show();
-    });
-    $(".submit_close").click(function () {
-        $(".submit_pop").hide();
-    });
+//3 은행
+$.ajax({
+    type: "GET",
+    url: "/portfolio/maeil/js/bank.json",
+    dataType: "json",
+    success: function (data) {
+        var elem = "";
+        console.log(data);
+        $.each(data, function (index, obj) {
+            elem += `<option>${obj.name}</option>`;
+        });
+        $("#bank").append(elem);
+    },
+    error: function (xhr) {
+        console.log(`${xhr.status}/${xhr.errorText}`);
+    }
+});
+
+//3 popup
+$(".formBox .bwrap .bt_wrap > .submit").click(function () {
+    $(".submit_pop").show();
+});
+$(".submit_close").click(function () {
+    $(".submit_pop").hide();
+});
 
 
 
-    /* ----------------------유효성 검사---------------------------- */
+/* ----------------------유효성 검사---------------------------- */
 
-    $("#num01").blur(function () {
-        //전화번호 공백 검사
-        if ($("#num01").val() == "") {
-            $("#numlog01").text("*전화번호를 입력하세요");
-            $("#num01").focus();
-            return false;
-        }
-        //전화번호 유효성 검사
-        else if (!num.test($("#num01").val())) {
-            $("#numlog01").text("*올바른 전화번호가 아닙니다. 다시 입력해 주세요.");
-            // $("#email").val("");
-            $("#num01").focus();
-            return false;
-        } else { // 서로 맞는경우
-            $("#numlog01").text("");
-        }
-    });
+$("#num01").blur(function () {
+    //전화번호 공백 검사
+    if ($("#num01").val() == "") {
+        $("#numlog01").text("*전화번호를 입력하세요");
+        $("#num01").focus();
+        return false;
+    }
+    //전화번호 유효성 검사
+    else if (!num.test($("#num01").val())) {
+        $("#numlog01").text("*올바른 전화번호가 아닙니다. 다시 입력해 주세요.");
+        // $("#email").val("");
+        $("#num01").focus();
+        return false;
+    } else { // 서로 맞는경우
+        $("#numlog01").text("");
+    }
+});
 
-    $("input:text[id*=email0]").blur(function () {
-        //이메일 공백 검사
-        if ($("#email01").val() == "") {
-            $("#emaillog01").text("*이메일을 입력하세요");
-            $("#email01").focus();
-            return false;
-        }
-        //이메일 유효성 검사
-        else if (!email.test($("#email01").val())) {
-            $("#emaillog01").text("*이메일 형식에 맞게 입력해주세요");
-            // $("#email").val("");
-            $("#email01").focus();
-            return false;
-        } else { // 서로 맞는경우
-            $("#emaillog01").text("");
-        }
-    });
-    // --------------------------
-    $("#num02").blur(function () {
-        //전화번호 공백 검사
-        if ($("#num02").val() == "") {
-            $("#numlog02").text("*전화번호를 입력하세요");
-            $("#num02").focus();
-            return false;
-        }
-        //전화번호 유효성 검사
-        else if (!num.test($("#num02").val())) {
-            $("#numlog02").text("*올바른 전화번호가 아닙니다. 다시 입력해 주세요.");
-            // $("#email").val("");
-            $("#num02").focus();
-            return false;
-        } else { // 서로 맞는경우
-            $("#numlog02").text("");
-        }
-    });
+$("input:text[id*=email0]").blur(function () {
+    //이메일 공백 검사
+    if ($("#email01").val() == "") {
+        $("#emaillog01").text("*이메일을 입력하세요");
+        $("#email01").focus();
+        return false;
+    }
+    //이메일 유효성 검사
+    else if (!email.test($("#email01").val())) {
+        $("#emaillog01").text("*이메일 형식에 맞게 입력해주세요");
+        // $("#email").val("");
+        $("#email01").focus();
+        return false;
+    } else { // 서로 맞는경우
+        $("#emaillog01").text("");
+    }
+});
+// --------------------------
+$("#num02").blur(function () {
+    //전화번호 공백 검사
+    if ($("#num02").val() == "") {
+        $("#numlog02").text("*전화번호를 입력하세요");
+        $("#num02").focus();
+        return false;
+    }
+    //전화번호 유효성 검사
+    else if (!num.test($("#num02").val())) {
+        $("#numlog02").text("*올바른 전화번호가 아닙니다. 다시 입력해 주세요.");
+        // $("#email").val("");
+        $("#num02").focus();
+        return false;
+    } else { // 서로 맞는경우
+        $("#numlog02").text("");
+    }
+});
 
-    $("#email02").blur(function () {
-        //이메일 공백 검사
-        if ($("#email02").val() == "") {
-            $("#emaillog02").text("*이메일을 입력하세요");
-            $("#email02").focus();
-            return false;
-        }
-        //이메일 유효성 검사
-        else if (!email.test($("#email02").val())) {
-            $("#emaillog02").text("*이메일 형식에 맞게 입력해주세요");
-            // $("#email").val("");
-            $("#email02").focus();
-            return false;
-        } else { // 서로 맞는경우
-            $("#emaillog02").text("");
-        }
-    });
+$("#email02").blur(function () {
+    //이메일 공백 검사
+    if ($("#email02").val() == "") {
+        $("#emaillog02").text("*이메일을 입력하세요");
+        $("#email02").focus();
+        return false;
+    }
+    //이메일 유효성 검사
+    else if (!email.test($("#email02").val())) {
+        $("#emaillog02").text("*이메일 형식에 맞게 입력해주세요");
+        // $("#email").val("");
+        $("#email02").focus();
+        return false;
+    } else { // 서로 맞는경우
+        $("#emaillog02").text("");
+    }
+});
 
-    /* ----------------------체크박스------------------------ */
+/* ----------------------체크박스------------------------ */
 
-    //체크박스 구현
-    // 전체 동의
-    $('#admitAll').on('click', function () {
-        var checked = $(this).is(':checked');
-        if (checked) {
-            $(this).closest('.admit_wrap').find('.check').prop('checked', true);
-        } else {
-            $(this).closest('.admit_wrap').find('.check').prop('checked', false);
-        }
-    });
+//체크박스 구현
+// 전체 동의
+$('#admitAll').on('click', function () {
+    var checked = $(this).is(':checked');
+    if (checked) {
+        $(this).closest('.admit_wrap').find('.check').prop('checked', true);
+    } else {
+        $(this).closest('.admit_wrap').find('.check').prop('checked', false);
+    }
+});
 
-    //하나 선택시 전체 동의 해제
-    $('.admit_wrap .check').on('click', function () {
-        var chkGroup = $(this).closest('.admit_wrap').find('.admit');
-        var chkGroup_cnt = chkGroup.length;
-        checked_cnt = $('.admit input:checkbox:checked').length;
+//하나 선택시 전체 동의 해제
+$('.admit_wrap .check').on('click', function () {
+    var chkGroup = $(this).closest('.admit_wrap').find('.admit');
+    var chkGroup_cnt = chkGroup.length;
+    checked_cnt = $('.admit input:checkbox:checked').length;
 
-        if (checked_cnt < chkGroup_cnt) {
-            $('#admitAll').prop('checked', false);
-        } else if (checked_cnt = 2) {
-            $('#admitAll').prop('checked', true);
-        }
-    });
+    if (checked_cnt < chkGroup_cnt) {
+        $('#admitAll').prop('checked', false);
+    } else if (checked_cnt = 2) {
+        $('#admitAll').prop('checked', true);
+    }
+});
 
 
 });
