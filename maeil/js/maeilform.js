@@ -163,7 +163,7 @@ $(function () {
     //3 은행
     $.ajax({
         type: "GET",
-        url: "/maeil/js/bank.json",
+        url: "/portfolio/maeil/js/bank.json",
         dataType: "json",
         success: function(data) {
             var elem = ""
