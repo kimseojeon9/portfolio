@@ -24,22 +24,157 @@ header .inner .gnb .subGnb > ul > li:last-child { border-right: unset; }
 header .inner .gnb .subGnb > ul > #sub02,
 header .inner .gnb .subGnb > ul > #sub07 { border: none; } 
 /* ---------------------------------------------------------- */
-.con2 .sec2, .con2 .sec2 .container { width: 100%; } 
-.con2 .sec2 .container .content { justify-content: center; } 
-.con2 .sec2 .tab,
-.con2 .sec2 .tab ul li { border-radius: 0; } 
-.con2 .sec2 .container .content .aside { display: none; } 
-.con2 .sec2 .container .content .mainCon { padding: 0; } 
-.con2 .sec2 .container .content .mainCon .tbox h3, .con2 .sec2 .container .content .mainCon .tbox h4 { width: 100%; } 
-.con2 .sec2 .container .content .mainCon > .pagination { display: flex; margin: 30px 0 0 0 } 
-.con2 .sec1 .bwrap [class^="box"] { width: 280px; height: 280px; } 
+.formBox div.amount ul li {
+    flex: 1 1 100px;
+}
+
+
 /* ---------------------------------------------------------- */
 footer { font-size: 0.75rem; } 
 footer .inner { padding: 0 30px; } 
 footer .inner .left>div::after { top: 1px; right: 1px; } 
+footer .inner .rigth .selectBox .site { padding: 5px 30px; text-align: center; } 
 /* ---------------------------------------------------------- */
-@media screen and (max-width: 820px) { 
-    :root {font-size: 13px;}
-    body {min-width: 320px;}
-    footer .inner>div.left { display: none; } 
- }
+@media screen and (max-width: 820px) and (min-width: 320px) {
+    :root {
+            font-size: 13px;
+            font-family: 'Noto Sans KR', sans-serif;
+            word-break: keep-all;
+            word-wrap: break-word;
+            --Blue: #1553A3;
+            --garyFontColor: #4A4A4A;
+            --darkGray: #353535;
+            --yellow: #FDF4A7;
+            --purple: #7E5192;
+            --green: #2AC1BC;
+            --formGray: #F4F4F4;
+        }
+    body {
+        min-width: 320px;
+    }
+    /* ---------- */
+    .formBox .bwrap {
+        width: 100%;
+        padding: 0 25px;
+    }
+    .formBox .box {
+        padding: 30px 0;
+    }
+    .formBox .bwrap.dos .box .content > div#individual div:last-child h3, .formBox .bwrap.dos .box .content > div#group div:last-child h3, .formBox .box .content > div h3 {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .formBox .box .content > div h3 {
+        width: 30%;
+    }
+    .formBox .bwrap.dos .box .content > div#individual div:last-child h3, .formBox .bwrap.dos .box .content > div#group div:last-child h3 {width: 30%;}
+    /* ---------- */
+    .submit_pop {
+        width: 300px;
+        height: 300px;
+        padding: 50px;
+    }
+    .submit_close {
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    /* ---------- */
+
+
+    footer a {
+        font-size: 10px;
+    }
+    footer .inner {padding: 0 20px;}
+    footer .inner > div.left {
+        display: none;
+    }
+    footer .inner .center {
+        flex-flow: column wrap;
+    }
+    footer .inner .center ul {
+        flex-flow: row wrap;
+    }
+    footer .inner .rigth .sns {gap: 5px;}
+    footer .inner .rigth .sns>li>a {
+        width: 24px;
+        height: 24px;
+    }
+    footer .inner .rigth .selectBox .site {
+        padding: 5px 10px;
+    }
+    .aside {
+        width: 80px;
+        height: 170px;
+    }
+    .aside div {opacity: 1;}
+}
+
+
+
+
+
+@media screen and (max-width: 359px) {
+    :root {
+        font-size: 11px;
+        font-family: 'Noto Sans KR', sans-serif;
+        word-break: keep-all;
+        word-wrap: break-word;
+        --Blue: #1553A3;
+        --garyFontColor: #4A4A4A;
+        --darkGray: #353535;
+        --yellow: #FDF4A7;
+        --purple: #7E5192;
+        --green: #2AC1BC;
+        --formGray: #F4F4F4;
+    }
+    body {
+        min-width: 320px;
+    }
+
+    .formBox .bwrap {
+        width: 100%;
+        padding: 0 25px;
+    }
+    .formBox .box {
+        padding: 30px 0;
+    }
+    .formBox .bwrap.dos .box .content > div#individual div:last-child h3, .formBox .bwrap.dos .box .content > div#group div:last-child h3, .formBox .box .content > div h3 {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .formBox .box .content > div h3 {
+        width: 30%;
+    }
+    .formBox .bwrap.dos .box .content > div#individual div:last-child h3, .formBox .bwrap.dos .box .content > div#group div:last-child h3 {width: 30%;}
+    .formBox .box .info {
+        font-size: 9px;
+    }
+
+    footer .inner {padding: 0 20px;}
+    footer .inner > div.left {
+        display: none;
+    }
+    footer .inner .center {
+        flex-flow: column wrap;
+    }
+    footer .inner .center ul {
+        flex-flow: row wrap;
+    }
+    footer .inner .rigth .sns {gap: 5px;}
+    footer .inner .rigth .sns>li>a {
+        width: 24px;
+        height: 24px;
+    }
+    footer .inner .rigth .selectBox .site {
+        padding: 5px 10px;
+    }
+    .aside {
+        width: 80px;
+        height: 170px;
+    }
+    .aside div {opacity: 1;}
+}
