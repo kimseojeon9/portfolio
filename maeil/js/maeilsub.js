@@ -44,6 +44,13 @@ $(function () {
         } else {
             $(".topbt").removeClass("on");
         }
+        $(window).scroll(function () {
+            if ($(this).scrollTop() < 100) {
+                $(".aside").css({"opacity": "1", "transition": "all 0.5s ease"});
+            } else {
+                $(".aside").css({"opacity": "0", "transition": "all 0.5s ease"});
+            }
+        });
     });
 
     // 탑 버튼
