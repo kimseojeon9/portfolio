@@ -45,7 +45,7 @@ $(function () {
             $(".topbt").removeClass("on");
         }
         $(window).scroll(function () {
-            if ($(this).scrollTop() < 100) {
+            if ($(this).scrollTop() < 400) {
                 $(".aside00").css({"opacity": "1", "transition": "all 0.5s ease"});
             } else {
                 $(".aside00").css({"opacity": "0", "transition": "all 0.5s ease"});
