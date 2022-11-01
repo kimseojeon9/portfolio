@@ -61,18 +61,13 @@ $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 750) {
       $(".topbt").addClass("on");
+      $(".aside").css({"opacity": "1", "transition": "all 0.5s ease"});
     } else {
       $(".topbt").removeClass("on");
+      $(".aside").css({"opacity": "0", "transition": "all 0.5s ease"});
     }
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 750) {
-          $(".aside").css({"opacity": "1", "transition": "all 0.5s ease"});
-      } else {
-          $(".aside").css({"opacity": "0", "transition": "all 0.5s ease"});
-      }
   });
   
-  });
   // 탑 버튼
   $(".topbt").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
