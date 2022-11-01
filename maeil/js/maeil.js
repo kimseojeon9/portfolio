@@ -58,13 +58,14 @@ $(function () {
   });
 
   // 스크롤 이벤트
+  $(".aside").css({"opacity": "0", "transition": "all 0.5s ease"});
   $(window).scroll(function () {
     if ($(this).scrollTop() > 750) {
       $(".topbt").addClass("on");
-      $(".aside").css({"opacity": "1", "transition": "all 0.5s ease"});
-    } else {
-      $(".topbt").removeClass("on");
       $(".aside").css({"opacity": "0", "transition": "all 0.5s ease"});
+    } else {
+      $(".aside").css({"opacity": "1", "transition": "all 0.5s ease"});
+      $(".topbt").removeClass("on");
     }
   });
   
