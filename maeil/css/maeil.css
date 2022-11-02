@@ -945,6 +945,7 @@ footer>.topbt.on{
     position: fixed;
     right: 1%;
     top: 50%;
+    opacity: 0;
     transform: translate(0, -50%);
 }
 
