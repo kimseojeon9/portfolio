@@ -200,6 +200,7 @@ $(function () {
     $('#number').on('blur', function (e) {
         var val = $(this).val();
         var val2 = $('.amount button').val();
+        console.log(val2)
         var comment = `한 어르신께 일주일간 안부를 묻기 위해 약 5,000원 이상의 후원금이 필요합니다.`;
 
         $(".formBox .bwrap .bt_wrap > .next").click(function(){
@@ -208,8 +209,14 @@ $(function () {
                 $(".formBox .bwrap").eq(0).addClass("on").siblings().removeClass("on");
                 $(".formBox .step ul li").eq(0).addClass("on").siblings().removeClass("on");
             }
-            else if (val2 >= 10000) {}
-            else if (val >= 5000) {};
+            else if (val2 >= 10000) {
+                $(".formBox .bwrap").eq(1).addClass("on").siblings().removeClass("on");
+                $(".formBox .step ul li").eq(1).addClass("on").siblings().removeClass("on");
+            }
+            else if (val >= 5000) {
+                $(".formBox .bwrap").eq(1).addClass("on").siblings().removeClass("on");
+                $(".formBox .step ul li").eq(1).addClass("on").siblings().removeClass("on");
+            };
         });
         
     });
