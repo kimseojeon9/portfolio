@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
 
-body{max-width: 1024px; min-width: 641px; margin: 0 auto;}
+body{max-width: 820px; min-width: 320px; margin: 0 auto;}
 :root{
     font-size: 13px;
     font-family: 'Noto Sans KR', sans-serif;
