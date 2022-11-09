@@ -455,9 +455,9 @@ header .inner {
     gap: 20px;
 }
 /* sec03 */
-.sec03 {
+/* .sec03 {
     background: linear-gradient(120deg, var(--lightPink) 0%, var(--oreng) 100%);
-}
+} */
 .sec03 .inner {
     flex-direction: column;
     width: 80%;
