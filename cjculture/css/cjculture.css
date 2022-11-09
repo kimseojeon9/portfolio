@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid #A764FF; */
+    /* outline: 1px solid red; */
 }
 body {
     min-width: 1280px;
@@ -169,8 +169,7 @@ header .inner {
     height: 80px;
     background: #000;
     z-index: 10;
-    transform: translateY(50%);
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .swiper-button-next {
     right: 5%;
@@ -440,9 +439,10 @@ header .inner {
 .info .schedule .schd_box01 > div.today {
     flex-direction: row;
     height: 10%;
-    background: var(--lightPink);
+    background: var(--line);
     border-radius: 20px 20px 0 0;
     font-weight: 500;
+    color: #fff;
 }
 .info .schedule .schd_box01 .today a {
     height: 36px;
