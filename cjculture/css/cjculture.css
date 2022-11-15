@@ -148,16 +148,16 @@ header .inner {
 .sec01 .swiper-wrapper {
     height: 100%;
 }
-.sec01 .slide {
+.sec01 .p_slide {
     width: 100%;
     height: 100%;
     gap: 30px;
 }
-.sec01 .slide .images {
+.sec01 .p_slide .images {
     width: 70%;
     height: inherit;
 }
-.sec01 .slide .images img {
+.sec01 .p_slide .images img {
     width: 100%;
     height: inherit;
     border-radius: 30px;
@@ -478,13 +478,13 @@ header .inner {
     width: 100%;
     height: 100%;
     display: flex;
+    flex: 1 1 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
 }
 .sec03 .poster div {
-    width: 100%;
     height: 400px;
     border: 20px;
     position: relative;
@@ -505,26 +505,27 @@ header .inner {
 }
 .sec03 .poster div .description {
     width: 100%;
-    height: 100%;
-    background: var(--pink);
-    border-radius: 20px;
+    height: 30%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 0 0 20px 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     text-align: center;
     gap: 10px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     display: flex;
-    opacity: 0;
     transition: all .3s ease-in-out;
     cursor: pointer;
+    color: #fff;
 }
 .sec03 .poster div:hover .description {
-    opacity: 1;
+    height: 100%;
+    border-radius: 20px;
 }
 /*  */
 .sec04 {
