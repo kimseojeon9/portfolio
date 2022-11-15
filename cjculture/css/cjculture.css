@@ -534,13 +534,6 @@ div.schds span {
 
 
 
-
-
-
-
-
-
-
 /* sec03 */
 .sec03 .inner {
     flex-direction: column;
@@ -684,6 +677,9 @@ div.schds span {
 .sec04 .space_slide .space .img {
     width: 100%;
 }
+
+
+
 /* 푸터 */
 .sec04 footer {
     background: var(--line);
@@ -693,13 +689,46 @@ div.schds span {
 
 
 
-
-
-
-
-
-aside {
+/* aside */
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
     position: fixed;
     top: 50%;
-    right: 5%;
+    right: 1%;
+    z-index: 100;
+}
+
+aside .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: var(--ligthGray);
+    position: relative;
+    transition: all .5s;
+}
+
+aside .swiper-pagination-bullet::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 5px solid var(--ligthGray);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+aside .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+}
+
+aside .swiper-pagination-bullet-active::after {
+    border: none;
+    border-radius: unset;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: var(--swiper-pagination-bullet-vertical-gap, 40px) 0;
 }
