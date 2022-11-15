@@ -12,19 +12,84 @@
     <div class="swiper containner">
         <header>
             <div class="inner">
-                <a href="#" class="logo">청주시문화산업진흥재단</a>
+                <a href="/portfolio/cjculture/cjculture.html" class="logo">청주시문화산업진흥재단</a>
                 <div class="gnb">
                     <ul>
-                        <li><a href="#">재단소개</a></li>
-                        <li><a href="#">공간소개</a></li>
-                        <li><a href="#">사업소개</a></li>
-                        <li><a href="#">신청·참여</a></li>
-                        <li><a href="#">정보마당</a></li>
-                        <li><a href="#">열린공간</a></li>
+                        <li>
+                            <a href="#">재단소개</a>
+                            <ul class="snb">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">직원찾기</a></li>
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">인권경영</a></li>
+                                <li><a href="#">고객만족경영</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공간소개</a>
+                            <ul class="snb">
+                                <li><a href="#">청주첨단문화산업단지</a></li>
+                                <li><a href="#">충북콘텐츠코리아랩</a></li>
+                                <li><a href="#">충북글로벌게임센터</a></li>
+                                <li><a href="#">청주시한국공예관</a></li>
+                                <li><a href="#">동부창고</a></li>
+                                <li><a href="#">김수현드라마아트홀</a></li>
+                                <li><a href="#">문화파출소 청원</a></li>
+                                <li><a href="#">청년문화창작소 느티</a></li>
+                                <li><a href="#">청년문화상점 굿쥬</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">사업소개</a>
+                            <ul class="snb">
+                                <li><a href="#">문화도시</a></li>
+                                <li><a href="#">지역문화</a></li>
+                                <li><a href="#">예술교육</a></li>
+                                <li><a href="#">문화산업</a></li>
+                                <li><a href="#">공예진흥</a></li>
+                                <li><a href="#">정책·교류</a></li>
+                                <li><a href="#">종료사업</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">신청·참여</a>
+                            <ul class="snb">
+                                <li><a href="#">대관신청</a></li>
+                                <li><a href="#">대관신청 조회</a></li>
+                                <li><a href="#">문화플랫폼 클레이</a></li>
+                                <li><a href="#">주차정기권 신청</a></li>
+                                <li><a href="#">예술후원</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">정보마당</a>
+                            <ul class="snb">
+                                <li><a href="#">공고일정 한눈에 보기</a></li>
+                                <li><a href="#">일반공고</a></li>
+                                <li><a href="#">지원사업공고</a></li>
+                                <li><a href="#">채용공고</a></li>
+                                <li><a href="#">입찰공고</a></li>
+                                <li><a href="#">결과발표</a></li>
+                                <li><a href="#">문화소식</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">계약서식</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">열린공간</a>
+                            <ul class="snb">
+                                <li><a href="#">경영공시</a></li>
+                                <li><a href="#">열린의견</a></li>
+                                <li><a href="#">입주기업</a></li>
+                                <li><a href="#">오늘 뭐 먹지?</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <span class="material-icons mClose">close</span>
                     <span class="material-icons mMenu">menu_open</span>
                 </div>
+                <div class="snbbg"></div>
             </div>
         </header>
         <div class="scrolling swiper-wrapper">
@@ -103,15 +168,14 @@
                     </div>
                     <div class="info">
                         <div class="notice">
-                            <!-- <h3>공고</h3> -->
                             <div class="title">
                                 <ul>
-                                    <li class="on"><a href="#">전체</a></li>
-                                    <li><a href="#">일반공고</a></li>
-                                    <li><a href="#">지원사업공고</a></li>
-                                    <li><a href="#">채용공고</a></li>
-                                    <li><a href="#">입찰공고</a></li>
-                                    <li><a href="#">결과발표</a></li>
+                                    <li class="on" data-id="li00"><a href="#">전체</a></li>
+                                    <li data-id="li01"><a href="#">일반공고</a></li>
+                                    <li data-id="li02"><a href="#">지원사업공고</a></li>
+                                    <li data-id="li03"><a href="#">채용공고</a></li>
+                                    <li data-id="li04"><a href="#">입찰공고</a></li>
+                                    <li data-id="li05"><a href="#">결과발표</a></li>
                                     <li class="plus"><a href="#"><i class="fa-sharp fa-solid fa-plus"></i></a></li>
                                 </ul>
                             </div>
@@ -119,7 +183,7 @@
                                 <div>
                                     <a href="#">
                                         <span class="top">
-                                            <strong>일반공고</strong>
+                                            <strong class="nomal">일반공고</strong>
                                             <em>2022-10-31</em>
                                         </span>
                                         <span>
@@ -130,44 +194,64 @@
                                 <div>
                                     <a href="#">
                                         <span class="top">
-                                            <strong>일반공고</strong>
-                                            <em>2022-10-31</em>
+                                            <strong class="job">채용공고</strong>
+                                            <em>2022-10-27</em>
                                         </span>
                                         <span>
-                                            2022 문화파출소 청원 &lt;四時사천 원데이클래스-겨울편&gt; 수강생 모집
+                                            기간제근로자 채용 서류전형 합격자 공고(충북글로벌게임센터)
                                         </span>
                                     </a>
                                 </div>
                                 <div>
                                     <a href="#">
                                         <span class="top">
-                                            <strong>일반공고</strong>
-                                            <em>2022-10-31</em>
+                                            <strong class="job">채용공고</strong>
+                                            <em>2022-10-25</em>
                                         </span>
                                         <span>
-                                            2022 문화파출소 청원 &lt;四時사천 원데이클래스-겨울편&gt; 수강생 모집
+                                            (재)청주시문화산업진흥재단 기간제근로자 채용 재공고(장애인 제한경쟁)
                                         </span>
                                     </a>
                                 </div>
                                 <div>
                                     <a href="#">
                                         <span class="top">
-                                            <strong>일반공고</strong>
-                                            <em>2022-10-31</em>
+                                            <strong class="job">채용공고</strong>
+                                            <em>2022-10-24</em>
                                         </span>
                                         <span>
-                                            2022 문화파출소 청원 &lt;四時사천 원데이클래스-겨울편&gt; 수강생 모집
+                                            (재)청주시문화산업진흥재단 대표이사 공개모집 임명예정자(최종합격자) 공고
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="top">
+                                            <strong class="nomal">일반공고</strong>
+                                            <em>2022-10-18</em>
+                                        </span>
+                                        <span>
+                                            2023 청주국제공예공모전 요강 발표
+                                        </span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <span class="top">
+                                            <strong class="volun">지원사업공고</strong>
+                                            <em>2022-10-18</em>
+                                        </span>
+                                        <span>
+                                            [한국공예관] 2022 문화상품 공모전(~11/21)
                                         </span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="schedule">
-                            <div class="schd_box01">
+                            <div class="schd_box">
                                 <div class="today">
-                                    <a href="#"><i class="fa-regular fa-circle-caret-left"></i></a>
                                     22.11.11.(금)
-                                    <a href="#"><i class="fa-regular fa-circle-caret-right"></i></a>
                                 </div>
                                 <div class="schds">
                                     <span>공지1</span>
@@ -175,8 +259,40 @@
                                     <span>공지3</span>
                                 </div>
                             </div>
-                            <div class="schd_box02">
-                                배너 영역입니다
+                            <div class="bnr_box">
+                                <div class="page">
+                                    <span class="page_n">
+                                        <span></span> / <span></span>
+                                    </span>
+                                    <button class="prev_b">&lt; 이전</button>
+                                    <button class="next_b">&gt; 다음</button>
+                                </div>
+                                <div class="banners">
+                                    <div>
+                                        <a href="https://moonpacw.org/"><img src="/portfolio/cjculture/main/banner/banner1.jpg" alt="문화파출소 청원"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://cbgame.org/"><img src="/portfolio/cjculture/main/banner/banner2.jpg" alt="충북글로벌게임센터"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.cjculture42.org/"><img src="/portfolio/cjculture/main/banner/banner3.jpg" alt="청주문화도시조성사업"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.dbchangko.org/"><img src="/portfolio/cjculture/main/banner/banner4.png" alt="동부창고"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.cbckl.kr/www/index.do"><img src="/portfolio/cjculture/main/banner/banner5.png" alt="충북콘텐츠코리아랩"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://cjkcm.org/"><img src="/portfolio/cjculture/main/banner/banner6.png" alt="한국공예관"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://www.okcj.org/"><img src="/portfolio/cjculture/main/banner/banner7.png" alt="청주공예비엔날레조직위원회"></a>
+                                    </div>
+                                    <div>
+                                        <a href="https://kimsoohyundrama.org/arthall/index.do"><img src="/portfolio/cjculture/main/banner/banner8.png" alt="드라마아트홀"></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

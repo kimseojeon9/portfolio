@@ -94,6 +94,7 @@ header .inner {
     flex-direction: row;
     align-items: center;
     padding: 0;
+    position: relative;
 }
 .logo {
     text-indent: -99999px;
@@ -101,22 +102,43 @@ header .inner {
     min-width: 218px;
     height: 55px;
 }
-.gnb, .gnb ul, .gnb ul li {
+.gnb, .gnb ul {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.gnb, .gnb ul {
     flex-direction: row;
+    z-index: 500;
 }
-.gnb ul {
-    gap: 10px;
+.gnb ul li {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
-.gnb ul a {
+.gnb ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
     font-size: 1.25rem; 
     font-weight: 600;
+    text-align: center;
+    line-height: 100px;
+    position: relative;
+}
+.gnb ul > li:hover > a::after {
+    transform: scale(1, 1);
+}
+.gnb > ul > li > a::after {
+    display: block;
+    content: "";
+    transform: scale(0, 1);
+    width: 100%;
+    height: 3px;
+    background: var(--pink);
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease;
 }
 .mClose, .mMenu {
     cursor: pointer;
@@ -124,6 +146,42 @@ header .inner {
 }
 .mClose {
     display: none;
+}
+/* 서브 */
+.gnb ul li .snb {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    gap: 0;
+}
+.gnb ul li .snb li {
+    height: 40px;
+}
+.gnb ul li .snb a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    z-index: 100;
+    color: var(--line);
+}
+.gnb ul li .snb li:hover a {
+    color: var(--pink);
+}
+.snbbg {
+    position: absolute;
+    top: 100px;
+    left: 0%;
+    width: 100vw;
+    height: 400px;
+    transform: translateX(-19%);
+    background: #fff;
 }
 
 /* 컨텐츠 */
@@ -290,56 +348,6 @@ header .inner {
     background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
 }
 /* info */
-.info {
-    height: calc(100vh - 20%);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    width: 100%;
-}
-.info .notice {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: calc(100% - 30%);
-    height: 80%;
-    
-}
-/* 타이틀 */
-.info .notice .title {width: 100%;}
-.info .notice .title ul {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 30px 0 0 0;
-}
-.info .notice .title ul li {
-    width: 130px;
-    height: 50px;
-}
-.info .notice .title ul li.plus {
-    width: 50px;
-    background: #EEEEEE;
-}
-.info .notice .title ul li a {
-    font-size: 1.25rem;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.info .notice .title ul li.on, .info .notice .title ul li:hover {
-    background: var(--line);
-}
-.info .notice .title ul li.on a, .info .notice .title ul li:hover a {
-    color: #fff;
-}
-/* 공고란 */
 .info .notice .contents {
     display: flex;
     flex-flow: row wrap;
@@ -380,8 +388,22 @@ header .inner {
 .info .notice .contents > div > a .top strong {
     font-weight: 400;
     color: #fff;
-    background: var(--mint);
     padding: 5px 10px;
+}
+strong.nomal {
+    background: var(--mint);
+}
+strong.job {
+    background: var(--blue);
+}
+strong.volun {
+    background: var(--oreng);
+}
+strong.bid {
+    background: var(--red);
+}
+strong.result {
+    background: var(--puple);
 }
 .info .notice .contents > div > a .top em {
     font-style: normal;
@@ -409,12 +431,13 @@ header .inner {
     width: calc(100% - 70%);
     height: 80%;
 }
-.info .schedule .schd_box01 {
+.info .schedule .schd_box {
     margin: 30px 0 0 0;
     width: 100%;
     height: 70%;
     border: 1px solid var(--line);
     border-radius: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -422,13 +445,7 @@ header .inner {
     gap: 10px;
     font-size: 1.25rem;
 }
-.info .schedule .schd_box02 {
-    margin: 30px 0 0 0;
-    width: 100%;
-    height: 30%;
-    border: 1px solid var(--line);
-}
-.info .schedule .schd_box01 > div {
+.info .schedule .schd_box > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -436,28 +453,79 @@ header .inner {
     width: 100%;
 }
 
-.info .schedule .schd_box01 > div.today {
+.info .schedule .schd_box > div.today {
     flex-direction: row;
-    height: 10%;
+    height: 15%;
     background: var(--line);
-    border-radius: 20px 20px 0 0;
     font-weight: 500;
     color: #fff;
 }
-.info .schedule .schd_box01 .today a {
+.info .schedule .schd_box .today a {
     height: 36px;
     width: 36px;
     margin: 0 10px;
     display: block;
 }
-.info .schedule .schd_box01 > div.schds {
+.info .schedule .schd_box > div.schds {
     flex-direction: column;
     gap: 20px;
 }
+/*  */
+.info .schedule .bnr_box {
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 30%;
+    /* border: 1px solid var(--line); */
+    display: flex;
+    flex-direction: column;
+}
+.bnr_box .page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+.bnr_box .page span {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 5px;
+}
+.bnr_box .page button {
+    border: none;
+    background: var(--line);
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.bnr_box .banners {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    padding: 20px 10px;
+    position: relative;
+}
+.bnr_box .banners img {
+    width: calc(100% - 20px);
+    object-fit: cover;
+    position: absolute;
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
 /* sec03 */
-/* .sec03 {
-    background: linear-gradient(120deg, var(--lightPink) 0%, var(--oreng) 100%);
-} */
 .sec03 .inner {
     flex-direction: column;
     width: 80%;
