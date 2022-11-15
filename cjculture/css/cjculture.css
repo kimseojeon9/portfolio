@@ -87,7 +87,7 @@ header {
     z-index: 1000;
     position: sticky;
     top: 0;
-    left: 50%;
+    left: 0;
     background: #fff;
 }
 header .inner {
@@ -517,10 +517,10 @@ strong.result {
     display: block;
 }
 .info .schedule .schd_box .today a:nth-of-type(1) {
-    background: url(/cjculture/main/chevron_left.png) no-repeat 50% 50% / 70%;
+    background: url(/portfolio/cjculture/main/chevron_left.png) no-repeat 50% 50% / 70%;
 }
 .info .schedule .schd_box .today a:nth-of-type(2) {
-    background: url(/cjculture/main/chevron_right.png) no-repeat 50% 50% / 70%;
+    background: url(/portfolio/cjculture/main/chevron_right.png) no-repeat 50% 50% / 70%;
 }
 .info .schedule .schd_box > div.schds {
     flex-direction: column;
