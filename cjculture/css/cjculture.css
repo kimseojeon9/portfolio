@@ -348,6 +348,56 @@ header .inner {
     background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
 }
 /* info */
+.info {
+    height: calc(100vh - 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+.info .notice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 30%);
+    height: 80%;
+    
+}
+/* 타이틀 */
+.info .notice .title {width: 100%;}
+.info .notice .title ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 30px 0 0 0;
+}
+.info .notice .title ul li {
+    width: 130px;
+    height: 50px;
+}
+.info .notice .title ul li.plus {
+    width: 50px;
+    background: #EEEEEE;
+}
+.info .notice .title ul li a {
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .notice .title ul li.on, .info .notice .title ul li:hover {
+    background: var(--line);
+}
+.info .notice .title ul li.on a, .info .notice .title ul li:hover a {
+    color: #fff;
+}
+/* 공고란 */
 .info .notice .contents {
     display: flex;
     flex-flow: row wrap;
@@ -467,10 +517,10 @@ strong.result {
     display: block;
 }
 .info .schedule .schd_box .today a:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/chevron_left.png) no-repeat 50% 50% / 70%;
+    background: url(/cjculture/main/chevron_left.png) no-repeat 50% 50% / 70%;
 }
 .info .schedule .schd_box .today a:nth-of-type(2) {
-    background: url(/portfolio/cjculture/main/chevron_right.png) no-repeat 50% 50% / 70%;
+    background: url(/cjculture/main/chevron_right.png) no-repeat 50% 50% / 70%;
 }
 .info .schedule .schd_box > div.schds {
     flex-direction: column;
@@ -485,6 +535,7 @@ div.schds span {
     line-height: 1.75rem;
     cursor: pointer;
 }
+
 /*  */
 .info .schedule .bnr_box {
     margin: 30px 0 0 0;
