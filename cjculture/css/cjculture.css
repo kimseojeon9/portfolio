@@ -674,6 +674,12 @@ div.schds span {
     border: 2px solid var(--pink);
     color: var(--pink);
     padding: 5px 10px;
+    transition: all .3s ease-in-out;
+}
+.sec04 .space_slide .space .tbox a:hover {
+    border: 2px solid var(--pink);
+    color: #fff;
+    background: var(--pink);
 }
 .sec04 .space_slide .space .img {
     width: 100%;
