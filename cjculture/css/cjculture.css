@@ -11,7 +11,7 @@
     /* outline: 1px solid red; */
 }
 body {
-    min-width: 1280px;
+    min-width: 1025px;
 }
 :root {
     font-family: 'Noto Sans KR', sans-serif, 'Nanum Gothic', sans-serif, 'Nanum Gothic Coding', monospace;
@@ -98,7 +98,7 @@ header .inner {
 }
 .logo {
     text-indent: -99999px;
-    background: url(/cjculture/logo.png) no-repeat 50% 50% / cover;
+    background: url(/portfolio/cjculture/logo.png) no-repeat 50% 50% / cover;
     min-width: 218px;
     height: 55px;
 }
@@ -183,6 +183,11 @@ header .inner {
     left: 0;
 }
 
+
+
+
+
+
 /* 컨텐츠 */
 /* 섹션1 */
 .sec01 {
@@ -192,12 +197,12 @@ header .inner {
 }
 .sec01 .inner {
     align-items: flex-start;
-    padding: 15% 0 0 0;
+    padding: 10% 0 0 0;
 }
 /* 스와이퍼 */
 .sec01 .slideWraper {
     width: 100%;
-    height: 450px;
+    height: 70%;
     align-items: center;
     justify-content: center;
     position: unset;
@@ -211,7 +216,7 @@ header .inner {
     gap: 30px;
 }
 .sec01 .p_slide .images {
-    width: 70%;
+    width: 100%;
     height: inherit;
 }
 .sec01 .p_slide .images img {
@@ -226,7 +231,7 @@ header .inner {
     height: 80px;
     background: #000;
     z-index: 10;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .swiper-button-next {
     right: 5%;
@@ -246,6 +251,7 @@ header .inner {
 /* txtbox */
 .txtBox {
     width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,6 +263,9 @@ header .inner {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 0 30px 30px 0;
+    color: #fff;
 }
 .txtBox h1 {
     line-height: 1.25em;
@@ -308,6 +317,7 @@ header .inner {
     border-radius: 100px;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 .quick .icon:hover {
     transform: translate(0, -8%);
@@ -329,22 +339,22 @@ header .inner {
     transform: translate(-50%, 0);
 }
 .quick .icon:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
+    background: url(/portfolio/cjculture/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
 }
 .quick .icon:nth-of-type(2) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(4) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(5) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(6) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
 }
 /* info */
 .info {
@@ -584,6 +594,15 @@ div.schds span {
 
 
 
+
+
+
+
+
+
+
+
+
 /* sec03 */
 .sec03 .inner {
     flex-direction: column;
@@ -598,6 +617,10 @@ div.schds span {
     justify-self: center;
     gap: 30px;
 }
+.sec03 .title em {
+    font-style: normal;
+    color: var(--pink);
+}
 .sec03 .title p {
     font-size: 1.125rem;
 }
@@ -609,7 +632,7 @@ div.schds span {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 30px;
+    gap: 15px;
 }
 .sec03 .poster div {
     height: 400px;
@@ -662,6 +685,7 @@ div.schds span {
 }
 .sec04 .inner {
     flex-direction: column;
+    align-items: center;
 }
 .sec04 h2 {
     width: 100%;
@@ -790,19 +814,17 @@ footer .sns a {
     transition: all 0.3s;
 }
 footer .sns a:nth-of-type(1) {
-    background: url(/cjculture/main/sns_02_Facebook.svg) no-repeat 50% 50%;
+    background: url(/portfolio/cjculture/main/sns_02_Facebook.svg) no-repeat 50% 50%;
 }
 footer .sns a:nth-of-type(2) {
-    background: url(/cjculture/main/sns_01_Instagram.svg) no-repeat 50% 50%;
+    background: url(/portfolio/cjculture/main/sns_01_Instagram.svg) no-repeat 50% 50%;
 }
 footer .sns a:nth-of-type(3) {
-    background: url(/cjculture/main/sns_03_youtube.svg) no-repeat 50% 50%;
+    background: url(/portfolio/cjculture/main/sns_03_youtube.svg) no-repeat 50% 50%;
 }
 footer .sns a:hover {
     transform: translateY(-20%);
 }
-
-
 
 
 /* aside */
