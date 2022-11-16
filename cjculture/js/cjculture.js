@@ -51,9 +51,15 @@ $(document).ready(function () {
     $('.snb, .snbbg').stop().slideUp('500');
   });
 
-  $('.mMenu').on('click', function () {
-    $('.snb, .snbbg').show("fast");
-  });
+  if ($(window).width() <= 1024) {
+    $(".gnb ul").hide();
+    $(".mMenu").click(function () {
+      $(".gnb ul").show();
+    });
+    $(".mClose").click(function () {
+      $(".gnb ul").hide();
+    });
+  }
 
   // sec02 
   $('.title li').on('click', function () {
@@ -61,12 +67,10 @@ $(document).ready(function () {
   });
 
   // banners 
-  $('banners div:gt(0)').hide();
   var totalNum = $(".banners>div").length;
   var currentNum = 1;
   $(".page_n>span:first").text(currentNum);
   $(".page_n>span:last").text(totalNum);
-
   $(".next_b").click(function () {
     currentNum++;
     if (currentNum > totalNum) {
@@ -75,7 +79,6 @@ $(document).ready(function () {
     $(".banners div:first").insertAfter(".banners div:last");
     $(".page_n>span:first").text(currentNum);
   });
-
   $(".prev_b").click(function () {
     currentNum--;
     if (currentNum < 1) {
@@ -85,4 +88,19 @@ $(document).ready(function () {
     $(".page_n>span:first").text(currentNum);
   });
 
+  
+});
+
+
+// 리사이징
+$(window).resize(function () {
+  if ($(window).width() < 1024) {
+    $('.gnb > ul').hide();
+    $('.mMenu').on('click', function () {
+      $('.gnb > ul').show("fast");
+    });
+    $('.mClose').on('click', function () {
+      $('.gnb > ul').hide("fast");
+    });
+  };
 });
