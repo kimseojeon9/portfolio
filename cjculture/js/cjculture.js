@@ -10,7 +10,7 @@ var swiper = new Swiper(".containner", {
   },
 });
 
-// // 메인 슬라이드
+// 메인 슬라이드
 var swiper = new Swiper(".slideWraper", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -67,6 +67,16 @@ $(document).ready(function () {
       autoplaySpeed: 2000,
     });
   }
+  if ($(window).width() <= 640) {
+    $(".mMenu").click(function () {
+      $(".gnb ul").show();
+      $('.gnb ul .snb').hide();
+    });
+    $('.gnb ul li').on('click', function(){
+      $(this).find('ul').show();
+      $(this).find('ul').stop().slideToggle();
+    });
+  }
 
   // sec02 
   $('.title li').on('click', function () {
@@ -114,8 +124,8 @@ $(window).resize(function () {
 var lastWidth = $(window).width();
 $(window).resize(function () {
   if ($(window).width() != lastWidth) {
-    location.reload();
-    window.location = window.location; 
+    location.reload(); // 파이어폭스에서 리프레시 안됨
+    window.location = window.location; // 리프레시 파이어폭스 브라우저 이슈 해결
     lastWidth = $(window).width();
     return false;
   }
