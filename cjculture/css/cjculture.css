@@ -202,13 +202,15 @@ header .inner {
 /* 스와이퍼 */
 .sec01 .slideWraper {
     width: 100%;
-    height: 70%;
-    align-items: center;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
     justify-content: center;
     position: unset;
 }
 .sec01 .swiper-wrapper {
-    height: 100%;
+    height: 70%;
+    transform: translateY(-10%);
 }
 .sec01 .p_slide {
     width: 100%;
@@ -232,6 +234,7 @@ header .inner {
     background: #000;
     z-index: 10;
     opacity: 0.7;
+    transform: translateY(-50%);
 }
 .swiper-button-next {
     right: 5%;
@@ -339,22 +342,22 @@ header .inner {
     transform: translate(-50%, 0);
 }
 .quick .icon:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
+    background: url(/portfolio/cjculture/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
 }
 .quick .icon:nth-of-type(2) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(4) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(5) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(6) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
 }
 /* info */
 .info {
@@ -594,19 +597,16 @@ div.schds span {
 
 
 
-
-
-
-
-
-
-
-
-
 /* sec03 */
+.sec03 {
+    padding: 20% 0 0 0;
+}
 .sec03 .inner {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 80%;
+    padding: 0;
 }
 .sec03 .title {
     width: 100%;
@@ -626,7 +626,7 @@ div.schds span {
 }
 .sec03 .poster {
     width: 100%;
-    height: 100%;
+    /* height: 70%; */
     display: flex;
     flex: 1 1 0;
     flex-direction: row;
@@ -635,7 +635,7 @@ div.schds span {
     gap: 15px;
 }
 .sec03 .poster div {
-    height: 400px;
+    height: 50%;
     border: 20px;
     position: relative;
 }
@@ -648,10 +648,10 @@ div.schds span {
 }
 .sec03 .poster div:nth-of-type(2),
 .sec03 .poster div:nth-of-type(4) {
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
 }
 .sec03 .poster div:nth-of-type(3) {
-    margin: 100px 0 0 0;
+    margin: 60px 0 0 0;
 }
 .sec03 .poster div .description {
     width: 100%;
@@ -686,6 +686,7 @@ div.schds span {
 .sec04 .inner {
     flex-direction: column;
     align-items: center;
+    height: calc(100% - 20%);
 }
 .sec04 h2 {
     width: 100%;
@@ -758,7 +759,7 @@ div.schds span {
 .sec04 footer {
     background: var(--line);
     width: 100%;
-    height: 150px;
+    height: calc(100% - 80%);
     display: flex;
     justify-content: center;
 }
@@ -773,7 +774,7 @@ footer .footerTxt {
     flex-direction: column;
     width: calc(100% - 20%);
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 footer .footerTxt ul {
     display: flex;
