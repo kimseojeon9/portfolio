@@ -342,22 +342,22 @@ header .inner {
     transform: translate(-50%, 0);
 }
 .quick .icon:nth-of-type(1) {
-    background: url(/portfolio/cjculture/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
 }
 .quick .icon:nth-of-type(2) {
-    background: url(/portfolio/cjculture/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(3) {
-    background: url(/portfolio/cjculture/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(4) {
-    background: url(/portfolio/cjculture/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(5) {
-    background: url(/portfolio/cjculture/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(6) {
-    background: url(/portfolio/cjculture/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
+    background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
 }
 /* info */
 .info {
