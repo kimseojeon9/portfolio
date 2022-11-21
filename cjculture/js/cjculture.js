@@ -426,12 +426,9 @@ let li02 = document.getElementById('li02');
 let li03 = document.getElementById('li03');
 let li04 = document.getElementById('li04');
 let li05 = document.getElementById('li05');
-let contents = document.getElementsByClassName('contents');
-var a = document.querySelectorAll('.contents > a')
 
 li01.onclick = function () {
   $('.contents').empty()
-  console.log(a)
   for (var i = 0; i < nomalData; i++) {
     createNoticeInfo01(i)
   }
