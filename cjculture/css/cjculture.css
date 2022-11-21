@@ -415,39 +415,30 @@ header .inner {
     flex-flow: row wrap;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    padding: 1px;
 }
-.info .notice .contents > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    position: relative;
-    flex: 1 1 276px;
-    height: auto;
-    margin: 0 -1px;
-    width: calc(100% + 1px);
-}
-.info .notice .contents > div:hover > a {
+.info .notice .contents a:hover {
     box-shadow: 3px 3px 12px rgb(0 0 0 / 20%);
     transition: all 0.2s ease-in;
 }
-.info .notice .contents > div > a {
-    display: block;
+.info .notice .contents a {
+    display: flex;
     padding: 10px;
     border: 1px solid var(--ligthGray);
-    margin: -1px;
     position: relative;
     width: calc(100% - 1px);
-    height: calc(100% + 1px);
-    -webkit-transition: .2s;
     transition: .2s;
+    flex: 1 1 276px;
+    height: calc(100% /3);
+    margin: -1px -1px 0px 0px;
 }
-.info .notice .contents > div > a .top {
+.info .notice .contents a .top {
     position: relative;
     display: block;
     width: 100%;
 }
-.info .notice .contents > div > a .top strong {
+.info .notice .contents a .top strong {
     font-weight: 400;
     color: #fff;
     padding: 5px 10px;
@@ -467,21 +458,24 @@ strong.bid {
 strong.result {
     background: var(--puple);
 }
-.info .notice .contents > div > a .top em {
+.info .notice .contents a .top em {
     font-style: normal;
     color: var(--ligthGray);
     position: absolute;
     right: 0;
 }
-.info .notice .contents > div > a span:last-child {
+.info .notice .contents a span:last-child {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     text-align: center;
     font-size: 1.125rem;
     width: 100%;
     padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* schedule */

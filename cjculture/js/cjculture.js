@@ -132,19 +132,6 @@ $(window).resize(function () {
 });
 
 // 공고 게시판
-function createNoticeInfo (index) {
-  var div = document.createElement('div')
-  var a = document.createElement('a')
-  var span = document.createElement('span')
-
-  function makeBlock (){
-  }
-  console.log(notice());
-
-};
-
-console.log(createNoticeInfo());
-
 /* ------------class------------ */
 class NoticeInfo {
   constructor(type, days, info) {
@@ -166,7 +153,7 @@ class NoticeInfo {
 // 일반공고
 var nomal = new Map();
 nomal.set(221115, new NoticeInfo('일반공고', '2022-11-15', '2022 김수현드라마아트홀 「스크린 속 김수현을 만나다」 특별상영 관람객 모집'));
-nomal.set(221115 - 2, new NoticeInfo('일반공고', '2022-11-15', '2022 김수현드라마아트홀 「타닥타닥 감성 피우기」 체험 프로그램 안내'));
+nomal.set(221115.2, new NoticeInfo('일반공고', '2022-11-15', '2022 김수현드라마아트홀 「타닥타닥 감성 피우기」 체험 프로그램 안내'));
 nomal.set(221112, new NoticeInfo('일반공고', '2022-11-12', '2022년 제4차 청주첨단문화산업단지 기간연장 및 공간변경 기업 신청 공고'));
 nomal.set(221111, new NoticeInfo('일반공고', '2022-11-11', '「2022 청주영상주간」 프로그램 및 사전 예약 안내'));
 nomal.set(221031, new NoticeInfo('일반공고', '2022-10-31', '2022 문화파출소 청원 &lt;四時사천 원데이클래스-겨울편&gt; 수강생 모집'));
@@ -178,7 +165,7 @@ nomal.set(220910, new NoticeInfo('일반공고', '2022-09-10', '한국공예관 
 nomal.set(220906, new NoticeInfo('일반공고', '2022-09-06', '찾아가는 케이녹 투자유치 상담회 “KNock STATION X 충북 : 에듀테크" 참여자 모집'));
 nomal.set(220902, new NoticeInfo('일반공고', '2022-09-02', '한국공예관 뮤지엄숍 추석맞이 할인&사은 행사 안내(9/3~9/30)'));
 nomal.set(220831, new NoticeInfo('일반공고', '2022-08-31', '[(재)청주시문화산업진흥재단] <소소한 동네 문제 해결단> 모집'));
-nomal.set(220831 - 2, new NoticeInfo('일반공고', '2022-08-31', '동부창고 카페C 9/2(금) 영업시간 단축 운영 안내'));
+nomal.set(220831.2, new NoticeInfo('일반공고', '2022-08-31', '동부창고 카페C 9/2(금) 영업시간 단축 운영 안내'));
 
 // 지원사업공고
 var volun = new Map();
@@ -218,7 +205,7 @@ bid.set(220527, new NoticeInfo('입찰공고', '2022-05-27', '[제2022-29호] 20
 bid.set(220524, new NoticeInfo('입찰공고', '2022-05-24', '[제2022-28호] 청주 기록문화 실태 조사·분석 및 2022년 청주 문화도시조성사업 성과관리 용역 입찰 공고(협상에 의한 계약)'));
 bid.set(220520, new NoticeInfo('입찰공고', '2022-05-20', '[제2022-27호] 2022 청주 문화도시조성사업 청주 시민기록관 전시 기획·설계 및 전시물 제작·설치 용역 입찰 공고(협상에 의한 계약)(2022. 6. 2. 변경)'));
 bid.set(220511, new NoticeInfo('입찰공고', '2022-05-11', '[제2022-26호] 2022 청주 문화도시조성사업 청년문화창작소 느티 공간 운영 용역 입찰 재공고(협상에 의한 계약)'));
-bid.set(220511 - 2, new NoticeInfo('입찰공고', '2022-05-11', '[제2022-25호] 2022 충북글로벌게임센터 지스타 2022 충북공동관 구축·운영 용역 입찰 재공고(협상에 의한 계약)'));
+bid.set(220511.2, new NoticeInfo('입찰공고', '2022-05-11', '[제2022-25호] 2022 충북글로벌게임센터 지스타 2022 충북공동관 구축·운영 용역 입찰 재공고(협상에 의한 계약)'));
 
 // 결과발표
 var result = new Map();
@@ -226,7 +213,7 @@ result.set(220923, new NoticeInfo('결과발표', '2022-09-23', '2022 충북글�
 result.set(220920, new NoticeInfo('결과발표', '2022-09-20', '2022 충북글로벌게임센터 [글로벌 게임전시회 참가지원] 게임기업 선정평가 결과안내'));
 result.set(220908, new NoticeInfo('결과발표', '2022-09-08', '청주첨단문화산업단지 2022년 제3차 입주기업 기간연장·공간변경 심사 결과'));
 result.set(220803, new NoticeInfo('결과발표', '2022-08-03', '2022 충북글로벌게임센터 [게임 상용화 지원] 2차 게임기업 선정평가 결과 안내'));
-result.set(220803 - 2, new NoticeInfo('결과발표', '2022-08-03', '2022 충북글로벌게임센터 [인디 스타트업 제작지원] 중간평가 결과 안내'));
+result.set(220803.2, new NoticeInfo('결과발표', '2022-08-03', '2022 충북글로벌게임센터 [인디 스타트업 제작지원] 중간평가 결과 안내'));
 result.set(220803, new NoticeInfo('결과발표', '2022-08-03', '2022 충북글로벌게임센터 [충북 게임기업 제작지원] 중간평가 결과'));
 result.set(220725, new NoticeInfo('결과발표', '2022-07-25', '2022 청주 문화도시조성사업 <시민 자율예산제>-[시민제안형] 심의 결과 발표'));
 result.set(220701, new NoticeInfo('결과발표', '2022-07-01', '청주첨단문화산업단지 2022년 제2차 기간연장·공간변경 입주기업 심사 결과'));
@@ -234,3 +221,238 @@ result.set(220701, new NoticeInfo('결과발표', '2022-07-01', '청주첨단문
 // 전체
 var all = [];
 all.push(nomal, volun, job, bid, result);
+
+let nomalV = [...nomal.values()]; 
+let volunV = [...volun.values()]; 
+let jobV = [...job.values()]; 
+let bidV = [...bid.values()]; 
+let resultV = [...result.values()]; 
+
+// console.log(nomalV[0]);
+// console.log(nomalV[0].type);
+// console.log(nomal.values().next().value.infoI());
+
+/* ----------함수--------- */
+function createNoticeInfo01(index) {
+  var div = document.createElement('div');
+  var a = document.createElement('a');
+  // span 01
+  function makeSpanTop(index) {
+    let span = document.createElement('span');
+    
+    let strong = document.createElement('strong');
+    let strongTxt = document.createTextNode(nomalV[index].type);
+    
+    let em = document.createElement('em');
+    let emTxt = document.createTextNode(nomalV[index].days);
+    
+    strong.appendChild(strongTxt);
+    em.appendChild(emTxt);
+    
+    strong.classList.add('nomal');
+    span.classList.add('top');
+    span.appendChild(strong);
+    span.appendChild(em);
+    a.appendChild(span)
+  }
+  // span 02
+  function makeSpanBottom(index) {
+    let span = document.createElement('span');
+    let spanTxt = document.createTextNode(nomalV[index].info);
+    span.appendChild(spanTxt);
+    a.appendChild(span)
+  }
+  makeSpanTop(index);
+  makeSpanBottom(index);
+
+  // a에 집어넣기
+  let block = document.querySelector(".contents")
+  block.appendChild(a)
+};
+function createNoticeInfo02(index) {
+  var div = document.createElement('div');
+  var a = document.createElement('a');
+  function makeSpanTop(index) {
+    let span = document.createElement('span');
+
+    let strong = document.createElement('strong');
+    let strongTxt = document.createTextNode(volunV[index].type);
+    
+    let em = document.createElement('em');
+    let emTxt = document.createTextNode(volunV[index].days);
+    
+    strong.appendChild(strongTxt);
+    em.appendChild(emTxt);
+    
+    strong.classList.add('volun');
+    span.classList.add('top');
+    span.appendChild(strong);
+    span.appendChild(em);
+    a.appendChild(span)
+  }
+  function makeSpanBottom(index) {
+    let span = document.createElement('span');
+    let spanTxt = document.createTextNode(volunV[index].info);
+    span.appendChild(spanTxt);
+    a.appendChild(span)
+  }
+  makeSpanTop(index);
+  makeSpanBottom(index);
+  let block = document.querySelector(".contents")
+  block.appendChild(a)
+};
+function createNoticeInfo03(index) {
+  var div = document.createElement('div');
+  var a = document.createElement('a');
+  function makeSpanTop(index) {
+    let span = document.createElement('span');
+
+    let strong = document.createElement('strong');
+    let strongTxt = document.createTextNode(jobV[index].type);
+    
+    let em = document.createElement('em');
+    let emTxt = document.createTextNode(jobV[index].days);
+    
+    strong.appendChild(strongTxt);
+    em.appendChild(emTxt);
+    
+    strong.classList.add('job');
+    span.classList.add('top');
+    span.appendChild(strong);
+    span.appendChild(em);
+    a.appendChild(span)
+  }
+  function makeSpanBottom(index) {
+    let span = document.createElement('span');
+    let spanTxt = document.createTextNode(jobV[index].info);
+    span.appendChild(spanTxt);
+    a.appendChild(span)
+  }
+  makeSpanTop(index);
+  makeSpanBottom(index);
+  let block = document.querySelector(".contents")
+  block.appendChild(a)
+};
+function createNoticeInfo04(index) {
+  var div = document.createElement('div');
+  var a = document.createElement('a');
+  function makeSpanTop(index) {
+    let span = document.createElement('span');
+
+    let strong = document.createElement('strong');
+    let strongTxt = document.createTextNode(bidV[index].type);
+    
+    let em = document.createElement('em');
+    let emTxt = document.createTextNode(bidV[index].days);
+    
+    strong.appendChild(strongTxt);
+    em.appendChild(emTxt);
+    
+    strong.classList.add('nomal');
+    span.classList.add('top');
+    span.appendChild(strong);
+    span.appendChild(em);
+    a.appendChild(span)
+  }
+  function makeSpanBottom(index) {
+    let span = document.createElement('span');
+    let spanTxt = document.createTextNode(bidV[index].info);
+    span.appendChild(spanTxt);
+    a.appendChild(span)
+  }
+  makeSpanTop(index);
+  makeSpanBottom(index);
+  let block = document.querySelector(".contents")
+  block.appendChild(a)
+};
+function createNoticeInfo05(index) {
+  var div = document.createElement('div');
+  var a = document.createElement('a');
+  function makeSpanTop(index) {
+    let span = document.createElement('span');
+
+    let strong = document.createElement('strong');
+    let strongTxt = document.createTextNode(resultV[index].type);
+    
+    let em = document.createElement('em');
+    let emTxt = document.createTextNode(resultV[index].days);
+    
+    strong.appendChild(strongTxt);
+    em.appendChild(emTxt);
+    
+    strong.classList.add('nomal');
+    span.classList.add('top');
+    span.appendChild(strong);
+    span.appendChild(em);
+    a.appendChild(span)
+  }
+  function makeSpanBottom(index) {
+    let span = document.createElement('span');
+    let spanTxt = document.createTextNode(resultV[index].info);
+    span.appendChild(spanTxt);
+    a.appendChild(span)
+  }
+  makeSpanTop(index);
+  makeSpanBottom(index);
+  let block = document.querySelector(".contents")
+  block.appendChild(a)
+};
+
+let nomalData = nomalV.length
+let volunData = volunV.length
+let jobData = jobV.length
+let bidData = bidV.length
+let resultData = resultV.length
+
+// for (var i = 0; i < nomalData; i++) {
+//   createNoticeInfo01(i)
+// }
+// for (var i = 0; i < volunData; i++) {
+//   createNoticeInfo02(i)
+// }
+// for (var i = 0; i < jobData; i++) {
+//   createNoticeInfo03(i);
+// }
+// for (var i = 0; i < bidData; i++) {
+//   createNoticeInfo04(i);
+// }
+// for (var i = 0; i < resultData; i++) {
+//   createNoticeInfo05(i);
+// }
+    
+/* ----------클릭 이벤트--------- */
+let li00 = document.getElementById('li00');
+let li01 = document.getElementById('li01');
+let li02 = document.getElementById('li02');
+let li03 = document.getElementById('li03');
+let li04 = document.getElementById('li04');
+let li05 = document.getElementById('li05');
+let contents = document.getElementsByClassName('contents');
+// let removecell = contents.removeChild(this.children);
+
+li01.onclick = function () {
+  for (var i = 0; i < nomalData; i++) {
+    createNoticeInfo01(i)
+  }
+};
+li02.onclick = function () {
+  // removecell
+  for (var i = 0; i < volunData; i++) {
+    createNoticeInfo02(i)
+  }
+};
+li03.onclick = function () {
+  for (var i = 0; i < jobData; i++) {
+    createNoticeInfo03(i)
+  }
+};
+li04.onclick = function () {
+  for (var i = 0; i < bidData; i++) {
+    createNoticeInfo04(i)
+  }
+};
+li05.onclick = function () {
+  for (var i = 0; i < resultData; i++) {
+    createNoticeInfo05(i);
+  }
+};
