@@ -14,10 +14,10 @@ var swiper = new Swiper(".containner", {
 var swiper = new Swiper(".slideWraper", {
   spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -32,10 +32,10 @@ var swiper = new Swiper(".slideWraper", {
 var swiper = new Swiper(".space_slide", {
   spaceBetween: 30,
   centeredSlides: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -478,3 +478,35 @@ li00.onclick = function () {
     createNoticeInfo05(i);
   }
 };
+
+// 메인슬라이드 json
+$.ajax({
+  type: "GET",
+  url: "/cjculture/js/main.json",
+  dataType: "json",
+  success: function (data) {
+    var elem = "";
+    console.log(data);
+    $.each(data, function(i, obj){
+      elem += `<div class="swiper-slide p_slide">`;
+        elem += `<div class="images">`;
+          elem += `<img src="${obj.imgUrl}" alt="${obj.imgAlt}">`;
+        elem += `</div>`;
+        elem += ` <div class="txtBox">`;
+          elem += `<h1>${obj.tbox.title}</h1>`;
+          elem += `<div>`;
+            elem += `<span>${obj.tbox.description.txt01}</span>`;
+            elem += `<span>${obj.tbox.description.txt02}</span>`;
+            elem += `<span>${obj.tbox.description.txt03}</span>`;
+            elem += `<span>${obj.tbox.description.txt04}</span>`;
+            elem += `<span>${obj.tbox.description.txt05}</span>`;
+          elem += `</div>`;
+        elem += `</div>`;
+      elem += `</div>`;
+    });
+    $('.main_wrapper').append(elem);
+  },
+  error: function (xhr) {
+    console.log(`${xhr.status}/${xhr.errorText}`);
+  }
+});
