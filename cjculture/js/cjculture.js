@@ -14,10 +14,10 @@ var swiper = new Swiper(".containner", {
 var swiper = new Swiper(".slideWraper", {
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -32,10 +32,10 @@ var swiper = new Swiper(".slideWraper", {
 var swiper = new Swiper(".space_slide", {
   spaceBetween: 30,
   centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -234,7 +234,6 @@ let resultV = [...result.values()];
 
 /* ----------함수--------- */
 function createNoticeInfo01(index) {
-  var div = document.createElement('div');
   var a = document.createElement('a');
   // span 01
   function makeSpanTop(index) {
@@ -348,7 +347,7 @@ function createNoticeInfo04(index) {
     strong.appendChild(strongTxt);
     em.appendChild(emTxt);
     
-    strong.classList.add('nomal');
+    strong.classList.add('bid');
     span.classList.add('top');
     span.appendChild(strong);
     span.appendChild(em);
@@ -380,7 +379,7 @@ function createNoticeInfo05(index) {
     strong.appendChild(strongTxt);
     em.appendChild(emTxt);
     
-    strong.classList.add('nomal');
+    strong.classList.add('result');
     span.classList.add('top');
     span.appendChild(strong);
     span.appendChild(em);
@@ -404,21 +403,21 @@ let jobData = jobV.length
 let bidData = bidV.length
 let resultData = resultV.length
 
-// for (var i = 0; i < nomalData; i++) {
-//   createNoticeInfo01(i)
-// }
-// for (var i = 0; i < volunData; i++) {
-//   createNoticeInfo02(i)
-// }
-// for (var i = 0; i < jobData; i++) {
-//   createNoticeInfo03(i);
-// }
-// for (var i = 0; i < bidData; i++) {
-//   createNoticeInfo04(i);
-// }
-// for (var i = 0; i < resultData; i++) {
-//   createNoticeInfo05(i);
-// }
+for (var i = 0; i < nomalData; i++) {
+  createNoticeInfo01(i)
+}
+for (var i = 0; i < volunData; i++) {
+  createNoticeInfo02(i)
+}
+for (var i = 0; i < jobData; i++) {
+  createNoticeInfo03(i);
+}
+for (var i = 0; i < bidData; i++) {
+  createNoticeInfo04(i);
+}
+for (var i = 0; i < resultData; i++) {
+  createNoticeInfo05(i);
+}
     
 /* ----------클릭 이벤트--------- */
 let li00 = document.getElementById('li00');
@@ -428,30 +427,53 @@ let li03 = document.getElementById('li03');
 let li04 = document.getElementById('li04');
 let li05 = document.getElementById('li05');
 let contents = document.getElementsByClassName('contents');
-// let removecell = contents.removeChild(this.children);
+var a = document.querySelectorAll('.contents > a')
 
 li01.onclick = function () {
+  $('.contents').empty()
+  console.log(a)
   for (var i = 0; i < nomalData; i++) {
     createNoticeInfo01(i)
   }
 };
 li02.onclick = function () {
-  // removecell
+  $('.contents').empty()
   for (var i = 0; i < volunData; i++) {
     createNoticeInfo02(i)
   }
 };
 li03.onclick = function () {
+  $('.contents').empty()
   for (var i = 0; i < jobData; i++) {
     createNoticeInfo03(i)
   }
 };
 li04.onclick = function () {
+  $('.contents').empty()
   for (var i = 0; i < bidData; i++) {
     createNoticeInfo04(i)
   }
 };
 li05.onclick = function () {
+  $('.contents').empty()
+  for (var i = 0; i < resultData; i++) {
+    createNoticeInfo05(i);
+  }
+};
+li00.onclick = function () {
+  $('.contents').empty()
+  for (var i = 0; i < nomalData; i++) {
+    createNoticeInfo01(i)
+  }
+  for (var i = 0; i < volunData; i++) {
+    createNoticeInfo02(i)
+  }
+  for (var i = 0; i < jobData; i++) {
+    createNoticeInfo03(i);
+  }
+  for (var i = 0; i < bidData; i++) {
+    createNoticeInfo04(i);
+  }
   for (var i = 0; i < resultData; i++) {
     createNoticeInfo05(i);
   }
