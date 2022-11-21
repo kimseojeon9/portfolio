@@ -429,6 +429,7 @@ let li05 = document.getElementById('li05');
 
 li01.onclick = function () {
   $('.contents').empty()
+  console.log(a)
   for (var i = 0; i < nomalData; i++) {
     createNoticeInfo01(i)
   }
@@ -502,6 +503,32 @@ $.ajax({
       elem += `</div>`;
     });
     $('.main_wrapper').append(elem);
+  },
+  error: function (xhr) {
+    console.log(`${xhr.status}/${xhr.errorText}`);
+  }
+});
+
+// 포스터
+$.ajax({
+  type: "GET",
+  url: "/cjculture/js/poster.json",
+  dataType: "json",
+  success: function (data) {
+    var elem = "";
+    console.log(data);
+    $.each(data, function(i, obj){
+      elem += `<div>`;
+        elem += `<a href="#">`
+          elem += `<img src="${obj.imgUrl}" alt="${obj.imgAlt}">`
+          elem += `<div class="description">`
+            elem += `<span>${obj.description.one}</span>`
+            elem += `<span>${obj.description.two}</span>`
+          elem += `</div>`
+        elem += `</a>`
+      elem += `</div>`;
+    });
+    $('.poster').append(elem);
   },
   error: function (xhr) {
     console.log(`${xhr.status}/${xhr.errorText}`);
