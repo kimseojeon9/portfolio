@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+:root {
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    word-break: keep-all;
+    word-wrap: break-word;
+    --nomal : #F1F0F6;
+}
+h3 { font-weight: 700; font-size: 1.5rem; }
+li { list-style: none; }
+a { text-decoration: none; color: #000; }
+.wrap { background: var(--nomal); }
+section { width: 100%; height: 100vh; display: flex; justify-content: center; }
+.inner { display: flex; width: 1200px; height: 100%; }
+
+/* 웰컴 시작 */
+.wellcom .inner {
+    align-items: center;
+}
+.wellcom .inner .container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.wellcom .name {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+}
+.wellcom .chat {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+#today{
+    position: relative;
+    display: block;
+}
+#today::after{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 530px;
+    top: 50%;
+    left: 0;
+    z-index: 100;
+    background: #000;
+    transform: translateX(15%);
+}
+#today::before{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 530px;
+    top: 50%;
+    right: 0;
+    z-index: 100;
+    background: #000;
+    transform: translateX(-15%);
+}
+.wellcom .chat > div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    gap: 10px;
+}
+.wellcom .chat > div.mine {
+    padding: 30px 0 0 0;
+    align-items: flex-start;
+}
+.wellcom .chat > div.yours {
+    align-items: flex-end;
+}
+.wellcom .chat > div span {
+    width: fit-content;
+    background: #eee;
+    padding: 20px 20px;
+    border-radius: 15px;
+}
+.wellcom .chat > div.yours span {
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    color: #FFF;
+    border-radius: 15px 15px 0 15px;
+    display: none;
+}
+
+
+
+.wellcom .bt {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: #eee;
+}
+.wellcom .bt button {
+    border: none;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    border-radius: 10px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* 어바웃 시작 */
+.about .inner {
+    align-items: center;
+}
+.about .inner .container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.about .col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 0 30px;
+    position: relative;
+}
+.about .col::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #d9d9d9;
+    width: 1px;
+    height: 90%;
+    transform: translateY(-50%);
+}
+.about .col:nth-child(1)::after {
+    display: none;
+}
+.about .profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.about .col > div {
+    width: 100%;
+    height: 130px;
+}
+.about .col > div h3 {
+    margin: 0 0 10px 0;
+}
+.about .col > div.skill .tGroup {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.about .col > div.skill .tGroup p {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    transition: all .3s ease-in-out;
+    background: #eee;
+}
+.about .col > div.skill .tGroup p:hover {
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 프로젝트 시작 */
+.project .inner {
+    align-items: center;
+    padding: 30px 0;
+}
+.project .container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.project .container ul {
+    position: absolute;
+    top: 10%;
+    left: -15%;
+    width: 15%;
+    height: fit-content;
+}
+.project .container ul li {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 15px 10px;
+    background: #FFF;
+    margin: 10px 0;
+}
+.project .container ul li.on {
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+}
+.project .contents {
+    flex-direction: row;
+    padding: 10px;
+    display: none;
+    width: 100%;
+}
+.project .contents.on {
+    display: flex;
+}
+.project .contents > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    padding: 0 10px;
+}
+.project .contents > div.tBox {
+    align-items: flex-start;
+}
+.project .contents > div.tBox .bt {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.project .contents > div.tBox .bt a {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    transition: all .3s ease-in-out;
+    background: #eee;
+    font-weight: 700;
+}
+.project .contents > div.tBox .bt a:hover {
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.project .contents > div.screen .img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.project .contents > div.screen .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0%;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+}
+.project .contents > div.screen .img img.on {
+    display: flex;
+}
+.project .contents > div.screen .bt {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.project .contents > div.screen .bt button {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    border: none;
+    transition: all .3s ease-in-out;
+    background: #eee;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.project .contents > div.screen .bt button:hover {
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 굿바이 */
+.bye .inner {
+    align-items: center;
+}
+.bye .inner .container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.bye .name {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+}
+.bye .chat {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.bye .chat > div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    gap: 10px;
+}
+.bye .chat > div.mine {
+    padding: 30px 0 0 0;
+    align-items: flex-start;
+}
+.bye .chat > div span {
+    width: fit-content;
+    background: #eee;
+    padding: 20px 20px;
+    border-radius: 15px;
+}
