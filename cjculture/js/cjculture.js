@@ -480,7 +480,7 @@ li00.onclick = function () {
 // 메인슬라이드 json
 $.ajax({
   type: "GET",
-  url: "/cjculture/js/main.json",
+  url: "/portfolio/cjculture/js/main.json",
   dataType: "json",
   success: function (data) {
     var elem = "";
@@ -512,7 +512,7 @@ $.ajax({
 // 포스터
 $.ajax({
   type: "GET",
-  url: "/cjculture/js/poster.json",
+  url: "/portfolio/cjculture/js/poster.json",
   dataType: "json",
   success: function (data) {
     var elem = "";
