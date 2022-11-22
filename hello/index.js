@@ -32,6 +32,7 @@ $(document).ready(function(){
     });
     
     $('.bt button').on('click', function(){
+        $(this).addClass('on').siblings().removeClass('on');
         $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
     });
 });
