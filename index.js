@@ -10,7 +10,7 @@ var date = {
     minutes: dateInfo.getMinutes(),
 }
 
-// today.appendChild(`${date.month}.${date.date}`)
+today.textContent = `${date.month}.${date.date}`
 
 var greeting;
 if (date.hours > 18) { // 19-24 밤
@@ -22,8 +22,7 @@ if (date.hours > 18) { // 19-24 밤
 } else { // 0-8 새벽
     greeting = 'Hello';
 }
-
-// sayHello.appendChild(`${greeting}`)
+sayHello.textContent = `${greeting}`
 
 $(document).ready(function(){
     $('.project .container ul li').on('click', function(){
