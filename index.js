@@ -64,11 +64,15 @@ $(document).ready(function(){
         $("#you").text(val);
         $(".yours").show();
         if (val == 'no'){
-            $('#an01').text('okey bye!');
-            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000)
+            $('.myAnswer').empty();
+            $('.myAnswer').append('<span>ok</span>');
+            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000);
         } else if (val == 'yes'){
             $('#an01').text('okey!');
-            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000)
+            $('.myAnswer').append('<span>here</span>');
+            $('.myAnswer').append('<span>매일유업</span>');
+            $('.myAnswer').append('<span>청주시문화산업진흥센터</span>');
+            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000);
         }
     });
 
