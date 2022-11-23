@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>seojeong's portfolio</title>
-    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="stylesheet" type="text/css" href="/portfolio/index.css">
 </head>
 
 <body>
@@ -14,135 +14,65 @@
         <section class="wellcom">
             <div class="inner">
                 <div class="container">
+                    <div class="frame"></div>
                     <div class="name">
+                        <div class="profile"></div>
                         <h1>SEOJEONG</h1>
                     </div>
                     <div class="chat">
                         <span id="today">22.11.22</span>
                         <div class="mine">
-                            <span id="sayHello">Good afternoon!</span>
-                            <span>How are you today?</span>
+                            <span id="sayHello"></span>
+                            <span>I made a portfolio.<br>do you want to see it?</span>
                         </div>
                         <div class="yours">
-                            <span></span>
+                            <span id="you"></span>
                         </div>
-                        <div class="myAnswe"></div>
+                        <div class="myAnswer">
+                            <span id="an01"></span>
+                        </div>
                     </div>
                     <div class="bt">
-                        <button>Good XD</button>
-                        <button>Fine :)</button>
-                        <button>Bad :(</button>
+                        <button value="yes">yes</button>
+                        <p>or</p>
+                        <button value="no">no</button>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- 어바웃 시작 -->
-        <section class="about">
-            <div class="inner">
-                <div class="container">
-                    <div class="col profile">
-                        <img src="/imgs/profile.jpg" alt="프로필 사진">
-                    </div>
-                    <div class="col one">
-                        <div class="who">
-                            <h3>who</h3>
-                            <p>이름: 김서정</p>
-                            <p>생년월일: 1998.05.21</p>
-                            <p>휴대전화: 010.4055.0521</p>
-                            <p>이메일: 0521kimsj@gmail.com</p>
-                        </div>
-                        <div class="skill">
-                            <h3>skill</h3>
-                            <div class="tGroup">
-                                <p>html</p>
-                                <p>css</p>
-                                <p>js</p>
-                                <p>jQuery</p>
-                                <p>figma</p>
+                    <div class="prfbg">
+                        <div class="prfWrap">
+                            <span id="close">Close</span>
+                            <div class="myface">
+                                <img src="/portfolio/imgs/profile.jpg" alt="my face">
+                                <p>김서정</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col two">
-                        <div class="license">
-                            <h3>license</h3>
-                            <p>웹디자인기능사(필기)</p>
-                            <p>JPT 770점</p>
-                        </div>
-                        <div class="education">
-                            <h3>education</h3>
-                            <p>웹디자인(UI/UX) & 웹퍼블리셔 취업 과정 수료<br>2022.07.25 ~ 2022.11.24</p>
-                            <p>건양대학교 글로벌호텔관광학과 졸업<br>2022.08</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 프로젝트 시작 -->
-        <section class="project">
-            <div class="inner">
-                <div class="container">
-                    <ul>
-                        <li data-id="a" class="on">Project A</li>
-                        <li data-id="b">Project B</li>
-                    </ul>
-                    <div class="contents on" id="a">
-                        <div class="tBox">
-                            <h3>Project A<br>매일유업<br>반응형 웹사이트 리뉴얼</h3>
-                            <div class="description">
-                                <p>기존 블럭 형태로 되어 있던 홈페이지를 섹션별로 나누어 내용간의 구분을 명확히했습니다. </p>
-                                <p>또, 해당 기업의 사회공헌에 대한 서브 페이지를 보기 쉽게 재구성하고 해당 페이지에서 바로 후원 폼으로 넘아갈 수 있는 플로우를 구현했습니다.</p>
-                                <p>구성은 메인 1장과 서브 페이지 2장(사회공헌, 우유안부 후원 폼)으로 되어 있습니다.</p>
+                            <div class="bts">
+                                <button value="who">Who</button>
+                                <button value="skill">Skill</button>
+                                <button value="license">License</button>
+                                <button value="education">Education</button>
                             </div>
-                            <div class="bt">
-                                <a href="/maeil/html/maeil.html" target='_blank'>사이트 링크</a>
-                                <a href="o/imgs/ui.pdf" target="_blank">UI 정의서</a>
+                            <div class="txt">
+                                <div id="who" class="on">
+                                    <p>이름: 김서정</p>
+                                    <p>생년월일: 1998.05.21</p>
+                                    <p>휴대전화: 010.4055.0521</p>
+                                    <p>이메일: 0521kimsj@gmail.com</p>
+                                </div>
+                                <div id="skill">
+                                    <p>html</p>
+                                    <p>css</p>
+                                    <p>js</p>
+                                    <p>jQuery</p>
+                                    <p>figma</p>
+                                </div>
+                                <div id="license">
+                                    <p>웹디자인기능사(필기)</p>
+                                    <p>JPT 770점</p>
+                                </div>
+                                <div id="education">
+                                    <p>웹디자인(UI/UX) & 웹퍼블리셔 취업 과정 수료<br>2022.07.25 ~ 2022.11.24</p>
+                                    <p>건양대학교 글로벌호텔관광학과 졸업<br>2022.08</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="screen">
-                            <div class="img">
-                                <img src="/imgs/maeil.JPG" alt="매일유업 메인" class="on" id="main">
-                                <img src="/imgs/maeilsub.JPG" alt="매일유업 서브" id="sub1">
-                                <img src="/imgs/maeilform.JPG" alt="매일유업 후원 폼" id="sub2">
-                            </div>
-                            <div class="bt">
-                                <button data-id="main">메인</button>
-                                <button data-id="sub1">사회공헌</button>
-                                <button data-id="sub2">우유안부 후원 폼</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contents" id="b">
-                        <div class="tBox">
-                            <h3>Project B<br>청주시문화산업진흥재단<br>반응형 웹사이트 리디자인</h3>
-                            <div class="description">
-                                <p>청주에서 열리는 새로운 문화 행사, 사업, 교육정보를 알려주는 사이트인 것에 초점을 맞춰, 데이터 관리에 신경을 쓰며 진행하였습니다.</p>
-                            </div>
-                            <div class="bt">
-                                <a href="/cjculture/html/cjculture.html" target='_blank'>사이트 링크</a>
-                            </div>
-                        </div>
-                        <div class="screen">
-                            <div class="img">
-                                <img src="/imgs/maeil.JPG" alt="매일유업">
-                            </div>
-                            <div class="bt">
-                                <button>메인</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 굿바이 시작 -->
-        <section class="bye">
-            <div class="inner">
-                <div class="container">
-                    <div class="name">
-                        <h1>SEOJEONG</h1>
-                    </div>
-                    <div class="chat">
-                        <div class="mine">
-                            <span>XHS!</span>
                         </div>
                     </div>
                 </div>
@@ -151,6 +81,6 @@
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="/index.js"></script>
+<script src="/portfolio/index.js"></script>
 </body>
 </html>

@@ -14,6 +14,8 @@
     word-break: keep-all;
     word-wrap: break-word;
     --nomal : #F1F0F6;
+    --bg: #F2F1F6;
+    --blue: #007AFF;
 }
 h3 { font-weight: 700; font-size: 1.5rem; }
 li { list-style: none; }
@@ -28,61 +30,70 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
 }
 .wellcom .inner .container {
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #FFF;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    align-items: center;
     border-radius: 30px;
     overflow: hidden;
-}
-.wellcom .name {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-}
-.wellcom .chat {
-    height: 70%;
-    width: 100%;
     position: relative;
+}
+/* 프레임 */
+.wellcom .frame {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/portfolio/imgs/iphon.png) no-repeat 50% -20% / cover;
+    z-index: 100;
+    transform: scale(1.2);
+}
+/* 프로필 */
+.wellcom .name {
+    width: 55%;
+    height: 25%;
+    border-radius: 20% 20% 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
+    color: #FFF;
+    position: absolute;
+    top: 30px;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+.wellcom .name .profile {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: url(/portfolio/imgs/profile.jpg) no-repeat 50% 50% / cover ;
+    cursor: pointer;
+    z-index: 101;
+}
+/* 채팅 */
+.wellcom .chat {
+    width: 55%;
+    height: 80%;
+    position: relative;
+    top: 18.5%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 30px;
+    background: #FFF;
 }
 #today{
     position: relative;
     display: block;
-}
-#today::after{
-    position: absolute;
-    content: "";
-    display: block;
-    height: 1px;
-    width: 530px;
-    top: 50%;
-    left: 0;
-    z-index: 100;
-    background: #000;
-    transform: translateX(15%);
-}
-#today::before{
-    position: absolute;
-    content: "";
-    display: block;
-    height: 1px;
-    width: 530px;
-    top: 50%;
-    right: 0;
-    z-index: 100;
-    background: #000;
-    transform: translateX(-15%);
+    font-weight: bold;
+    color: #969699;
 }
 .wellcom .chat > div {
     display: flex;
@@ -91,7 +102,7 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     padding: 0 10px;
     font-size: 1.25rem;
     font-weight: 700;
-    gap: 10px;
+    gap: 5px;
 }
 .wellcom .chat > div.mine {
     padding: 30px 0 0 0;
@@ -103,37 +114,154 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
 .wellcom .chat > div span {
     width: fit-content;
     background: #eee;
-    padding: 20px 20px;
-    border-radius: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .3s;
 }
 .wellcom .chat > div.yours span {
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
     color: #FFF;
-    border-radius: 15px 15px 0 15px;
-    display: none;
+    padding: 10px 30px;
+    border-radius: 20px 20px 0 20px;
 }
-
-
-
+/* 버튼 */
 .wellcom .bt {
-    width: 100%;
-    height: 20%;
+    position: absolute;
+    bottom: 5%;
+    width: 55%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 85px;
     gap: 30px;
-    background: #eee;
+    /* background: #eee; */
+    z-index: 101;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
 }
 .wellcom .bt button {
     border: none;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
+    background: unset;
     border-radius: 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #FFF;
 }
+
+
+
+/* 어바웃 */
+.wellcom .prfbg {
+    width: 53.9%;
+    height: 100%;
+    z-index: 101;
+    position: absolute;
+    top: 41px;
+    border-radius: 90px 90px 0 0;
+    overflow: hidden;
+    background: var(--bg);
+    transform: translateY(100%);
+    transition: all 0.4s ease-in-out;
+}
+.wellcom .prfbg.on {
+    transform: translateY(0);
+}
+.prfbg .prfWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+}
+.prfbg .prfWrap > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prfbg .prfWrap #close {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+/*  */
+.prfbg .prfWrap .myface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.prfbg .prfWrap .myface img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+/*  */
+.prfbg .prfWrap .bts {
+    justify-content: space-between;
+    gap: 30px;
+}
+.prfbg .prfWrap .bts button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue);
+    background: #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*  */
+.prfbg .prfWrap .txt {
+    background: #FFF;
+    border-radius: 10px;
+}
+.prfbg .prfWrap .txt > div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 30px;
+    gap: 10px;
+    font-size: 1.25rem;
+}
+.prfbg .prfWrap .txt > div.on {
+    display: flex;
+}
+.prfbg .prfWrap .txt > div > p {
+    width: 100%;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+.prfbg .prfWrap .txt > div > p:last-child {
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
