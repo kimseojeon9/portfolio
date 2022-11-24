@@ -429,7 +429,6 @@ let li05 = document.getElementById('li05');
 
 li01.onclick = function () {
   $('.contents').empty()
-  console.log(a)
   for (var i = 0; i < nomalData; i++) {
     createNoticeInfo01(i)
   }
