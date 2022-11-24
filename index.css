@@ -45,7 +45,7 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     display: block;
     width: 100%;
     height: 100%;
-    background: url(/hello/imgs/iphon.png) no-repeat 50% 0% / 100%;
+    background: url(/portfolio/imgs/iphon.png) no-repeat 50% 0% / 100%;
     position: absolute;
     top: -5px;
     left: 0;
@@ -76,7 +76,7 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    background: url(/hello/imgs/profile.jpg) no-repeat 50% 50% / cover ;
+    background: url(/portfolio/imgs/profile.jpg) no-repeat 50% 50% / cover ;
     cursor: pointer;
     z-index: 1;
 }
