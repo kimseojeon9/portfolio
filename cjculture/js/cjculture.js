@@ -427,6 +427,24 @@ let li03 = document.getElementById('li03');
 let li04 = document.getElementById('li04');
 let li05 = document.getElementById('li05');
 
+li00.onclick = function () {
+  $('.contents').empty()
+  for (var i = 0; i < nomalData; i++) {
+    createNoticeInfo01(i)
+  }
+  for (var i = 0; i < volunData; i++) {
+    createNoticeInfo02(i)
+  }
+  for (var i = 0; i < jobData; i++) {
+    createNoticeInfo03(i);
+  }
+  for (var i = 0; i < bidData; i++) {
+    createNoticeInfo04(i);
+  }
+  for (var i = 0; i < resultData; i++) {
+    createNoticeInfo05(i);
+  }
+};
 li01.onclick = function () {
   $('.contents').empty()
   for (var i = 0; i < nomalData; i++) {
@@ -453,24 +471,6 @@ li04.onclick = function () {
 };
 li05.onclick = function () {
   $('.contents').empty()
-  for (var i = 0; i < resultData; i++) {
-    createNoticeInfo05(i);
-  }
-};
-li00.onclick = function () {
-  $('.contents').empty()
-  for (var i = 0; i < nomalData; i++) {
-    createNoticeInfo01(i)
-  }
-  for (var i = 0; i < volunData; i++) {
-    createNoticeInfo02(i)
-  }
-  for (var i = 0; i < jobData; i++) {
-    createNoticeInfo03(i);
-  }
-  for (var i = 0; i < bidData; i++) {
-    createNoticeInfo04(i);
-  }
   for (var i = 0; i < resultData; i++) {
     createNoticeInfo05(i);
   }
