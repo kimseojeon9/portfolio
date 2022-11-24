@@ -50,6 +50,11 @@ $(document).ready(function () {
   }, function () {
     $('.snb, .snbbg').stop().slideUp('500');
   });
+  $(".mMenu").hover(function () {
+    $('.snb, .snbbg').stop().slideDown('500');
+  }, function () {
+    $('.snb, .snbbg').stop().slideUp('500');
+  });
 
   // 반응형
   if ($(window).width() <= 1024) {
