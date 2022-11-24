@@ -43,6 +43,11 @@ if (date.hours > 18) { // 19-24 밤
 }
 sayHello.textContent = `${greeting}`
 
+function pop () {
+    $('.project').show();
+    return false;
+}
+
 
 $(document).ready(function(){
     // 채팅
@@ -70,10 +75,10 @@ $(document).ready(function(){
                 $('.myAnswer').append('<span>here</span>');
             }, 2.5 * 1000);
             setTimeout(function () {
-                $('.myAnswer').append('<span><a href="#">매일유업</a></span>');
+                $('.myAnswer').append('<span><a href="#" onclick="pop()">매일유업</a></span>');
             }, 3.5 * 1000);
             setTimeout(function () {
-                $('.myAnswer').append('<span><a href="#" id="p01">청주시문화산업진흥센터</a></span>');
+                $('.myAnswer').append('<span><a href="#" onclick="pop()">청주시문화산업진흥센터</a></span>');
             }, 4 * 1000);
             setTimeout(function () {
                 $('.myAnswer').append('<span>did you see that?</span>');
@@ -108,17 +113,6 @@ $(document).ready(function(){
 
     // 프로젝트
     $('.project').hide();
-    $('#p01').click(function(){
-        console.log('클릭됨');
-        $('.project').show();
-        return false;
-
-    });
-    // $('#p01').on('click', function(){
-    //     console.log('클릭됨');
-    //     $('.project').show();
-    //     return false;
-    // });
     $('.project ul li').on('click', function () {
         $(this).addClass('on').siblings().removeClass('on');
         $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
@@ -130,12 +124,3 @@ $(document).ready(function(){
     });
 });
 
-// setTimeout(function(){
-//     $('.myAnswer').append('<span>Oh... are you busy?</span>')
-// }, 1.5*1000);
-// setTimeout(function(){
-//     $('.myAnswer').append('<span>okey!</span>')
-// }, 2.5*1000);
-// setTimeout(function(){
-//     $('.myAnswer').append('<span>see ya!</span>')
-// }, 3.5*1000);
