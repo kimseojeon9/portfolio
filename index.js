@@ -100,22 +100,8 @@ $(document).ready(function(){
     $('#close').on('click', function(){
         $('.wellcom .prfbg').removeClass('on')
     });
-    $('.prfbg .prfWrap .bts button').on('click', function(e){
-        var val = $('.prfbg .prfWrap .bts button').val();
-        console.log(val);
-        switch (val) {
-            case 'skill':
-            $('#skill').addClass('on').siblings().removeClass('on');
-            break;
-            case 'license':
-            $('#license').addClass('on').siblings().removeClass('on');
-            break;
-            case 'education':
-            $('#education').addClass('on').siblings().removeClass('on');
-            break;
-            default :
-            $('#who').addClass('on').siblings().removeClass('on');
-        }
+    $('.prfbg .prfWrap .bts button').on('click', function(){
+        $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
     });
 
     // 프로젝트
