@@ -301,10 +301,21 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     display: flex;
     flex-direction: row;
     border-radius: 100px 100px 0 0;
-    background: #FFF;
+    background: var(--bg);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     position: relative;
 }
+.project .p_container #close_p {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--blue);
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
 .project .p_container ul {
     position: absolute;
     top: 12%;
@@ -349,7 +360,7 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     flex-flow: row wrap;
     gap: 10px;
     justify-content: space-between;
-    background: #FFF;
+    background: var(--bg);
 }
 .project .contents > div.tBox .bt a {
     width: 175px;
@@ -392,7 +403,7 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     flex-flow: row wrap;
     gap: 30px;
     justify-content: center;
-    background: #FFF;
+    background: var(--bg);
 }
 .project .contents > div.screen .bt button {
     width: 110px;

@@ -106,11 +106,13 @@ $(document).ready(function(){
 
     // 프로젝트
     $('.project').hide();
+    $('#close_p').on('click', function(){
+        $('.project').hide();
+    });
     $('.project ul li').on('click', function () {
         $(this).addClass('on').siblings().removeClass('on');
         $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
     });
-
     $('.project .bt button').on('click', function () {
         $(this).addClass('on').siblings().removeClass('on');
         $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
