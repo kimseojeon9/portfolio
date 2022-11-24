@@ -45,34 +45,39 @@ sayHello.textContent = `${greeting}`
 
 
 $(document).ready(function(){
-    // $('.project .container ul li').on('click', function(){
-    //     $(this).addClass('on').siblings().removeClass('on');
-    //     $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
-    // });
-    
-    // $('.bt button').on('click', function(){
-    //     $(this).addClass('on').siblings().removeClass('on');
-    //     $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
-    // });
-
     // 채팅
-    $('.yours').hide();
-    $('.myAnswer').hide();
     $('.wellcom .bt button').on('click', function(e){
         var val = $(this).val();
-        // console.log(val);
-        $("#you").text(val);
-        $(".yours").show();
+        $('<div class="yours"><span class="you">'+val+'</sapn></div>').appendTo('.scrollbg');
+        
+        $('<div class="myAnswer"></div>').appendTo('.scrollbg');
+
         if (val == 'no'){
-            $('.myAnswer').empty();
-            $('.myAnswer').append('<span>ok</span>');
-            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000);
-        } else if (val == 'yes'){
-            $('#an01').text('okey!');
-            $('.myAnswer').append('<span>here</span>');
-            $('.myAnswer').append('<span>매일유업</span>');
-            $('.myAnswer').append('<span>청주시문화산업진흥센터</span>');
-            setTimeout(function(){$('.myAnswer').show()}, 1.5*1000);
+            setTimeout(function(){
+                    $('.myAnswer').append('<span>Oh... are you busy?</span>')
+            }, 1.5*1000);
+            setTimeout(function(){
+                    $('.myAnswer').append('<span>okey!</span>')
+            }, 2.5*1000);
+            setTimeout(function(){
+                    $('.myAnswer').append('<span>see ya!</span>')
+            }, 3.5*1000);
+        } else if (val == 'yes') {
+            setTimeout(function () {
+                $('.myAnswer').append('<span>okey!</span>');
+            }, 1.5 * 1000);
+            setTimeout(function () {
+                $('.myAnswer').append('<span>here</span>');
+            }, 2.5 * 1000);
+            setTimeout(function () {
+                $('.myAnswer').append('<span><a href="#">매일유업</a></span>');
+            }, 3.5 * 1000);
+            setTimeout(function () {
+                $('.myAnswer').append('<span><a href="#" id="p01">청주시문화산업진흥센터</a></span>');
+            }, 4 * 1000);
+            setTimeout(function () {
+                $('.myAnswer').append('<span>did you see that?</span>');
+            }, 10 * 1000);
         }
     });
 
@@ -83,28 +88,54 @@ $(document).ready(function(){
     $('#close').on('click', function(){
         $('.wellcom .prfbg').removeClass('on')
     });
-    $('.prfbg .prfWrap .bts').on('click', function(e){
+    $('.prfbg .prfWrap .bts button').on('click', function(e){
         var val = $('.prfbg .prfWrap .bts button').val();
         console.log(val);
-        if(val == 'who'){
-            $('#who').addClass('on').siblings().removeClass('on');
-        } else if (val == 'skill') {
+        switch (val) {
+            case 'skill':
             $('#skill').addClass('on').siblings().removeClass('on');
-        } else if (val == 'license') {
+            break;
+            case 'license':
             $('#license').addClass('on').siblings().removeClass('on');
-        } else if (val == 'education') {
+            break;
+            case 'education':
             $('#education').addClass('on').siblings().removeClass('on');
+            break;
+            default :
+            $('#who').addClass('on').siblings().removeClass('on');
         }
     });
 
+    // 프로젝트
+    $('.project').hide();
+    $('#p01').click(function(){
+        console.log('클릭됨');
+        $('.project').show();
+        return false;
+
+    });
+    // $('#p01').on('click', function(){
+    //     console.log('클릭됨');
+    //     $('.project').show();
+    //     return false;
+    // });
+    $('.project ul li').on('click', function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
+    });
+
+    $('.project .bt button').on('click', function () {
+        $(this).addClass('on').siblings().removeClass('on');
+        $('#' + $(this).data('id')).addClass('on').siblings().removeClass('on');
+    });
 });
 
-
-
-
-
-
-
-
-
-
+// setTimeout(function(){
+//     $('.myAnswer').append('<span>Oh... are you busy?</span>')
+// }, 1.5*1000);
+// setTimeout(function(){
+//     $('.myAnswer').append('<span>okey!</span>')
+// }, 2.5*1000);
+// setTimeout(function(){
+//     $('.myAnswer').append('<span>see ya!</span>')
+// }, 3.5*1000);

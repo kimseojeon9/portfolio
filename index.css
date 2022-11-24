@@ -16,6 +16,7 @@
     --nomal : #F1F0F6;
     --bg: #F2F1F6;
     --blue: #007AFF;
+    --gray: #bbc2ca;
 }
 h3 { font-weight: 700; font-size: 1.5rem; }
 li { list-style: none; }
@@ -29,34 +30,38 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     align-items: center;
 }
 .wellcom .inner .container {
-    width: 100%;
+    width: 80%;
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 175px 175px 0 0;
     overflow: hidden;
     position: relative;
 }
-/* 프레임 */
-.wellcom .frame {
-    position: absolute;
-    width: 50%;
+.wellcom .inner .container::before {
+    content: "";
+    display: block;
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url(/portfolio/imgs/iphon.png) no-repeat 50% -20% / cover;
-    z-index: 100;
-    transform: scale(1.2);
+    background: url(/hello/imgs/iphon.png) no-repeat 50% 0% / 100%;
+    position: absolute;
+    top: -5px;
+    left: 0;
 }
+.wellcom .name, 
+.wellcom .prfbg,
+.wellcom .chat, 
+.wellcom .bt, 
+.wellcom .project {
+    width: calc(100% - 110px);
+}
+
 /* 프로필 */
 .wellcom .name {
-    width: 55%;
-    height: 25%;
-    border-radius: 20% 20% 0 0;
+    height: 365px;
+    border-radius: 140px 140px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,8 +69,6 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
     box-shadow: 0px 2px 10px rgb(0 0 0 / 25%);
     color: #FFF;
-    position: absolute;
-    top: 30px;
     gap: 10px;
     padding: 0 0 10px 0;
 }
@@ -73,75 +76,103 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    background: url(/portfolio/imgs/profile.jpg) no-repeat 50% 50% / cover ;
+    background: url(/hello/imgs/profile.jpg) no-repeat 50% 50% / cover ;
     cursor: pointer;
-    z-index: 101;
+    z-index: 1;
 }
 /* 채팅 */
 .wellcom .chat {
-    width: 55%;
     height: 80%;
-    position: relative;
-    top: 18.5%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     flex-direction: column;
     padding: 10px 30px;
     background: #FFF;
+    overflow: auto;
+    position: relative;
+    z-index: 10;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
 }
 #today{
-    position: relative;
+    position: fixed;
+    top: 36%;
     display: block;
     font-weight: bold;
-    color: #969699;
+    color: var(--gray);
 }
-.wellcom .chat > div {
+.wellcom .chat .scrollbg {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: #FFF;
+}
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+.wellcom .chat .scrollbg > div {
     display: flex;
     width: 100%;
     flex-direction: column;
     padding: 0 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     gap: 5px;
 }
-.wellcom .chat > div.mine {
+.wellcom .chat .scrollbg > div.mine {
     padding: 30px 0 0 0;
     align-items: flex-start;
 }
-.wellcom .chat > div.yours {
+.wellcom .chat .scrollbg > div.yours {
     align-items: flex-end;
 }
-.wellcom .chat > div span {
+.wellcom .chat .scrollbg > div span {
     width: fit-content;
     background: #eee;
     padding: 10px 20px;
     border-radius: 20px;
     transition: all .3s;
 }
-.wellcom .chat > div.yours span {
+.wellcom .chat .scrollbg > div.yours span {
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
     color: #FFF;
     padding: 10px 30px;
     border-radius: 20px 20px 0 20px;
 }
+.wellcom .chat .scrollbg > div.myAnswer span a {
+    color: var(--blue);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.wellcom .chat .scrollbg > div.myAnswer span a:hover {
+    color: #4ea0f8;
+}
 /* 버튼 */
 .wellcom .bt {
-    position: absolute;
-    bottom: 5%;
-    width: 55%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 85px;
     gap: 30px;
-    /* background: #eee; */
-    z-index: 101;
+    z-index: 1;
     font-size: 1.5rem;
     font-weight: bold;
     color: #FFF;
+    background: var(--gray);
+    text-align: center;
+}
+.wellcom .bt button,
+.wellcom .bt p.var {
+    width: 100%;
+    height: 100%;
 }
 .wellcom .bt button {
+    height: 80px;
     border: none;
     padding: 10px 20px;
     background: unset;
@@ -150,19 +181,39 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     cursor: pointer;
     color: #FFF;
 }
-
-
-
-/* 어바웃 */
-.wellcom .prfbg {
-    width: 53.9%;
+.wellcom .bt p.var {
+    position: relative;
+    line-height: 80px;
+}
+.wellcom .bt p.var::after{
+    content: "";
+    display: block;
+    background-color: #FFF;
+    width: 1px;
     height: 100%;
-    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+.wellcom .bt p.var::before{
+    content: "";
+    display: block;
+    background-color: #FFF;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -15px;
+}
+/* 프로필 */
+.wellcom .prfbg {
+    height: 100%;
+    z-index: 10;
     position: absolute;
     top: 41px;
     border-radius: 90px 90px 0 0;
     overflow: hidden;
-    background: var(--bg);
+    background: #f2f1f6fa;
     transform: translateY(100%);
     transition: all 0.4s ease-in-out;
 }
@@ -248,129 +299,40 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
 .prfbg .prfWrap .txt > div > p:last-child {
     border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 어바웃 시작 */
-.about .inner {
-    align-items: center;
-}
-.about .inner .container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background: #FFF;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-.about .col {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    padding: 0 30px;
-    position: relative;
-}
-.about .col::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background: #d9d9d9;
-    width: 1px;
-    height: 90%;
-    transform: translateY(-50%);
-}
-.about .col:nth-child(1)::after {
-    display: none;
-}
-.about .profile img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-.about .col > div {
-    width: 100%;
-    height: 130px;
-}
-.about .col > div h3 {
-    margin: 0 0 10px 0;
-}
-.about .col > div.skill .tGroup {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-    justify-content: flex-start;
-}
-.about .col > div.skill .tGroup p {
-    width: 80px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 7px;
-    transition: all .3s ease-in-out;
-    background: #eee;
-}
-.about .col > div.skill .tGroup p:hover {
-    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
 /* 프로젝트 시작 */
-.project .inner {
-    align-items: center;
-    padding: 30px 0;
+.project {
+    position: absolute;
+    top: 43px;
+    left: 55px;
+    height: 100%;
+    z-index: 20;
 }
-.project .container {
+.project .p_container {
     width: 100%;
-    height: 70%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    border-radius: 30px;
+    border-radius: 115px 115px 0 0;
     background: #FFF;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     position: relative;
 }
-.project .container ul {
+.project .p_container ul {
     position: absolute;
-    top: 10%;
-    left: -15%;
+    top: 12%;
+    left: 0%;
     width: 15%;
     height: fit-content;
 }
-.project .container ul li {
+.project .p_container ul li {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: 700;
     padding: 15px 10px;
-    background: #FFF;
+    background: #eee;
     margin: 10px 0;
 }
-.project .container ul li.on {
+.project .p_container ul li.on {
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
 }
 .project .contents {
@@ -398,11 +360,12 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: space-between;
+    background: #FFF;
 }
 .project .contents > div.tBox .bt a {
-    width: 100px;
-    height: 40px;
+    width: 175px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,10 +404,11 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     flex-flow: row wrap;
     gap: 30px;
     justify-content: center;
+    background: #FFF;
 }
 .project .contents > div.screen .bt button {
-    width: 130px;
-    height: 40px;
+    width: 110px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -455,67 +419,17 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
+    color: #000;
 }
 .project .contents > div.screen .bt button:hover {
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    color: #FFF;
+    color: #000;
 }
 .project .contents > div.screen .bt button.on {
-    color: #FFF;
+    color: #000;
     background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
 }
 
-/* 굿바이 */
-.bye .inner {
-    align-items: center;
-}
-.bye .inner .container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #FFF;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    overflow: hidden;
-}
-.bye .name {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg, #6ECEFE 0%, #A476FD 109%);
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-}
-.bye .chat {
-    height: 90%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-}
-.bye .chat > div {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    padding: 0 10px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    gap: 10px;
-}
-.bye .chat > div.mine {
-    padding: 30px 0 0 0;
-    align-items: flex-start;
-}
-.bye .chat > div span {
-    width: fit-content;
-    background: #eee;
-    padding: 20px 20px;
-    border-radius: 15px;
-}
+
+

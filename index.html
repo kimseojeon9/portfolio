@@ -14,28 +14,23 @@
         <section class="wellcom">
             <div class="inner">
                 <div class="container">
-                    <div class="frame"></div>
                     <div class="name">
                         <div class="profile"></div>
                         <h1>SEOJEONG</h1>
                     </div>
                     <div class="chat">
                         <span id="today"></span>
-                        <div class="mine">
-                            <span id="sayHello"></span>
-                            <span>I made a portfolio.<br>do you want to see it?</span>
-                        </div>
-                        <div class="yours">
-                            <span id="you"></span>
-                        </div>
-                        <div class="myAnswer">
-                            <span id="an01"></span>
+                        <div class="scrollbg">
+                            <div class="mine">
+                                <span id="sayHello"></span>
+                                <span>I made a portfolio.<br>do you want to see it?</span>
+                            </div>
                         </div>
                     </div>
                     <div class="bt">
-                        <button value="yes">yes</button>
-                        <p>or</p>
-                        <button value="no">no</button>
+                        <button value="yes" id="yesbt">yes</button>
+                        <p class="var">or</p>
+                        <button value="no" id="nobt">no</button>
                     </div>
                     <div class="prfbg">
                         <div class="prfWrap">
@@ -71,6 +66,61 @@
                                 <div id="education">
                                     <p>웹디자인(UI/UX) & 웹퍼블리셔 취업 과정 수료<br>2022.07.25 ~ 2022.11.24</p>
                                     <p>건양대학교 글로벌호텔관광학과 졸업<br>2022.08</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="p_container">
+                            <ul>
+                                <li data-id="a" class="on">Project A</li>
+                                <li data-id="b">Project B</li>
+                            </ul>
+                            <div class="contents on" id="a">
+                                <div class="tBox">
+                                    <h3>Project A<br>매일유업<br>반응형 웹사이트 리뉴얼</h3>
+                                    <div class="description">
+                                        <p>기존 블럭 형태로 되어 있던 홈페이지를 섹션별로 나누어 내용간의 구분을 명확히했습니다. </p>
+                                        <p>또, 해당 기업의 사회공헌에 대한 서브 페이지를 보기 쉽게 재구성하고 해당 페이지에서 바로 후원 폼으로 넘아갈 수 있는 플로우를
+                                            구현했습니다.</p>
+                                        <p>구성은 메인 1장과 서브 페이지 2장(사회공헌, 우유안부 후원 폼)으로 되어 있습니다.</p>
+                                    </div>
+                                    <div class="bt">
+                                        <a href="/portfolio/maeil/html/maeil.html" target='_blank'>사이트 링크</a>
+                                        <a href="/portfolio/imgs/ui.pdf" target="_blank">UI 정의서</a>
+                                    </div>
+                                </div>
+                                <div class="screen">
+                                    <div class="img">
+                                        <img src="/portfolio/imgs/maeil.JPG" alt="매일유업 메인" class="on" id="main">
+                                        <img src="/portfolio/imgs/maeilsub.JPG" alt="매일유업 서브" id="sub1">
+                                        <img src="/portfolio/imgs/maeilform.JPG" alt="매일유업 후원 폼" id="sub2">
+                                    </div>
+                                    <div class="bt">
+                                        <button data-id="main">메인</button>
+                                        <button data-id="sub1">사회공헌</button>
+                                        <button data-id="sub2">우유안부 후원 폼</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contents" id="b">
+                                <div class="tBox">
+                                    <h3>Project B<br>청주시문화산업진흥재단<br>반응형 웹사이트 리디자인</h3>
+                                    <div class="description">
+                                        <p>청주에서 열리는 새로운 문화 행사, 사업, 교육정보를 알려주는 사이트인 것에 초점을 맞춰, 데이터 관리에 신경을 쓰며
+                                            진행하였습니다.</p>
+                                    </div>
+                                    <div class="bt">
+                                        <a href="/portfolio/cjculture/html/cjculture.html" target='_blank'>사이트 링크</a>
+                                    </div>
+                                </div>
+                                <div class="screen">
+                                    <div class="img">
+                                        <img src="/portfolio/imgs/maeil.JPG" alt="매일유업">
+                                    </div>
+                                    <div class="bt">
+                                        <button>메인</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
