@@ -47,6 +47,13 @@ function pop () {
     $('.project').show();
     return false;
 }
+function pop_b () {
+    $('.project').show( function(){
+        $('.project ul li:last').addClass('on').siblings().removeClass('on');
+        $('#b').addClass('on').siblings().removeClass('on');
+    });
+    return false;
+}
 
 
 $(document).ready(function(){
@@ -78,7 +85,7 @@ $(document).ready(function(){
                 $('.myAnswer').append('<span><a href="#" onclick="pop()">매일유업</a></span>');
             }, 3.5 * 1000);
             setTimeout(function () {
-                $('.myAnswer').append('<span><a href="#" onclick="pop()">청주시문화산업진흥센터</a></span>');
+                $('.myAnswer').append('<span><a href="#" onclick="pop_b()">청주시문화산업진흥센터</a></span>');
             }, 4 * 1000);
             setTimeout(function () {
                 $('.myAnswer').append('<span>did you see that?</span>');
