@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+:root {font-size: 14px;}
+body {max-width: 1200px; min-width: 320px;}
+.inner {width: 100%;}
+
+/* wellcom */
+.wellcom .inner .container {
+    width: 100%;
+    border-radius: unset;
+}
+.wellcom .inner .container::before {
+    display: none;
+}
+.wellcom .name, 
+.wellcom .prfbg,
+.wellcom .chat, 
+.wellcom .bt, 
+.wellcom .project {
+    width: 100%;
+}
+.wellcom .name {
+    border-radius: unset;
+}
+.wellcom .chat .scrollbg {
+    height: 95%;
+    overflow: hidden;
+}
+/* profile */
+.wellcom .prfbg {
+    top: 0;
+    border-radius: unset;
+}
+/* project */
+.project {
+    top: 0;
+    left: 0;
+}
+.project .p_container {
+    border-radius: unset;
+}
+.project .p_container #close_p {
+    top: 10px;
+    left: 10px;
+}
+.project .p_container ul {
+    top: 30px;
+}
+.project .contents > div.tBox {
+    padding-top: 30px;
+}
+.project .contents > div.tBox .bt {
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 620px) and (min-width: 320px) {
+    :root {font-size: 12px;}
+    .prfbg .prfWrap .bts {gap: 10px;}
+    .prfbg .prfWrap .bts button {
+        height: 40px;
+        padding: 0 10px;
+    }
+    .project .p_container ul {width: 35%;}
+    .project .contents > div.tBox {
+        padding-top: 105px;
+    }
+}
