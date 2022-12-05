@@ -5,7 +5,7 @@ var dateInfo = new Date();
 var date = {
     month: dateInfo.getMonth() + 1,
     date: dateInfo.getDate(),
-    hours: dateInfo.getHours() +9,
+    hours: dateInfo.getHours(),
     minutes: dateInfo.getMinutes(),
 }
 
