@@ -69,14 +69,14 @@ $(document).ready(function(){
                     $('.myAnswer').append('<span>Oh... are you busy?</span>')
             }, 1.5*1000);
             setTimeout(function(){
-                    $('.myAnswer').append('<span>okey!</span>')
+                    $('.myAnswer').append('<span>okay!</span>')
             }, 2.5*1000);
             setTimeout(function(){
                     $('.myAnswer').append('<span>see ya!</span>')
             }, 3.5*1000);
         } else if (val == 'yes') {
             setTimeout(function () {
-                $('.myAnswer').append('<span>okey!</span>');
+                $('.myAnswer').append('<span>okay!</span>');
             }, 1.5 * 1000);
             setTimeout(function () {
                 $('.myAnswer').append('<span>here</span>');
