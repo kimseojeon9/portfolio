@@ -71,7 +71,7 @@ section {
 }
 .inner {
     width: 1200px;
-    height: 100%;
+    height: calc(100vh - 100px);
     padding: 30px 0px;
     gap: 30px;
     display: flex;
@@ -92,6 +92,7 @@ header {
     position: relative;
 }
 header .inner {
+    height: 100%;
     flex-direction: row;
     align-items: center;
     padding: 0;
@@ -196,12 +197,13 @@ header .inner {
     position: relative;
 }
 .sec01 .inner {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 10% 0 0 0;
 }
 /* 스와이퍼 */
 .sec01 .slideWraper {
-    width: 100%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: flex-start;
