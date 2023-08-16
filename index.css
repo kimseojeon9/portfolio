@@ -392,6 +392,9 @@ section { width: 100%; height: 100vh; display: flex; justify-content: center; }
     transform: translateY(0);
     transition: all 3S;
 }
+.project .contents#b > div.screen .img img {
+    display: flex;
+}
 .project .contents > div.screen .img img.on {
     display: flex;
 }
