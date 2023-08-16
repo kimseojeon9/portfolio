@@ -553,6 +553,7 @@ strong.result {
 .info .schedule .schd_box > div.schds {
     flex-direction: column;
     gap: 20px;
+    padding: 0 0 10px;
 }
 div.schds span {
     background: var(--lightPink);
