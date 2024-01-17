@@ -195,6 +195,7 @@ header .inner {
     padding: 0;
     background: linear-gradient(180deg, #DEE8F5 0%, #FFF9FB 100%);
     position: relative;
+    display: flex;
 }
 .sec01 .inner {
     align-items: center;
@@ -379,8 +380,8 @@ header .inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: calc(100% - 30%);
-    height: 80%;
+    width: calc(100% - 40%);
+    height: 100%;
     
 }
 /* 타이틀 */
@@ -420,7 +421,7 @@ header .inner {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 300px;
+    height: 100%;
     padding: 1px;
     overflow-y: scroll;
 }
@@ -507,7 +508,7 @@ strong.result {
     justify-content: flex-start;
     align-items: flex-start;
     width: calc(100% - 70%);
-    height: 80%;
+    height: 100%;
 }
 .info .schedule .schd_box {
     margin: 30px 0 0 0;
@@ -617,6 +618,7 @@ div.schds span {
 /* sec03 */
 .sec03 {
     padding: 100px 120px;
+    display: flex;
 }
 .sec03 .inner {
     flex-direction: column;
@@ -693,11 +695,13 @@ div.schds span {
     height: 100%;
     border-radius: 20px;
 }
-/*  */
+
+/* sec04 */
 .sec04 {
     flex-direction: column;
     align-items: center;
     position: relative;
+    display: flex;
 }
 .sec04 .inner {
     flex-direction: column;
