@@ -94,8 +94,8 @@ $(document).ready(function () {
   var noticeDate = new Date();
   var date = {
     year: noticeDate.getFullYear().toString().substring(2, 4),
-    month: noticeDate.getMonth() + 1,
-    date: noticeDate.getDate()
+    month: (noticeDate.getMonth() + 1).toString().padStart(2, '0'),
+    date: noticeDate.getDate().toString().padStart(2, '0')
   };
   console.log(`${date.year}.${date.month}.${date.date}`) ;
   today.textContent = `${date.year}.${date.month}.${date.date}`;
