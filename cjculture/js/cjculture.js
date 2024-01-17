@@ -88,6 +88,18 @@ $(document).ready(function () {
     $(this).addClass('on').siblings().removeClass('on');
   });
 
+  // notice
+  var today = document.getElementById('notice_D')
+
+  var noticeDate = new Date();
+  var date = {
+    year: noticeDate.getFullYear().toString().substring(2, 4),
+    month: noticeDate.getMonth() + 1,
+    date: noticeDate.getDate()
+  }
+  console.log(`${date.year}.${date.month}.${date.date}`) 
+  today.textContent = `${date.year}.${date.month}.${date.date}`
+
   // banners 
   var totalNum = $(".banners>div").length;
   var currentNum = 1;
