@@ -538,6 +538,7 @@ strong.result {
     background: var(--line);
     font-weight: 500;
     color: #fff;
+    padding: 0 30%;
 }
 #notice_D {
     height: 36px;
@@ -546,14 +547,17 @@ strong.result {
     display: block;
     color: white;
     text-align: center;
+    line-height: normal;
 }
 .info .schedule .schd_box .today a:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/chevron_left.png) no-repeat 50% 50% / 70%;
+    background: url(/portfolio/cjculture/main/chevron_left.png) no-repeat 50% 50% / 100%;
     width: 36px;
+    height: 36px;
 }
 .info .schedule .schd_box .today a:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/chevron_right.png) no-repeat 50% 50% / 70%;
+    background: url(/portfolio/cjculture/main/chevron_right.png) no-repeat 50% 50% / 100%;
     width: 36px;
+    height: 36px;
 }
 .info .schedule .schd_box > div.schds {
     flex-direction: column;
