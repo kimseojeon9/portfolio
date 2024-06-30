@@ -85,7 +85,7 @@ $(document).ready(function(){
                 $('.myAnswer').append('<span><a href="#" onclick="pop()">매일유업</a></span>');
             }, 3.5 * 1000);
             setTimeout(function () {
-                $('.myAnswer').append('<span><a href="#" onclick="pop_b()">청주시문화산업진흥센터</a></span>');
+                $('.myAnswer').append('<span><a href="#" onclick="pop_b()">청주문화공간</a></span>');
             }, 4 * 1000);
             setTimeout(function () {
                 $('.myAnswer').append('<span>did you see that?</span>');
