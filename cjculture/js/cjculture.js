@@ -62,9 +62,12 @@ $(document).ready(function () {
     $(".mMenu").click(function () {
       $(".gnb ul").show();
     });
+    /* --- */
     $(".mClose").click(function () {
       $(".gnb ul").hide();
     });
+    // 한 번 더 눌러서 메뉴창 닫기 < 어떻게?
+    /* --- */
     $('.poster').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -72,7 +75,7 @@ $(document).ready(function () {
       autoplaySpeed: 2000,
     });
   }
-  if ($(window).width() <= 640) {
+  if ($(window).width() <= 767) {
     $(".mMenu").click(function () {
       $(".gnb ul").show();
       $('.gnb ul .snb').hide();
@@ -99,29 +102,16 @@ $(document).ready(function () {
   };
   console.log(`${date.year}.${date.month}.${date.date}`) ;
   today.textContent = `${date.year}.${date.month}.${date.date}`;
+  
+  // 양쪽 버튼 누르면 이전 이후 날짜 출력 추가하기
 
-  // banners 
-  var totalNum = $(".banners>div").length;
-  var currentNum = 1;
-  $(".page_n>span:first").text(currentNum);
-  $(".page_n>span:last").text(totalNum);
-  $(".next_b").click(function () {
-    currentNum++;
-    if (currentNum > totalNum) {
-      currentNum = 1;
-    }
-    $(".banners div:first").insertAfter(".banners div:last");
-    $(".page_n>span:first").text(currentNum);
-  });
-  $(".prev_b").click(function () {
-    currentNum--;
-    if (currentNum < 1) {
-      currentNum = totalNum;
-    }
-    $(".banners div:last").insertBefore(".banners div:first");
-    $(".page_n>span:first").text(currentNum);
-  });
-
+  // 팝업
+  $('.schds > span').click(function(){
+    $('.modal').show()
+  })
+  $('.modal, .go_back').click(function(){
+    $('.modal').hide()
+  })
 
 });
 
@@ -148,7 +138,7 @@ $(window).resize(function () {
   }
 });
 
-// 공고 게시판
+// sec02 공고 게시판 
 /* ------------class------------ */
 class NoticeInfo {
   constructor(type, days, info) {
@@ -166,6 +156,7 @@ class NoticeInfo {
     return `${this.info}`;
   }
 }
+
 /* ------------map------------ */
 // 일반공고
 var nomal = new Map();
@@ -496,7 +487,7 @@ li05.onclick = function () {
 // 메인슬라이드 json
 $.ajax({
   type: "GET",
-  url: "/portfolio/cjculture/js/main.json",
+  url: "/cjculture/js/main.json",
   dataType: "json",
   success: function (data) {
     var elem = "";
@@ -528,7 +519,7 @@ $.ajax({
 // 포스터
 $.ajax({
   type: "GET",
-  url: "/portfolio/cjculture/js/poster.json",
+  url: "/cjculture/js/poster.json",
   dataType: "json",
   success: function (data) {
     var elem = "";

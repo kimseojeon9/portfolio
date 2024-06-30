@@ -1,8 +1,9 @@
 @charset "UTF-8";
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
-body { max-width: 640px; min-width: 370px; } 
+body { max-width: 767px; min-width: 320px; } 
 h1 { font-size: 2.125rem; font-weight: 600; } 
 h2 { font-size: 2rem; font-weight: 600; } 
 h3 { font-size: 1.5rem; font-weight: 500; } 
@@ -26,11 +27,11 @@ h4 { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
     line-height: 50px;
 }
 .gnb ul > li:nth-child(1) {
-    border-top: 3px solid var(--pink);
+    border-top: 3px solid var(--yellowGreen);
     width: 80%;
 }
 .gnb ul > li:nth-last-child(1) {
-    border-bottom: 3px solid var(--pink);
+    border-bottom: 3px solid var(--yellowGreen);
     width: 80%;
 }
 .gnb ul li .snb {
@@ -103,9 +104,11 @@ h4 { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
 }
 .info {
     justify-content: flex-start;
+    height: 100%;
 }
 .info .notice {
     flex-direction: row;
+    height: 100%;
 }
 .info .notice .title {
     width: 25%;
@@ -125,6 +128,9 @@ h4 { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
     font-size: 0.95rem;
     font-weight: 400;
 }
+.info .notice .contents{
+    height: 100%;
+}
 .info .notice .contents a {
     padding: 3px;
     height: calc((100% /6) + 1px);
@@ -139,7 +145,6 @@ h4 { font-size: 1.25rem; font-weight: 500; line-height: 2rem; }
 .info .notice .contents a span:last-child {
     font-size: 0.95rem;
 }
-
 
 
 

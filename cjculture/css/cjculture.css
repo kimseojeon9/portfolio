@@ -10,6 +10,10 @@
     box-sizing: border-box;
     /* outline: 1px solid red; */
 }
+element.style {
+    height: auto;
+    margin-bottom: 0;
+}
 body {
     min-width: 1025px;
 }
@@ -20,7 +24,7 @@ body {
     word-wrap: break-word;
     word-break: keep-all;
     word-spacing: -1.6px;
-    --pink: #FD33A7;
+    --yellowGreen: #7FBE26;
     --lightPink: #FBE3F1;
     --ligthPink2: #FFF9FB;
     --line: #4A4A4A;
@@ -64,15 +68,16 @@ h4 {
     position: relative;
 }
 section {
-    display: flex;
-    justify-content: center;
-    padding: 100px 0 0 0;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
     margin-bottom: 0 !important;
 }
 .inner {
+    height: 100% !important;
     width: 1200px;
-    height: calc(100vh - 100px);
-    padding: 30px 120px;
     gap: 30px;
     display: flex;
     justify-content: center;
@@ -99,9 +104,9 @@ header .inner {
 }
 .logo {
     text-indent: -99999px;
-    background: url(/portfolio/cjculture/logo.png) no-repeat 50% 50% / cover;
-    min-width: 218px;
-    height: 55px;
+    background: url(/logo.png) no-repeat 50% 50% / contain;
+    min-width: 140px;
+    height: 30px;
 }
 .gnb, .gnb ul {
     width: 100%;
@@ -136,7 +141,7 @@ header .inner {
     transform: scale(0, 1);
     width: 100%;
     height: 3px;
-    background: var(--pink);
+    background: var(--yellowGreen);
     position: absolute;
     bottom: 0;
     transition: all .3s ease;
@@ -173,7 +178,7 @@ header .inner {
     color: var(--line);
 }
 .gnb ul li .snb li:hover a {
-    color: var(--pink);
+    color: var(--yellowGreen);
 }
 .snbbg {
     background: #fff;
@@ -193,14 +198,14 @@ header .inner {
 /* 섹션1 */
 .sec01 {
     padding: 0;
-    background: linear-gradient(180deg, #DEE8F5 0%, #FFF9FB 100%);
+    background: linear-gradient(60deg, #7FBE26 0%, #FFFB9A 100%);
     position: relative;
     display: flex;
 }
 .sec01 .inner {
     align-items: center;
     justify-content: center;
-    padding: 10% 0 0 0;
+    padding: 50px 0 0 0;
 }
 /* 스와이퍼 */
 .sec01 .slideWraper {
@@ -232,18 +237,18 @@ header .inner {
 }
 .swiper-button-next, .swiper-button-prev {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 50px !important;
+    height: 50px !important;
     background: #000;
     z-index: 10;
     opacity: 0.7;
     transform: translateY(-50%);
 }
-.swiper-button-next {
-    right: 5%;
+.sec01 .swiper-button-next {
+    right: 10%;
 }
-.swiper-button-prev {
-    left: 5%;
+.sec01 .swiper-button-prev {
+    left: 10%;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
     color: #fff;
@@ -252,7 +257,7 @@ header .inner {
     bottom: 20%;
 }
 .sec01 .swiper-pagination-bullet-active {
-    background: var(--pink);
+    background: var(--yellowGreen);
 }
 /* txtbox */
 .txtBox {
@@ -269,9 +274,10 @@ header .inner {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+    background-color: #ffffff50;
+    backdrop-filter: blur(10px);
     border-radius: 0 30px 30px 0;
-    color: #fff;
+    color: #000;
 }
 .txtBox h1 {
     line-height: 1.25em;
@@ -293,12 +299,11 @@ header .inner {
 
 /* 섹션2 */
 .sec02 {
-    padding: 0;
+    padding-top: 30px;
 }
 .sec02 .inner {
     flex-direction: column;
-    width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
 }
 /* quick menu */
 .quick {
@@ -319,8 +324,8 @@ header .inner {
     display: block;
     align-items: center;
     gap: 10px;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
@@ -349,22 +354,19 @@ header .inner {
     transform: translate(-50%, 0);
 }
 .quick .icon:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu1.svg) no-repeat 50% 35% / 30%;
+    background: url(/cjculture/main/quick/quickmenu1.png) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(2) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu2.svg) no-repeat 50% 35% / 35%;
+    background: url(/cjculture/main/quick/quickmenu2.png) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu3.svg) no-repeat 50% 35% / 35%;
+    background: url(/cjculture/main/quick/quickmenu3.png) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(4) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu4.svg) no-repeat 50% 35% / 35%;
+    background: url(/cjculture/main/quick/quickmenu4.png) no-repeat 50% 35% / 35%;
 }
 .quick .icon:nth-of-type(5) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu5.svg) no-repeat 50% 35% / 35%;
-}
-.quick .icon:nth-of-type(6) {
-    background: url(/portfolio/cjculture/main/quick/quickmenu6.svg) no-repeat 50% 35% / 35%;
+    background: url(/cjculture/main/quick/quickmenu5.png) no-repeat 50% 35% / 35%;
 }
 /* info */
 .info {
@@ -434,6 +436,7 @@ header .inner {
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 .contents::-webkit-scrollbar-track {
     background-color: var(--ligthGray);
@@ -453,7 +456,7 @@ header .inner {
     width: calc(100% - 1px);
     transition: .2s;
     flex: 1 1 270px;
-    height: calc(100% /3);
+    height: calc(100% /2.96);
     margin: -1px -1px 0px 0px;
 }
 .info .notice .contents a .top {
@@ -504,9 +507,6 @@ strong.result {
 /* schedule */
 .info .schedule {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     width: calc(100% - 70%);
     height: 100%;
 }
@@ -550,12 +550,12 @@ strong.result {
     line-height: normal;
 }
 .info .schedule .schd_box .today a:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/chevron_left.png) no-repeat 50% 50% / 100%;
+    background: url(/cjculture/main/chevron_left.png) no-repeat 50% 50% / 100%;
     width: 36px;
     height: 36px;
 }
 .info .schedule .schd_box .today a:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/chevron_right.png) no-repeat 50% 50% / 100%;
+    background: url(/cjculture/main/chevron_right.png) no-repeat 50% 50% / 100%;
     width: 36px;
     height: 36px;
 }
@@ -565,7 +565,7 @@ strong.result {
     padding: 0 0 10px;
 }
 div.schds span {
-    background: var(--lightPink);
+    background: var(--yellowGreen);
     width: 90%;
     height: 1.75rem;
     border-radius: 15px;
@@ -573,66 +573,63 @@ div.schds span {
     line-height: 1.75rem;
     cursor: pointer;
 }
-
-/*  */
-.info .schedule .bnr_box {
-    margin: 30px 0 0 0;
+/* 모달 팝업 */
+.modal {
     width: 100%;
-    height: 165px;
-    border: 1px solid var(--ligthGray);
+    height: 100%;
+    background-color: #ffffff20;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.pop {
+    width: 350px;
+    height: 370px;
+    background-color: #585858d3;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-}
-.bnr_box .page {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: center;
+    gap: 30px;
 }
-.bnr_box .page span {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 5px;
-}
-.bnr_box .page button {
-    border: none;
-    background: var(--line);
+.pop span {
     color: #fff;
-    width: 20px;
-    height: 20px;
-    overflow: hidden;
-    cursor: pointer;
     font-size: 1.25rem;
-    font-weight: 500;
+    background: var(--yellowGreen);
+    width: 90%;
+    height: 1.75rem;
+    border-radius: 15px;
+    text-align: center;
 }
-.bnr_box .banners {
-    width: 100%;
-    height: 90%;
-    overflow: hidden;
-    padding: 20px 10px;
-    position: relative;
-}
-.bnr_box .banners img {
-    width: calc(100% - 20px);
-    object-fit: cover;
+.pop span.go_back {
     position: absolute;
-    background: #fff;
-    border: 1px solid var(--ligthGray);
+    top: 20px;
+    right: 20px;
+    background: none;
+    width: auto;
+    height: 1.75rem;
+    border-radius: 0;
+    cursor: pointer;
 }
-
 
 
 /* sec03 */
 .sec03 {
-    padding: 100px 120px;
-    display: flex;
+    padding: 100px 0 0 0;
+    flex-direction: column;
+    align-items: center;
+    position: relative !important;
+    display: flex !important;
 }
 .sec03 .inner {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
 }
 .sec03 .title {
     width: 100%;
@@ -645,20 +642,18 @@ div.schds span {
 }
 .sec03 .title em {
     font-style: normal;
-    color: var(--pink);
+    color: var(--yellowGreen);
 }
 .sec03 .title p {
     font-size: 1.125rem;
 }
 .sec03 .poster {
     width: 100%;
-    /* height: 70%; */
     display: flex;
     flex: 1 1 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 15px;
 }
 .sec03 .poster div {
     height: 50%;
@@ -681,7 +676,7 @@ div.schds span {
 }
 .sec03 .poster div .description {
     width: 100%;
-    height: 30%;
+    height: 50%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     border-radius: 0 0 20px 20px;
     flex-direction: column;
@@ -708,13 +703,13 @@ div.schds span {
 .sec04 {
     flex-direction: column;
     align-items: center;
-    position: relative;
-    display: flex;
+    position: relative !important;
+    display: flex !important;
 }
 .sec04 .inner {
     flex-direction: column;
     align-items: center;
-    height: calc(100% - 20%);
+    padding-top: 100px;
 }
 .sec04 h2 {
     width: 100%;
@@ -737,15 +732,19 @@ div.schds span {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    padding: 10px;
+    background-color: #ffffff49;
+    backdrop-filter: blur(10px);
     z-index: 12;
     transform: translate(15%, 0);
     width: 800px;
+    box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.3);
 }
 .sec04 .space_slide .space .tbox h3 {
     width: 100%;
     height: 50px;
-    background: var(--pink);
+    background: var(--yellowGreen);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -757,25 +756,31 @@ div.schds span {
 }
 .sec04 .space_slide .space .tbox h4 em {
     font-style: normal;
-    color: var(--pink);
+    color: var(--yellowGreen);
 }
 .sec04 .space_slide .space .tbox p {
     text-align: left;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
 }
 .sec04 .space_slide .space .tbox a {
     font-size: 1.125rem;
     font-weight: 500;
-    border: 2px solid var(--pink);
-    color: var(--pink);
+    border: 2px solid var(--yellowGreen);
+    color: var(--yellowGreen);
     padding: 5px 10px;
     transition: all .3s ease-in-out;
 }
 .sec04 .space_slide .space .tbox a:hover {
-    border: 2px solid var(--pink);
+    border: 2px solid var(--yellowGreen);
     color: #fff;
-    background: var(--pink);
+    background: var(--yellowGreen);
 }
 .sec04 .space_slide .space .img {
     width: 100%;
@@ -795,7 +800,7 @@ div.schds span {
     flex-direction: row;
     align-items: flex-start;
     height: 100%;
-    padding: 20px;
+    padding: 10px 20px;
 }
 footer .footerTxt {
     display: flex;
@@ -825,6 +830,7 @@ footer .footerTxt a,
 footer .footerTxt p {
     color: #fff;
     font-weight: 300;
+    font-size: 0.9rem;
 }
 
 footer .sns {
@@ -843,13 +849,13 @@ footer .sns a {
     transition: all 0.3s;
 }
 footer .sns a:nth-of-type(1) {
-    background: url(/portfolio/cjculture/main/sns_02_Facebook.svg) no-repeat 50% 50%;
+    background: url(/cjculture/main/sns_02_Facebook.svg) no-repeat 50% 50%;
 }
 footer .sns a:nth-of-type(2) {
-    background: url(/portfolio/cjculture/main/sns_01_Instagram.svg) no-repeat 50% 50%;
+    background: url(/cjculture/main/sns_01_Instagram.svg) no-repeat 50% 50%;
 }
 footer .sns a:nth-of-type(3) {
-    background: url(/portfolio/cjculture/main/sns_03_youtube.svg) no-repeat 50% 50%;
+    background: url(/cjculture/main/sns_03_youtube.svg) no-repeat 50% 50%;
 }
 footer .sns a:hover {
     transform: translateY(-20%);
@@ -860,8 +866,11 @@ footer .sns a:hover {
 .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
     position: fixed;
     top: 50%;
-    right: 1%;
+    right: 2%;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 aside .swiper-pagination-bullet {

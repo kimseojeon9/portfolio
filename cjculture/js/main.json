@@ -1,6 +1,6 @@
 [
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter6.png",
+        "imgUrl": "/cjculture/main/mainposter6.png",
         "imgAlt": "2023 청주국제공예공모전",
         "tbox" : {
             "title": "2023 청주국제공예공모전",
@@ -14,7 +14,7 @@
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter7.png",
+        "imgUrl": "/cjculture/main/mainposter7.png",
         "imgAlt": "2022 생활공예클래스",
         "tbox" : {
             "title": "2022 생활공예클래스",
@@ -28,7 +28,7 @@
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter1.png",
+        "imgUrl": "/cjculture/main/mainposter1.png",
         "imgAlt": "문화제조창 함께 프로젝트",
         "tbox" : {
             "title": "문화제조창 함께 프로젝트<br>전대미²문 참여자 모집",
@@ -37,12 +37,12 @@
                 "txt02": "참여일시: 22.11.30(수) 13:00~16:00",
                 "txt03": "모집대상: 성인 20명",
                 "txt04": "참가비: 무료<br>모집기간: 2022.11.16 ~ 2022.11.25",
-                "txt05": "모집기간: 2022.11.16 ~ 2022.11.25"
+                "txt05": ""
             }
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter2.png",
+        "imgUrl": "/cjculture/main/mainposter2.png",
         "imgAlt": "동부창고 주말예술창고 12월 참여자 모집",
         "tbox" : {
             "title": "몸으로 놀고, 손으로 만드는<br>&quot;몸 작업장 & 손 작업장&quot;",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter3.png",
+        "imgUrl": "/cjculture/main/mainposter3.png",
         "imgAlt": "2022 청주영상주간",
         "tbox" : {
             "title": "2022 청주영상주간",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter4.jpg",
+        "imgUrl": "/cjculture/main/mainposter4.jpg",
         "imgAlt": "김수현드라마아트홀 타닥타닥 감성 피우기",
         "tbox" : {
             "title": "김수현드라마아트홀<br>타닥타닥 감성 피우기",
@@ -84,7 +84,7 @@
         }
     },
     {
-        "imgUrl": "/portfolio/cjculture/main/mainposter5.png",
+        "imgUrl": "/cjculture/main/mainposter5.png",
         "imgAlt": "움직임의 무게",
         "tbox" : {
             "title": "움직임의 무게<br>: The Gravity of Movement",
