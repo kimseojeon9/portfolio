@@ -60,12 +60,12 @@ $(document).ready(function () {
   if ($(window).width() <= 1024) {
     $(".gnb ul").hide();
     $(".mMenu").click(function () {
-      $(".gnb ul").show();
+      $(".gnb ul").toggle('slow');
     });
     /* --- */
-    $(".mClose").click(function () {
-      $(".gnb ul").hide();
-    });
+    // $(".mClose").click(function () {
+    //   $(".gnb ul").hide();
+    // });
     // 한 번 더 눌러서 메뉴창 닫기 < 어떻게?
     /* --- */
     $('.poster').slick({
