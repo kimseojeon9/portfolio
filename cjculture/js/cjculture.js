@@ -66,7 +66,7 @@ $(document).ready(function () {
     // $(".mClose").click(function () {
     //   $(".gnb ul").hide();
     // });
-    // 한 번 더 눌러서 메뉴창 닫기 < 어떻게?
+
     /* --- */
     $('.poster').slick({
       slidesToShow: 3,
