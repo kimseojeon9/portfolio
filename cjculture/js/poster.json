@@ -1,0 +1,42 @@
+[
+   {
+      "imgUrl" : "/cjculture/main/poster1.jpg",
+      "imgAlt" : "청주국제공예공모전",
+      "description" : {
+       "one": "2023 청주국제공예공모전",
+       "two": "2022.10.18~2023.05.07"
+      }
+   },
+   {
+      "imgUrl" : "/cjculture/main/poster2.jpg",
+      "imgAlt" : "사천 원데이클래스",
+      "description" : {
+       "one": "2022 문화파출소 청원 &lt;四時사천 원데이클래스 - 겨울편&gt; 수강생 모집",
+       "two": "2022.11.04~2022.11.13"
+      }
+   },
+   {
+      "imgUrl" : "/cjculture/main/poster3.jpg",
+      "imgAlt" : "예술가를 배우다",
+      "description" : {
+       "one": "동부창고 &quot;예술가를 배우다&quot; 파트너 모집",
+       "two": "2022.10.07~2022.10.21"
+      }
+   },
+   {
+      "imgUrl" : "/cjculture/main/poster4.jpg",
+      "imgAlt" : "김수현드라마아트홀",
+      "description" : {
+       "one": "김수현드라마아트홀<br>기증자료 특별전시<br>&lt;드라마를 추억하다&gt;",
+       "two": "2022.11.22~2022.12.22"
+      }
+   },
+   {
+      "imgUrl" : "/cjculture/main/poster5.png",
+      "imgAlt" : "동부창고 수상한 몸놀이",
+      "description" : {
+       "one": "동부창고<br>&quot;수상한 몸놀이&quot;<br>참여자 모집",
+       "two": "2022.11.21 ~ 2022.11.30"
+      }
+   }
+]
