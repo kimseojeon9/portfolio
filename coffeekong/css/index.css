@@ -1,0 +1,1074 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* -- 공통요소 -- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    --brown: #9e6440;
+    --gray: #e1e1e1;
+    --dark_gray: #454545;
+    --f_gray: #222;
+    --back_red: #FFCFCF;
+    --line_red: #FF8888;
+    --font_red: #6F3333;
+    --pink: #f5dede;
+    --brown2: #b8805d;
+    --brown3: #c79576;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2,
+h3,
+h4,
+p {
+    color: var(--f_gray);
+}
+
+li {
+    list-style: none;
+    color: var(--f_gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--f_gray);
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+}
+
+/* -- section 공통요소 -- */
+[class^=sec] {
+    height: calc(100vh + 81px);
+    padding-top: 81px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 100%;
+}
+
+[class^=sec] .inner {
+    padding-top: 81px;
+}
+
+/* -- header(공통요소) -- */
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    justify-content: center;
+}
+
+header>.inner {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu_wrap,
+.menu_wrap>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.menu_wrap>ul {
+    padding: 0 10px;
+    gap: 15px;
+}
+
+.menu_wrap>ul li,
+.menu_wrap>ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_wrap>ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 80px;
+    display: block;
+    text-align: center;
+}
+
+.menu_wrap>ul li a:hover {
+    color: var(--brown);
+    transition: all 0.2s ease;
+}
+
+header .logo {
+    height: inherit;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
+}
+
+/* -- menu -- */
+.menu_wrap>ul li a.menu_bar {
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+    translate: 0px 22px;
+    background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
+    border-radius: 20px;
+}
+
+.menu_wrap>ul li a.menu_bar:hover {
+    background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
+}
+
+.left .gnb {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 81px;
+    left: 0px;
+    background: var(--gray);
+}
+
+.left .gnb a {
+    color: var(--f_gray);
+}
+
+/* -- 로그인 시작 -- */
+/* -- form 공통요소 -- */
+.id {
+    position: relative;
+}
+
+.login_form {
+    position: absolute;
+    top: 81px;
+    left: -50px;
+    transform: translate(-50px, 0px);
+    width: 250px;
+    gap: 30px;
+    padding: 30px 32px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: #00000020 0px 7px 4px 7px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+}
+
+.login_form span,
+.login_form label,
+.login_form input {
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* -- error display: none 처리 -- */
+.error_info {
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--back_red);
+    border: 2px solid var(--line_red);
+    color: var(--font_red);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+.error_info span {
+    font-weight: bold;
+    display: none;
+}
+
+/* -- id_info -- */
+.id_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#id {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- pw_info -- */
+.pw_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#password {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- submit -- */
+.submit {
+    padding: 12px 30px;
+    background: var(--brown);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #b8805d;
+    transition: all 0.2s ease;
+}
+
+/* -- membership, forget -- */
+.membership,
+.forget {
+    width: 100%;
+}
+
+.membership_link,
+.forget_link {
+    line-height: unset !important;
+    font-size: 1rem !important;
+}
+
+.membership_link:hover,
+.forget_link:hover {
+    text-decoration: underline;
+}
+
+.membership {
+    border-top: 1px solid var(--f_gray);
+    padding: 30px 0 0 0;
+}
+
+/* ----------------------------------- */
+
+/* -- sec01 시작 -- */
+.sec01 .inner {
+    padding: 0;
+}
+
+.sec01 .s_Box {
+    display: flex;
+    width: 500px;
+    height: 50px;
+    padding: 0px 15px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 2px solid #000;
+}
+
+.sec01 .s_Box:hover {
+    box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.20);
+    transition: all 0.2s ease;
+}
+
+.sec01 .s_Box>input {
+    width: 100%;
+    height: calc(100% - 4px);
+    font-size: 1rem;
+    padding-left: 10px;
+    border: none;
+}
+
+.sec01 .s_Box>.img {
+    text-indent: -9999px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.sec01 .s_Box>.img::before {
+    content: "";
+    background: url(/coffeekong/img/icons/search.svg) 50% 50% / 100%;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.sec01 .search_box {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+}
+
+.sec01 .main_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -- slick -- */
+.sec01 .main_contents .visual_slide {
+    height: 510px;
+    width: 100%;
+    position: relative;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+div[class^=slide0]>a {
+    text-indent: -9999px;
+    width: 100%;
+    height: 510px;
+    cursor: pointer;
+    display: block;
+}
+
+.slide01>a {
+    background: url(/coffeekong/img/main/sec01/events1.jpg) no-repeat 50% 50% / cover;
+}
+
+.slide02>a {
+    background: url(/coffeekong/img/main/sec01/events2.png) no-repeat 50% 50% / cover;
+}
+
+.slide03>a {
+    background: url(/coffeekong/img/main/sec01/events3.png) no-repeat 50% 50% / cover;
+}
+
+/* -- sec02 시작 -- */
+.sec02 {
+    padding-top: 0px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0 30px 0;
+}
+
+.sec02 .contents {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.sec02 .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.best_L,
+.best_R {
+    width: 100%;
+    height: 100%;
+}
+
+.best_L {
+    padding: 0px 10px;
+}
+
+/* -- 베스트 1위 -- */
+.best_one {
+    width: inherit;
+    height: inherit;
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
+}
+
+.best_one.on {
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.best_one_link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.learnMore,
+.favorite {
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: none;
+}
+
+.learnMore {
+    background: url(/coffeekong/img/icons/icns.png) no-repeat 100% 50% / cover;
+}
+
+.favorite {
+    background: url(/coffeekong/img/icons/icns.png) no-repeat 0% 50% / cover;
+}
+
+.learnMore:hover {
+    background: url(/coffeekong/img/icons/icns_full.png) no-repeat 100% 50% / cover;
+}
+
+.favorite:hover {
+    background: url(/coffeekong/img/icons/icns_full.png) no-repeat 20% 50% / cover;
+}
+
+.best_R {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro,
+.best_ect {
+    height: 100%;
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.best_ect {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- 베스트 2,3위 -- */
+.best_two,
+.best_three {
+    width: 100%;
+    height: 100%;
+}
+
+.best_two {
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
+}
+
+.best_three {
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
+}
+
+.best_two.on,
+.best_three.on {
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* -- sec03 시작 -- */
+.sec03 .contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.k_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 150px;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyword {
+    width: 125px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--brown2);
+}
+
+.keyword:hover {
+    background-color: var(--brown3);
+    transition: all 0.2s ease;
+}
+
+.keyword a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.p_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    padding: 30px 0 0 0;
+    gap: 30px;
+}
+
+.product {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pic {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.pic img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.product:hover {
+    box-shadow: 0px 4px 10px #00000020;
+    transition: all 0.2s ease;
+}
+
+.product:hover .pic img {
+    display: block;
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+}
+
+.textBox a {
+    padding: 16px 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.store {
+    font-size: 0.9rem;
+}
+
+.p_name {
+    font-size: 1.125rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* -- sec04 시작 -- */
+.sec04 {
+    height: 100%;
+}
+
+.evtBnr {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.item {
+    width: 254px;
+    height: 254px;
+    position: absolute;
+    top: 5%;
+    right: 24%;
+}
+
+.sec04 .inner {
+    padding: 0;
+    height: 100%;
+}
+
+.rv_wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sec04 .title {
+    padding: 30px 0;
+}
+
+.sec04 .contents {
+    height: 100%;
+    width: 100%;
+}
+
+.reviewBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    gap: 30px;
+}
+
+.reviews {
+    height: 500px;
+    width: 380px;
+}
+
+.reviews .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.reviews .wrap:hover {
+    box-shadow: 4px 4px 10px #00000020;
+    transition: all 0.2s ease;
+}
+
+.rv_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 340px;
+}
+
+.sec04 .thumb img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+/* -- 리뷰 내용 커스텀 -- */
+.txtInfo {
+    width: 100%;
+    height: 160px;
+    padding: 20px;
+}
+
+.rv_con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
+}
+
+.prdt_name {
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    color: var(--f_gray);
+}
+
+.stars {
+    text-indent: -9999px;
+    display: block;
+    width: 90px;
+    position: relative;
+}
+
+.stars::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: var(--f_gray);
+    background: url(/coffeekong/img/icons/star.svg) repeat-x center / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user_name {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+.prdt_info {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 1rem;
+}
+
+/* -- footer 시작 -- */
+footer {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.footerWrap {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #343256;
+    border-top: 1px solid #271e4d;
+}
+
+footer .inner {
+    flex-direction: row;
+}
+
+.footerWrap [class^=footer_] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+footer .logo {
+    height: 60px;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
+}
+
+footer p {
+    font-weight: 400;
+    color: #fff;
+}
+
+address {
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+.footer_r a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ------미디어쿼리 시작------- */
+
+/* 데스크탑 (가로 해상도가 1280px 보다 작은 화면에 적용) */
+@media (max-width: 12079px) {
+
+    .sec01 .inner,
+    .sec03 .inner,
+    .sec04 .inner {
+        padding: 0 16px;
+    }
+
+    .intro {
+        padding: 0 16px 0 0;
+    }
+
+    .best_ect {
+        padding: 0 16px 0 0;
+    }
+
+    .p_wrap {
+        flex: 0 0;
+        gap: 16px;
+    }
+
+    .product {
+        width: 280px;
+    }
+}
+
+/* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
+@media (max-width: 1199px) {
+    .inner {
+        width: 100%;
+    }
+
+    [class^=sec] {
+        height: 100%;
+    }
+
+    .sec01 .inner,
+    .sec03 .inner,
+    .sec04 .inner {
+        padding: 0 16px;
+    }
+
+    .sec02 .container {
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        align-items: center;
+    }
+
+    .intro {
+        display: none;
+    }
+
+    .intro h3 {
+        font-size: 1rem;
+    }
+
+    .intro p {
+        text-align: center;
+    }
+
+    .best_L {
+        display: flex;
+        justify-content: center;
+        padding: unset;
+    }
+
+    .best_one {
+        width: 48.5%;
+        height: 100%;
+        transform: translate(-8px, 0px);
+    }
+
+    .best_ect {
+        gap: 16px;
+        width: 50%;
+    }
+
+    .k_wrap {
+        padding: 0px 100px;
+        gap: 16px;
+    }
+
+    .product {
+        width: 210px;
+    }
+
+    .reviewBox {
+        gap: 16px;
+    }
+
+}
+
+/* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
+@media (max-width: 991px) {
+
+    .sec01 .inner,
+    .sec03 .inner,
+    .sec04 .inner {
+        padding: 0 16px;
+    }
+
+    .title {
+        padding: 50px 0;
+    }
+
+    .sec02 .container {
+        align-items: flex-start;
+    }
+
+    .intro {
+        width: 46%;
+        gap: 30px;
+    }
+
+    .intro h3 {
+        font-size: large;
+    }
+
+    .best_L,
+    .best_ect {
+        padding: 0 30px;
+    }
+
+    .best_L {
+        width: 53%;
+    }
+
+    .best_one {
+        width: 100%;
+        transform: translate(0px, 0px);
+    }
+
+    .best_ect {
+        width: 100%;
+    }
+
+    .k_wrap {
+        padding: 0px 50px;
+    }
+
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
+@media (max-width: 767px) {
+    .wrap {
+        height: 100%;
+    }
+
+    .intro {
+        display: none;
+    }
+
+    .best_L {
+        width: 100%;
+    }
+
+    .k_wrap {
+        padding: 0;
+    }
+
+    .product {
+        width: 160px;
+    }
+
+    .product.single-item {
+        width: 100%;
+    }
+
+    .pic {
+        height: 60%;
+    }
+
+    .pic img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .textBox {
+        height: 40%;
+        display: flex;
+        align-items: center;
+    }
+
+    /*  */
+
+    .reviews {
+        height: 360px;
+        width: 240px;
+    }
+
+    .rv_link {
+        height: 100%;
+    }
+
+    .sec04 .thumb img {
+        height: 190px;
+    }
+
+    .txtInfo {
+        width: 100%;
+        height: 155px;
+        padding: 16px;
+    }
+
+    /*  */
+
+    footer .logo {
+        display: none;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.9rem;
+    }
+
+    .footerWrap [class^=footer_] {
+        padding: 0 16px;
+    }
+}

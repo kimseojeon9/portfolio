@@ -1,0 +1,50 @@
+[
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처1 좋은 원두",
+            "url": "#"
+        },
+        "textBox": {
+            "store": "판매처1",
+            "p_name": "좋은 원두",
+            "price": "22,000원"
+        }
+    },
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처2 싱그러운 원두",
+            "url": "#"
+        },
+        "textBox": {
+            "store": "판매처2",
+            "p_name": "싱그러운 원두",
+            "price": "21,000원"
+        }
+    },
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처3 고소한 원두",
+            "url": "#"
+        },
+        "textBox": {
+            "store": "판매처3",
+            "p_name": "고소한 원두",
+            "price": "21,900원"
+        }
+    },
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처4 싱싱한 원두",
+            "url": "#"
+        },
+        "textBox": {
+            "store": "판매처4",
+            "p_name": "싱싱한 원두",
+            "price": "23,000원"
+        }
+    }
+]

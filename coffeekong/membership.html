@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/coffeekong/css/mem_n_event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>coffeekon 회원가입</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 시작 -->
+        <header>
+            <div class="inner">
+                <div class="menu_wrap left">
+                    <ul>
+                        <li class="mn">
+                            <a class="menu_bar mb" href="#">menu bar</a>
+                            <ul class="gnb">
+                                <li>
+                                    <a href="#">신상품</a>
+                                </li>
+                                <li>
+                                    <a href="#">베스트</a>
+                                </li>
+                                <li>
+                                    <a href="#">전체상품</a>
+                                </li>
+                                <li>
+                                    <a href="#">이벤트</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="out">
+                            <a href="#">신상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">베스트</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">전체상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/event.html">이벤트</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="/coffeekong/index.html" class="logo"></a>
+                <div class="menu_wrap right">
+                    <ul>
+                        <li class="out">
+                            <a href="/coffeekong/membership.html">회원가입</a>
+                        </li>
+                        <li class="out id" data-id="id">
+                            <a href="#">로그인</a>
+                            <!-- 로그인 form -->
+                            <div class="login_form">
+                                <!-- error -->
+                                <div class="error_info">
+                                    <span class="error_id">올바르지 않는 아이디입니다.</span>
+                                    <span class="error_pw">올바르지 않는 비밀번호입니다.</span>
+                                    <span class="error_nan">존재하지 않는 아이디입니다.</span>
+                                </div>
+                                <!-- id -->
+                                <div class="id_info">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" name="id" placeholder="아이디를 입력하세요." autocomplete="off"/>
+                                </div>
+                                <!-- password -->
+                                <div class="pw_info">
+                                    <label for="password">비밀번호</label>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                </div>
+                                <!-- button -->
+                                <button type="submit" class="submit">로그인</button>
+                                <!-- membership -->
+                                <div class="membership">
+                                    <a href="/coffeekong/membership.html" class="membership_link">회원가입 하러 가기</a>
+                                </div>
+                                <!-- forget -->
+                                <div class="forget">
+                                    <a href="#" class="forget_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="out">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">주문조회</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 컨텐츠 시작 -->
+        <div class="container">
+            <div class="inner">
+                <!-- 멤버쉽 폼 시작 -->
+                <div class="mem_form">
+                    <h2>회원가입</h2>
+                    <p class="red">*필수입력</p>
+                    <!-- email -->
+                    <div class="em_info">
+                        <div class="title">
+                            <span>*</span>
+                            <label for="email">이메일</label>
+                        </div>
+                        <div class="email_wrap">
+                            <input type="text" id="email01" name="email" placeholder="이메일을 입력하세요." autocomplete=off/>
+                            <span>@</span>
+                            <input type="text" id="email02" name="email" placeholder="직접입력" autocomplete=off/>
+                            <select name="emails" id="emails">
+                                <option value="select">직접입력</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="kakao.com">kakao.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="nate.com">nate.com</option>
+                            </select>
+                        </div>
+                        <P class="error em">유효하지 않은 이메일입니다.</P>
+                        <P class="error null_em">이메일을 입력하세요.</P>
+                    </div>
+                    <!-- id -->
+                    <div class="id_info">
+                        <div class="title">
+                            <span>*</span>
+                            <label for="n_id">아이디</label>
+                        </div>
+                        <input type="text" id="n_id" name="n_id" placeholder="아이디를 입력하세요." autocomplete=off/>
+                        <P class="error id">아이디: 언더바와 마침표를 제외한 특수문자 사용 X, 4~10자리로 입력하세요.</P>
+                        <P class="error null_id">아이디를 입력하세요.</P>
+                    </div>
+                    <!-- pw -->
+                    <div class="pw_info">
+                        <div class="title">
+                            <span>*</span>
+                            <label for="password">비밀번호</label>
+                        </div>
+                        <input type="password" id="n_pw" name="n_pw" placeholder="비밀번호를 입력하세요."/>
+                        <P class="error pw">비밀번호: 영문, 숫자, 특수문자를 포함한 5~10자리</P>
+                        <P class="error null_pw">비밀번호를 입력하세요.</P>
+                    </div>
+                    <!-- gender -->
+                    <div class="gen_info">
+                        <legend>성별</legend>
+                        <!-- 선택 안 함 -->
+                         <div class="gender_wrap">
+                             <div class="gender">
+                                 <input type="radio" id="noAnswer" name="gender" value="noAnswer" checked/>
+                                 <label for="noAnswer">선택 안 함</label>
+                             </div>
+                             <!-- 남 -->
+                             <div class="gender male">
+                                 <input type="radio" id="male" name="gender" value="male" />
+                                 <label for="male">남</label>
+                             </div>
+                             <!-- 여 -->
+                             <div class="gender female">
+                                 <input type="radio" id="female" name="gender" value="female" />
+                                 <label for="female">여</label>
+                             </div>
+                         </div>
+                        </div>
+                    <!-- age -->
+                    <div class="age_info">
+                        <legend>나이</legend>
+                        <select name="age" id="age">
+                            <option value="select">입력 안 함</option>
+                            <option value="01">10~19세</option>
+                            <option value="02">20~24세</option>
+                            <option value="03">25~29세</option>
+                            <option value="04">30~34세</option>
+                            <option value="05">35~39세</option>
+                            <option value="06">40대</option>
+                            <option value="07">50대</option>
+                            <option value="08">60대</option>
+                            <option value="09">70대 이상</option>
+                        </select>
+                    </div>
+                    <!-- submit -->
+                     <button type="submit" class="submit" id="mem_submit">등록</button>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 시작 -->
+        <footer>
+            <div class="footerWrap">
+                <div class="inner">
+                    <div class="footer_l">
+                        <a href="/coffeekong/index.html" class="logo"></a>
+                        <p>Tell: 000-1111-2222</p>
+                        <p>Fax: 000-1111-2222</p>
+                        <p>E-mail: <a href="/1111@2222.com">1111@2222.com</a></p>
+                        <address>Address: 소언릉다시 나신로 든딘과길</address>
+                    </div>
+                    <div class="footer_c">
+                        <p>사업자등록명</p>
+                        <p>영업 시간: 평일 오전 9시 ~ 오후 6시</p>
+                        <p>점심 시간: 오후 12시 ~ 오후 1시</p>
+                        <p>휴일 안내: 주말, 공휴일 쉽니다.</p>
+                        <p>00은행: 000-1111-2222-33</p>
+                        <p>11은행: 111111-22-333333</p>
+                    </div>
+                    <div class="footer_r">
+                        <a href="#" class="faceBook">공식 페이스북</a>
+                        <a href="#" class="instagram">공식 인스타그램</a>
+                        <a href="#" class="naverBlog">공식 네이버블로그</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/coffeekong/js/mem_n_event.js"></script>
+</body>
+</html>

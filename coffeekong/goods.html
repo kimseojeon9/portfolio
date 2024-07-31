@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/coffeekong/css/sub2.css">
+    <title>상품 조회</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 시작 -->
+        <header>
+            <div class="inner">
+                <div class="menu_wrap left">
+                    <ul>
+                        <li class="mn">
+                            <a class="menu_bar mb" href="#">menu bar</a>
+                            <ul class="gnb">
+                                <li>
+                                    <a href="#">신상품</a>
+                                </li>
+                                <li>
+                                    <a href="#">베스트</a>
+                                </li>
+                                <li>
+                                    <a href="#">전체상품</a>
+                                </li>
+                                <li>
+                                    <a href="/coffeekong/event.html">이벤트</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="out">
+                            <a href="#">신상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">베스트</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">전체상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/event.html">이벤트</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="/coffeekong/index.html" class="logo"></a>
+                <div class="menu_wrap right">
+                    <ul>
+                        <li class="out">
+                            <a href="/coffeekong/membership.html">회원가입</a>
+                        </li>
+                        <li class="out id" data-id="id">
+                            <a href="#">로그인</a>
+                            <!-- 로그인 form -->
+                            <div class="login_form">
+                                <!-- error -->
+                                <div class="error_info">
+                                    <span class="error_id">올바르지 않는 아이디입니다.</span>
+                                    <span class="error_pw">올바르지 않는 비밀번호입니다.</span>
+                                    <span class="error_nan">존재하지 않는 아이디입니다.</span>
+                                </div>
+                                <!-- id -->
+                                <div class="id_info">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" name="id" autocomplete="off" placeholder="아이디를 입력하세요."/>
+                                </div>
+                                <!-- password -->
+                                <div class="pw_info">
+                                    <label for="password">비밀번호</label>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                </div>
+                                <!-- button -->
+                                <button type="submit" class="submit">로그인</button>
+                                <!-- membership -->
+                                <div class="membership">
+                                    <a href="/coffeekong/membership.html" class="membership_link">회원가입 하러 가기</a>
+                                </div>
+                                <!-- forget -->
+                                <div class="forget">
+                                    <a href="#" class="forget_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="out">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">주문조회</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 컨텐츠 시작 -->
+        <div class="container">
+            <div class="inner">
+                <!-- 컨텐츠 wrap -->
+                <div class="cWrap">
+                    <!-- 서치창 시작 -->
+                    <div class="search_box">
+                        <div class="s_Box">
+                            <input type="text" id="text" name="text" placeholder="검색어를 입력하세요.">
+                            <a href="#" class="img">search bar</a>
+                        </div>
+                    </div>
+                    <!-- 사이드, 상품란 묶음 -->
+                    <div class="both_side">
+                        <!-- 카테고리 시작 -->
+                        <div class="left">
+                            <ul class="category">
+                                <p>카테고리</p>
+                                <li class="keyword on">
+                                    <a href="#">전체상품</a>
+                                </li>
+                                <li class="keyword">
+                                    <a href="#">신상품</a>
+                                </li>
+                                <li class="keyword">
+                                    <a href="#">베스트</a>
+                                </li>
+                                <li class="keyword">
+                                    <a href="#">이벤트</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 상품 시작 -->
+                        <div class="right">
+                            <!-- 상품 시작 -->
+                            <div class="contents">
+                                <a class="goods" href="/coffeekong/goodsDetail.html">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사A</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">22,000원</span>
+                                    </div>
+                                </a>
+                                <a class="goods" href="#">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사B</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">21,000원</span>
+                                    </div>
+                                </a>
+                                <a class="goods" href="#">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사C</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">23,000원</span>
+                                    </div>
+                                </a>
+                                <a class="goods" href="#">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사D</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">23,000원</span>
+                                    </div>
+                                </a>
+                                <a class="goods" href="#">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사E</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">23,000원</span>
+                                    </div>
+                                </a>
+                                <a class="goods" href="#">
+                                    <div class="heart">
+                                        <span onclick="location.href='#'"></span>
+                                    </div>
+                                    <div class="thumb">
+                                        <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                    </div>
+                                    <div class="txt_box">
+                                        <span class="txt01">제조사F</span>
+                                        <span class="txt02">좋은 원두</span>
+                                        <span class="txt03">23,000원</span>
+                                    </div>
+                                </a>
+                             </div>
+                            </div>
+                        </div>
+                        <!-- 페이지네이션 시작 -->
+                        <div class="goods_page">
+                            <ul class="pagenation">
+                                <!-- 이전 -->
+                                <li class="prv">
+                                    <a href="#">&lt;</a>
+                                </li>
+                                <li class="page on"><a href="#">1</a></li>
+                                <li class="page"><a href="#">2</a></li>
+                                <li class="page"><a href="#">3</a></li>
+                                <!-- 다음 -->
+                                <li class="nxt">
+                                    <a href="#">&gt;</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 시작 -->
+        <footer>
+            <div class="footerWrap">
+                <div class="inner">
+                    <div class="footer_l">
+                        <a href="/coffeekong/index.html" class="logo"></a>
+                        <p>Tell: 000-1111-2222</p>
+                        <p>Fax: 000-1111-2222</p>
+                        <p>E-mail: <a href="/1111@2222.com">1111@2222.com</a></p>
+                        <address>Address: 소언릉다시 나신로 든딘과길</address>
+                    </div>
+                    <div class="footer_c">
+                        <p>사업자등록명</p>
+                        <p>영업 시간: 평일 오전 9시 ~ 오후 6시</p>
+                        <p>점심 시간: 오후 12시 ~ 오후 1시</p>
+                        <p>휴일 안내: 주말, 공휴일 쉽니다.</p>
+                        <p>00은행: 000-1111-2222-33</p>
+                        <p>11은행: 111111-22-333333</p>
+                    </div>
+                    <div class="footer_r">
+                        <a href="#" class="faceBook">공식 페이스북</a>
+                        <a href="#" class="instagram">공식 인스타그램</a>
+                        <a href="#" class="naverBlog">공식 네이버블로그</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/coffeekong/js/sub2.js"></script>
+</body>
+</html>

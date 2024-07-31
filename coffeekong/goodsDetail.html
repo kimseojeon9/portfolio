@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품상세 페이지</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="/coffeekong/css/sub2.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <title>상품 조회</title>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 시작 -->
+        <header>
+            <div class="inner">
+                <div class="menu_wrap left">
+                    <ul>
+                        <li class="mn">
+                            <a class="menu_bar mb" href="#">menu bar</a>
+                            <ul class="gnb">
+                                <li>
+                                    <a href="/coffeekong/goods.html">신상품</a>
+                                </li>
+                                <li>
+                                    <a href="/coffeekong/goods.html">베스트</a>
+                                </li>
+                                <li>
+                                    <a href="/coffeekong/goods.html">전체상품</a>
+                                </li>
+                                <li>
+                                    <a href="/coffeekong/event.html">이벤트</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/goods.html">신상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/goods.html">베스트</a>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/goods.html">전체상품</a>
+                        </li>
+                        <li class="out">
+                            <a href="/coffeekong/event.html">이벤트</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="/coffeekong/index.html" class="logo"></a>
+                <div class="menu_wrap right">
+                    <ul>
+                        <li class="out">
+                            <a href="/coffeekong/membership.html">회원가입</a>
+                        </li>
+                        <li class="out id" data-id="id">
+                            <a href="#">로그인</a>
+                            <!-- 로그인 form -->
+                            <div class="login_form">
+                                <!-- error -->
+                                <div class="error_info">
+                                    <span class="error_id">올바르지 않는 아이디입니다.</span>
+                                    <span class="error_pw">올바르지 않는 비밀번호입니다.</span>
+                                    <span class="error_nan">존재하지 않는 아이디입니다.</span>
+                                </div>
+                                <!-- id -->
+                                <div class="id_info">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" name="id" autocomplete="off" placeholder="아이디를 입력하세요."/>
+                                </div>
+                                <!-- password -->
+                                <div class="pw_info">
+                                    <label for="password">비밀번호</label>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                </div>
+                                <!-- button -->
+                                <button type="submit" class="submit">로그인</button>
+                                <!-- membership -->
+                                <div class="membership">
+                                    <a href="/coffeekong/membership.html" class="membership_link">회원가입 하러 가기</a>
+                                </div>
+                                <!-- forget -->
+                                <div class="forget">
+                                    <a href="#" class="forget_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="out">
+                            <a href="#">장바구니</a>
+                        </li>
+                        <li class="out">
+                            <a href="#">주문조회</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 컨텐츠 시작 -->
+        <div class="container">
+            <div class="inner">
+                <!-- 상품 상세 wrap -->
+                <div class="gwrap">
+                    <!-- 상품 개요 -->
+                    <div class="goods_top">
+                        <!-- 재품 사진 -->
+                        <div class="goods_left">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div thumbsSlider="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 텍스트 박스 -->
+                        <div class="goods_right">
+                            <!-- 상품 이름, 원산지, 찜, 공유 -->
+                            <div class="goods_info_wrap">
+                                <div class="goods_text_info">
+                                    <p class="goods_title">여기에 상품 이름이 들어갑니다. 너무 길면 아래로 떨어집니다.</p>
+                                    <p class="goods_origin_info">원산지: 표기해 줍니다.</p>
+                                </div>
+                                <div class="bt_wrap">
+                                    <span class="goods_favorite" onclick="location.href='#'" tabindex="0">찜 하기</span>
+                                    <span class="goods_share" onclick="location.href='#'" tabindex="0">공유하기</span>
+                                </div>
+                            </div>
+                            <!-- To: de__별점 1=20% / 0.5=10% 애프터로 조정 -->
+                            <span class="goods_star">별점</span>
+                            <p class="goods_price">21,000원</p>
+                            <!-- 수량 -->
+                            <div class="count">
+                                <!-- To: de__+ - 누르면 숫자 카운트 -->
+                                <div class="bt_wrap">
+                                    <!-- 마이너스 버튼 -->
+                                    <input type="button" value=" - " onclick="del();" class="bt_m">
+                                    <!-- 수량 값 -->
+                                    <input type="text" name="amounts" value="1" size="3" class="goods_count">
+                                    <!-- 플러스 버튼 -->
+                                    <input type="button" value=" + " onclick="add();" class="bt_p">
+                                </div>
+                                <!-- To: de__수량 추가하면 금액 바뀌게 -->
+                                <div>금액 :
+                                    <!-- To: de__span font: bold -->
+                                    <span>
+                                        <fmt:formatNumber/>
+                                    </span>원
+                                </div>
+                            </div>
+                            <!-- 장바구니, 구매 버튼 -->
+                            <div class="bt_wrap buy">
+                                <button type="button">장바구니</button>
+                                <button type="button">바로 구매</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 상세 페이지 시작 -->
+                    <div class="goods_middle">
+                        <!-- 상세 및 리뷰 탭 -->
+                        <div class="goods_nav">
+                            <ul class="nav_tab">
+                                <li class="sub_menu" tabindex="0">
+                                    상세 내용
+                                    <div class="line"></div>
+                                </li>
+                                <!-- 리뷰 총 개수 받아와서 옆에 출력 -->
+                                <li class="sub_menu scroll_move" tabindex="0">   
+                                    리뷰
+                                    <!-- 받아오기 -->
+                                    <span class="review_conut">(02)</span>
+                                    <div class="line"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 상세 페이지 이미지 -->
+                        <div class="goods_detail cut01">
+                            <p>제품 상세 내역이 들어갑니다.</p>
+                            <img src="/coffeekong/img/main/sec02/best_one.jpg" alt="제품 상세">
+                        </div>
+                        <!-- 상세 페이지 더 보기 및 접기 -->
+                        <div class="goods_cut">
+                            <button type="button" class="more">상세 설명 더 보기</button>
+                            <button type="button" class="less hide">상세 설명 접기</button>
+                        </div>
+                    </div>
+                    <!-- 상품 리뷰 -->
+                    <div class="goods_bottom">
+                        <!-- 리뷰 탭 -->
+                        <ul class="review_tab">
+                            <li tabindex="0">
+                                리뷰
+                                <span class="review_conut">(02)</span>
+                            </li>
+                        </ul>
+                        <!-- 리뷰 wrap -->
+                        <div class="goods_review_wrap">
+                            <div class="goods_reviews" tabindex="0">
+                                <div class="user_profile_pic">
+                                    <div class="null_img"></div>
+                                </div>
+                                <div class="product_info">
+                                    <ul class="user_info">
+                                        <li class="user_id">아이디가 들어갑니다.</li>
+                                        <!-- 1 = 20px / 0.5 = 10px -->
+                                        <li class="user_star">별점</li>
+                                    </ul>
+                                    <div class="review_text_info">
+                                        <p>리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다.</p>
+                                    </div>
+                                    <div class="user_pic">
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods_reviews" tabindex="0">
+                                <div class="user_profile_pic">
+                                    <div class="null_img"></div>
+                                </div>
+                                <div class="product_info">
+                                    <ul class="user_info">
+                                        <li class="user_id">아이디가 들어갑니다.</li>
+                                        <!-- 1 = 20px / 0.5 = 10px -->
+                                        <li class="user_star">별점</li>
+                                    </ul>
+                                    <div class="review_text_info">
+                                        <p>리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다.</p>
+                                    </div>
+                                    <div class="user_pic">
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 시작 -->
+        <footer>
+            <div class="footerWrap">
+                <div class="inner">
+                    <div class="footer_l">
+                        <a href="/coffeekong/index.html" class="logo"></a>
+                        <p>Tell: 000-1111-2222</p>
+                        <p>Fax: 000-1111-2222</p>
+                        <p>E-mail: <a href="/1111@2222.com">1111@2222.com</a></p>
+                        <address>Address: 소언릉다시 나신로 든딘과길</address>
+                    </div>
+                    <div class="footer_c">
+                        <p>사업자등록명</p>
+                        <p>영업 시간: 평일 오전 9시 ~ 오후 6시</p>
+                        <p>점심 시간: 오후 12시 ~ 오후 1시</p>
+                        <p>휴일 안내: 주말, 공휴일 쉽니다.</p>
+                        <p>00은행: 000-1111-2222-33</p>
+                        <p>11은행: 111111-22-333333</p>
+                    </div>
+                    <div class="footer_r">
+                        <a href="#" class="faceBook">공식 페이스북</a>
+                        <a href="#" class="instagram">공식 인스타그램</a>
+                        <a href="#" class="naverBlog">공식 네이버블로그</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="go_up">
+            Top
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/coffeekong/js/sub2.js"></script>
+</body>
+</html>

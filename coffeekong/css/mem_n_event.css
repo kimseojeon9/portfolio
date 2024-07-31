@@ -1,0 +1,758 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+/* -- 공통요소 -- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    --brown: #9e6440;
+    --gray: #e1e1e1;
+    --dark_gray: #454545;
+    --f_gray: #222;
+    --back_red: #FFCFCF;
+    --line_red: #FF8888;
+    --font_red: #6F3333;
+    --pink: #f5dede;
+    --brown2: #b8805d;
+    --brown3: #c79576;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2,
+h3,
+h4,
+p {
+    color: var(--f_gray);
+}
+
+li {
+    list-style: none;
+    color: var(--f_gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--f_gray);
+}
+
+/* -- header(공통요소) -- */
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    justify-content: center;
+}
+
+header>.inner {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu_wrap,
+.menu_wrap>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.menu_wrap>ul {
+    padding: 0 10px;
+    gap: 15px;
+}
+
+.menu_wrap>ul li,
+.menu_wrap>ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_wrap>ul li a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 80px;
+    display: block;
+    text-align: center;
+}
+
+.menu_wrap>ul li a:hover {
+    color: var(--brown);
+    transition: all 0.2s ease;
+}
+
+header .logo {
+    height: inherit;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
+}
+
+/* menu */
+.menu_wrap>ul li a.menu_bar {
+    text-indent: -9999px;
+    width: 36px;
+    height: 36px;
+    background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
+    border-radius: 20px;
+}
+
+.menu_wrap>ul li a.menu_bar:hover {
+    background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
+}
+
+.left .gnb {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--gray);
+}
+
+.left .gnb.on {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+}
+
+.left .gnb a {
+    color: var(--f_gray);
+}
+
+/* -- 로그인 시작 -- */
+/* -- form 공통요소 -- */
+.id {
+    position: relative;
+}
+
+.login_form {
+    position: absolute;
+    top: 81px;
+    left: -50px;
+    transform: translate(-50px, 0px);
+    width: 250px;
+    gap: 30px;
+    padding: 30px 32px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: #00000020 0px 7px 4px 7px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+}
+
+.login_form span,
+.login_form label,
+.login_form input {
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* -- error display: none 처리 -- */
+.error_info {
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--back_red);
+    border: 2px solid var(--line_red);
+    color: var(--font_red);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+.error_info span {
+    font-weight: bold;
+    display: none;
+}
+
+/* -- id_info -- */
+.id_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#id {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- pw_info -- */
+.pw_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+#password {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- submit -- */
+.submit {
+    padding: 12px 30px;
+    background: var(--brown);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #b8805d;
+    transition: all 0.2s ease;
+}
+
+/* -- membership, forget -- */
+.membership,
+.forget {
+    width: 100%;
+}
+
+.membership_link,
+.forget_link {
+    line-height: unset !important;
+    font-size: 1rem !important;
+}
+
+.membership_link:hover,
+.forget_link:hover {
+    text-decoration: underline;
+}
+
+.membership {
+    border-top: 1px solid var(--f_gray);
+    padding: 30px 0 0 0;
+}
+
+/* ----------------------------------- */
+
+/* -- container 시작 -- */
+.container {
+    padding: 81px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .inner {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -- mem_form 시작 -- */
+.mem_form {
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+    padding: 24px 0;
+    border-bottom: 2px solid var(--brown);
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+    padding: 12px 0;
+}
+
+.error {
+    color: red;
+    position: absolute;
+    bottom: -25px;
+    left: 15%;
+    animation: shakeX 0.3s;
+    display: none;
+}
+
+@keyframes shakeX {
+
+    0%,
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+
+
+
+/* -- info 공통요소 -- */
+.mem_form div[class$=_info] {
+    margin: 0 0 42px 0;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.mem_form .title,
+.mem_form legend {
+    font-weight: bold;
+    align-items: center;
+    padding: 1rem 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.mem_form .title span {
+    color: red;
+}
+
+.mem_form span,
+.mem_form label,
+.mem_form legend,
+.mem_form select,
+.mem_form input {
+    display: block;
+    font-size: 1rem;
+}
+
+.email_wrap,
+#n_id,
+#n_pw,
+.gender_wrap,
+#age {
+    position: absolute;
+    left: 15%;
+}
+
+#email01,
+#email02,
+#emails,
+#n_id,
+#n_pw,
+#age {
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+    padding: 10px;
+    height: 50px;
+}
+
+/* -- em_info -- */
+.email_wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.email_wrap span {
+    padding: 1rem 5px;
+}
+
+#emails {
+    margin: 0 0 0 10px;
+}
+
+/* -- gen_info -- */
+.gen_info {
+    border: none;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.gender_wrap,
+.gender {
+    display: flex;
+    flex-direction: row;
+}
+
+.gender_wrap {
+    height: 50px;
+    gap: 32px;
+}
+
+.gender {
+    align-items: center;
+    gap: 7px;
+}
+
+/* -- submit -- */
+.mem_form .submit {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+
+/* -- footer 시작 -- */
+footer {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.footerWrap {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #343256;
+    border-top: 1px solid #271e4d;
+}
+
+footer .inner {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+}
+
+.footerWrap [class^=footer_] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+footer .logo {
+    height: 60px;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
+}
+
+footer p {
+    font-weight: 400;
+    color: #fff;
+}
+
+address {
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+.footer_r a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ------------------------------ */
+.title {
+    width: 100%;
+}
+.ev {
+    /* text-align: left; */
+    border-bottom: unset;
+    padding: 32px 0 0 0;
+}
+/* -- event 시작 -- */
+/* -- 탭 버튼 -- */
+.type {
+    width: 100%;
+    padding: 32px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.type_bt_list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+/* 작성 버튼 */
+.write {
+    border: none;
+    font-size: 1rem;
+    display: none;
+}
+.write,
+.type_bt a {
+    padding: 14px 32px;
+    background-color: var(--brown2);
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+.type_bt.on a {
+    background-color: var(--brown);
+}
+.write:hover,
+.type_bt a:hover {
+    background-color: var(--brown3);
+    transition: all 0.2s ease-in-out;
+}
+
+/* -- 표 헤더 시작 -- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: none;
+}
+
+.header {
+    background-color: var(--brown2);
+    text-align: center;
+}
+
+.header td {
+    padding: 14px 0;
+    font-weight: bold;
+    color: #fff;
+}
+/* -- 표 시작 -- */
+.table {
+    display: none;
+}
+.list_category, 
+.list_subject, 
+.list_date {
+    border-bottom: 1px solid var(--gray);
+    font-size: 14px;
+    padding: 16px 0;
+    text-align: center;
+    cursor: pointer;
+}
+td:nth-child(1) {
+    width: 20%;
+}
+td:nth-child(2) {
+    width: 60%;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+td:nth-child(3) {
+    width: 20%;
+}
+.notice span {
+    font-weight: bold;
+    background: var(--pink);
+    padding: 7px 14px;
+    border-radius: 12px;
+}
+
+/* -- 페이지네이션 시작 -- */
+.table_page {
+    padding: 32px 0;
+}
+.table_page, 
+.pagenation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pagenation {
+    gap: 7px;
+}
+.pagenation a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagenation li.on a, 
+.pagenation li:hover a {
+    background: var(--brown2);
+    transition: all 0.2s ease;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------미디어쿼리 시작------- */
+
+/* 데스크탑 (가로 해상도가 1280px 보다 작은 화면에 적용) */
+@media (max-width: 12079px) {}
+
+/* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
+@media (max-width: 1199px) {
+    .container .inner {
+        width: 100%;
+    }
+
+    .container {
+        align-items: flex-start;
+    }
+}
+
+/* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
+@media (max-width: 991px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
+@media (max-width: 767px) {
+
+    /* 공통요소 */
+    footer {
+        position: unset;
+    }
+
+    footer .logo {
+        display: none;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.9rem;
+    }
+
+    .footerWrap [class^=footer_] {
+        padding: 0 10px;
+    }
+
+    /* 컨텐츠 시작 */
+    .wrap {
+        height: 100%;
+    }
+
+    .container {
+        margin-bottom: 32px;
+    }
+    .container .inner {
+        padding: 0 10px;
+    }
+
+    /* mem_form */
+    .mem_form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .mem_form div[class$=_info] {
+        flex-direction: column;
+    }
+
+    .mem_form .title,
+    .mem_form legend {
+        padding: 0;
+    }
+
+    .email_wrap,
+    #n_id,
+    #n_pw,
+    .gender_wrap,
+    #age {
+        position: unset;
+    }
+
+    .error {
+        left: 10px;
+    }
+
+    .error.id,
+    .error.pw {
+        bottom: -50%;
+    }
+
+    /*  */
+    .email_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 0;
+    }
+
+    #email01,
+    #email02 {
+        width: 45%;
+    }
+
+    #emails {
+        width: 100%;
+        margin: 0;
+    }
+
+    /*  */
+    .email_wrap,
+    #n_id,
+    #n_pw,
+    .gender_wrap,
+    #age {
+        width: 100%;
+    }
+
+}
